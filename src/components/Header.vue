@@ -12,7 +12,7 @@ export default{
     <RouterLink class="routerItem" to="/">Home</RouterLink>
     <RouterLink class="routerItem" to="/1/1.vue">交通</RouterLink>
     <RouterLink class="routerItem" to="/2/2.vue">2</RouterLink>
-    <RouterLink class="routerItem" to="/3/3.vue">店家</RouterLink>
+    <RouterLink class="routerItem" to="/3/3.vue">餐廳</RouterLink>
     <RouterLink class="routerItem" to="/4/4.vue">4</RouterLink>
 
 </div>
