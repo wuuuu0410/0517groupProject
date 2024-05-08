@@ -10,10 +10,10 @@ export default{
 <template>
 <div class="headerArea">
     <RouterLink class="routerItem" to="/">Home</RouterLink>
-    <RouterLink class="routerItem" to="/1/1.vue">交通</RouterLink>
-    <RouterLink class="routerItem" to="/2/2.vue">2</RouterLink>
-    <RouterLink class="routerItem" to="/3/3.vue">餐廳</RouterLink>
-    <RouterLink class="routerItem" to="/4/4.vue">4</RouterLink>
+    <RouterLink class="routerItem" to="/1/1">交通</RouterLink>
+    <RouterLink class="routerItem" to="/2/2">2</RouterLink>
+    <RouterLink class="routerItem" to="/3/3">餐廳</RouterLink>
+    <RouterLink class="routerItem" to="/4/4">4</RouterLink>
 
 </div>
 
