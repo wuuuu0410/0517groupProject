@@ -14,13 +14,15 @@ export default{
     <RouterLink class="routerItem" to="/2/2">2</RouterLink>
     <RouterLink class="routerItem" to="/3/3">餐廳</RouterLink>
     <RouterLink class="routerItem" to="/4/4">4</RouterLink>
-
 </div>
-
 
 </template>
 
 <style scoped lang="scss">
+body{
+    background: white;
+}
+
 .headerArea{
     width: 100%;
     height: 100%;
@@ -33,7 +35,5 @@ export default{
         text-decoration: none;
     }
 }
-
-
 
 </style>
