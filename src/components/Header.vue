@@ -19,9 +19,7 @@ export default{
 </template>
 
 <style scoped lang="scss">
-body{
-    background: white;
-}
+
 
 .headerArea{
     width: 100%;
