@@ -76,14 +76,20 @@ export default {
     },
     //============
     initMap() {
-      const map = new google.maps.Map(document.getElementById('map'), {
+      // 建立地圖物件
+      const mapElement = document.querySelector('.map-container')
+      // 建立地圖
+      const map = new google.maps.Map(mapElement, {
         center: { lat: 25.041160583496094, lng: 121.55579376220703 },
         zoom: 15
       })
-
-      const input = document.getElementById('searchInput')
-      const autocomplete = new google.maps.places.Autocomplete(input)
-      autocomplete.bindTo('bounds', map)
+      // 建立搜尋框
+      // const input = document.getElementById('searchInput')
+      // // 建立自動完成物件
+      // const autocomplete = new google.maps.places.Autocomplete(input)
+      // // 將搜尋結果顯示在地圖上
+      // const marker = new google.maps.Marker({ map: map })
+      // // autocomplete.bindTo('bounds', map)
     }
   }
 }
@@ -92,16 +98,51 @@ export default {
 </script>
 
 <template>
-  <!-- <div>
-    <h3>取得憑證資料:</h3>
-    <pre>{{ accessToken }}</pre>
-
-    <h3>api 資料:</h3>
-    <pre>{{ apiResponse }}</pre>
-  </div> -->
-
-  <div id="map" style="height: 500px; width: 100%;"></div>
-
+  <div class="container">
+    <div class="sidebar">
+      <!-- <h3>取得憑證資料:</h3>
+      <pre>{{ accessToken }}</pre>
+      <h3>api 資料:</h3>
+      <pre>{{ apiResponse }}</pre> -->
+      <div class="testArea">
+        <h1>Test</h1>
+      </div>
+    </div>
+    <!-- 地圖 -->
+    <div class="map-wrapper">
+      <div id="map" class="map-container"></div>
+    </div>
+  </div>
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+//設定整個容器的樣式
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+//設定左側欄位的樣式
+.sidebar {
+  width: 300px;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.testArea {
+  background-color: #ffffff;
+  height: 300px;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+//將地圖容器包裝在一個 .map-wrapper 容器中,並使用 flex: 1 佔滿剩餘空間。
+.map-wrapper {
+  flex: 1;
+}
+
+//設定地圖的高度和寬度
+.map-container {
+  height: 100%;
+  width: 100%;
+}
+</style>
