@@ -9,11 +9,13 @@ export default {
       apiResponse: null,
       filterData:null,
       cityName:"",
+      periodTime:0,
+      perPage:30,
     }
   },
   // 建立生命週期函式
   mounted() {
-    this.getAuthorizationHeader()
+    this.getAuthorizationHeader();
   },
   methods: {
     // 取得 Authorization Header
@@ -39,7 +41,7 @@ export default {
         async: false,
         success: (data) => {
           this.accessToken = data
-          this.getApiResponse()
+          this.getApiResponse();
         },
         // 取得 access_token 失敗
         error: (xhr, textStatus, thrownError) => {
@@ -49,8 +51,10 @@ export default {
     },
     // 取得 api 資料
     getApiResponse() {
-      const api_url = 'https://tdx.transportdata.tw/api/basic/v2/Tourism/Activity?%24top=30&%24format=JSON'
-
+      let api_url = 'https://tdx.transportdata.tw/api/basic/v2/Tourism/Activity?%24top=30&%24format=JSON';
+      if(this.cityName !== ""){
+        api_url=`https://tdx.transportdata.tw/api/basic/v2/Tourism/Activity/${this.cityName}?%24top=${this.perPage}&%24format=JSON`;
+      }
       $.ajax({
         // 設定請求
         type: 'GET',
@@ -62,13 +66,19 @@ export default {
         // 設定跨域
         async: false,
         success: (data) => {
+          if(this.cityName !== ""){
           this.apiResponse = data
+          }
+          this.filterData =data
         },
         // 取得 api 資料失敗
         error: (xhr, textStatus, thrownError) => {
           console.error(textStatus, thrownError)
         }
       })
+    },
+    getFilterData(){
+      
     }
   }
 }
@@ -80,7 +90,7 @@ export default {
       <div>
         <label for="cityname">你選擇的縣市：{{cityName}}</label>
         <select name="cityname" id="cityname" v-model="cityName" required>
-          <option>請選擇</option>
+          <option selected>請選擇</option>
           <option value="Taipei">臺北市</option>
           <option value="NewTaipei">新北市</option>
           <option value="Taoyuan">桃園市</option>
@@ -104,30 +114,100 @@ export default {
           <option value="KinmenCounty">金門縣</option>
           <option value="LienchiangCounty">連江縣</option>
         </select>  
+        <label>請選擇起始日：</label>
+        <label for="periodtime">你選擇的起始日：{{periodTime}}</label>
+        <select name="periodtime" id="periodtime" v-model="periodTime" required>
+          <option selected>請選擇</option>
+          <option value=90>三個月內</option>
+          <option value=180>半年內</option>
+          <option value=365>一年內</option>
+        </select> 
       </div>
       <div>
         <input type="checkbox" name="" id=""> 年度活動
         <input type="checkbox" name="" id=""> 節慶活動
         <input type="checkbox" name="" id=""> 藝文活動
       </div>
-    <button>搜尋</button>
+    <button @click="getApiResponse">搜尋</button>
     <!--this is for data test-->
       <!-- <diV> -->
-        <h3>api 資料:</h3>
-        <pre>{{ apiResponse }}</pre>
+        <!-- <h3>api 資料:</h3>
+        <pre>{{ filterData }}</pre> -->
       <!-- </diV> -->
     <!--this is for data test-->
-    <div v-for="item in apiResponse" :key="item">
-      <h1>活動名稱：{{ item.ActivityName }}</h1>
-      <p>活動描述：{{item.Description}}</p>
-      <p>主辦單位：{{item.Organizer}}</p>
-      <p>活動時間：{{item.StartTime.split('T')[0]}} - {{item.EndTime.split('T')[0]}}</p>
-      <div>
-      <p v-if="item.Class1 !== ''">活動類型：{{item.Class1}}</p>
-    </div>
+    <diV class="main">
+      <button>往左</button>
+      <div class="carts">
+        <div v-for="item in filterData" :key="item" class="cart">
+          <div class="cart-title">活動名稱：<br>{{ item.ActivityName }}</div>
+          <div class="cart-body">
+            <p>活動描述：{{item.Description}}</p>
+            <p>主辦單位：{{item.Organizer}}</p>
+            <p>活動時間：{{item.StartTime.split('T')[0]}} - {{item.EndTime.split('T')[0]}}</p>
+            <p v-if="item.Class1 !== ''">活動類型：{{item.Class1}}</p>
+          </div>
+        </div>
+        
+      </diV>
+      <button>往右</button>
     </div>
   </div>
 
 </template>
 
-<style></style>
+<style scoped lang="scss">
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.main{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  button{
+      padding: 2rem;
+      min-height: 10vh;
+      font-size: 1rem;
+      text-align: center;
+    }
+  .carts{
+      display: flex;
+      flex-direction: row;
+      overflow: scroll;
+      flex-wrap: nowrap;
+      margin: 2rem;
+      align-items: center;
+      
+    .cart{
+      display: flex;
+      flex-direction: column;
+      min-width: 700px;
+      height: 600px;
+      padding: 0.5rem;
+      margin: 3rem;
+      border: 1px solid black;
+      background-color: rgb(255, 255, 255);
+      justify-content: center;
+      align-items: flex-start;
+      border-radius: 2rem;
+      .cart-title{
+        display:flex;
+        font-size: 2rem;
+        font-weight: bold;
+        padding: 0.5rem;
+      }
+      .cart-body{
+        margin-top: 2rem;
+        p{
+          padding: 0.5rem;
+          font-size: 1rem;
+        }
+      }
+      
+    }
+  }
+}
+</style>
