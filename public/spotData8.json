@@ -1,0 +1,2570 @@
+{
+  "total": 485,
+  "data": [
+    {
+      "id": 2266,
+      "name": "白石湖同心池",
+      "name_zh": null,
+      "open_status": 1,
+      "introduction": "據說這裡是自然地形產生的湧泉，它內圈的土域及外圈的水域，水土齊心，象徵著情人永結同心，環繞生態濕地及親水平台，也強調水土保持的重要性。\r\n\r\n白石湖社區當初是以「找到幸福」為主題，將原本只是一處荒廢的湧泉，透過畫龍點睛的設計改造成雙心造型生態濕地湧泉的「同心池」，以及池畔休憩涼亭「永結亭」，讓生態濕地與親水平臺相互環繞，將水域及土域巧妙搭配，象徵水土齊心、情人「永結同心」，情人攜手來此浪漫出遊，必能為幸福加分。\r\n\r\n鄰近於同心池的古錐埤則是當地農民「古錐伯」為解決山區灌溉農田的水源問題，古錐伯召集村民所共同開鑿的蓄水生態池，後人為紀念他而將此蓄水埤塘取名為「古錐埤」。\r\n\r\n(資料來源：大地工程處)\r\n\r\n",
+      "open_time": "",
+      "zipcode": "114",
+      "distric": "內湖區",
+      "address": "114 臺北市內湖區同心池",
+      "tel": "+886-2-27593001",
+      "fax": "",
+      "email": "",
+      "months": "01,07,02,08,03,09,04,10,05,11,06,12",
+      "nlat": 25.100535202036667,
+      "elong": 121.58903706818819,
+      "official_site": "",
+      "facebook": "",
+      "ticket": "",
+      "remind": "",
+      "staytime": "",
+      "modified": "2024-03-21 17:01:05 +08:00",
+      "url": "https://www.travel.taipei/zh-tw/attraction/details/2266",
+      "category": [
+        {
+          "id": 16,
+          "name": "戶外踏青"
+        },
+        {
+          "id": 19,
+          "name": "親子共遊"
+        }
+      ],
+      "target": [
+        {
+          "id": 61,
+          "name": "親子共學"
+        },
+        {
+          "id": 66,
+          "name": "健行族"
+        }
+      ],
+      "service": [],
+      "friendly": [],
+      "images": [
+        {
+          "src": "https://www.travel.taipei/image/182399",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/182400",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/182401",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/182402",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/182403",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/182404",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/182405",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/182406",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/182407",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/182408",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/182411",
+          "subject": "",
+          "ext": ".jpg"
+        }
+      ],
+      "files": [],
+      "links": []
+    },
+    {
+      "id": 93,
+      "name": "國立臺灣大學醫學院附設醫院_西址",
+      "name_zh": null,
+      "open_status": 1,
+      "introduction": "臺大醫院創建於日據時期，昔稱臺北病院、臺灣總督府臺北醫院、臺北帝國大學醫學部附設醫院，戰後改稱為國立臺灣大學醫學院附設醫院，是臺灣近代醫學發展的核心，西址院區之建物目前做為門診及部分病房之用。本建築由近藤十郎先生設計，為文藝復興風格之紅磚鋼筋混凝土2層建物，在平面配置採取左右對稱的格局，以中央走廊貫穿，連接各門診及病房。大廳莊嚴華麗，空間寬敞，運用了許多西洋式建築技巧，是近代洋式建築的傑作，在當時是東南亞最大型及最現代化的醫院。",
+      "open_time": "",
+      "zipcode": "100",
+      "distric": "中正區",
+      "address": "100 臺北市中正區常德街1號",
+      "tel": "+886-2-23123456",
+      "fax": "",
+      "email": "",
+      "months": "01,07,02,08,03,09,04,10,05,11,06,12",
+      "nlat": 25.04199,
+      "elong": 121.51722,
+      "official_site": "https://www.ntuh.gov.tw/ntuh/Index.action",
+      "facebook": "",
+      "ticket": "",
+      "remind": "屬醫療場所，為維護病友權益，院區內謝絕參觀。",
+      "staytime": "",
+      "modified": "2024-03-21 16:47:01 +08:00",
+      "url": "https://www.travel.taipei/zh-tw/attraction/details/93",
+      "category": [
+        {
+          "id": 13,
+          "name": "歷史建築"
+        },
+        {
+          "id": 25,
+          "name": "無障礙旅遊推薦景點"
+        }
+      ],
+      "target": [
+        {
+          "id": 61,
+          "name": "親子共學"
+        },
+        {
+          "id": 62,
+          "name": "校外教學"
+        }
+      ],
+      "service": [
+        {
+          "id": 141,
+          "name": "無障礙設施"
+        },
+        {
+          "id": 146,
+          "name": "公廁"
+        },
+        {
+          "id": 147,
+          "name": "停車場"
+        }
+      ],
+      "friendly": [],
+      "images": [
+        {
+          "src": "https://www.travel.taipei/image/175434",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/180048",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/180049",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/180050",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/180051",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/180052",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/180053",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/180054",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/180055",
+          "subject": "",
+          "ext": ".jpg"
+        }
+      ],
+      "files": [],
+      "links": []
+    },
+    {
+      "id": 91,
+      "name": "台北啤酒工場",
+      "name_zh": null,
+      "open_status": 1,
+      "introduction": "歷史沿革\r\n台北啤酒工場的前身為「日本高砂麥酒株式會社」，創立於1919年，是日治時代台灣唯一的啤酒工廠。1945年由政府接管後，隸屬於台灣省菸酒公賣局「第二酒廠」，1975年更名為「建國啤酒廠」，期間經過改良釀造技術更新製造設備，添建新式廠房，產量與年俱增，最高曾達到年產1200萬打啤酒的輝煌紀錄。1997年7月1日起，建國啤酒廠與復興啤酒廠兩廠合併為一，建國廠成為復興啤酒廠的建國廠區，廠務由復興廠管理。2000年6月台北市政府指定「建國啤酒廠」為第95號市定古蹟，保留下全國最重要的啤酒產業文化資產，並朝「啤酒文化園區、產業活化保存」的方向邁進。2001年4月「建國廠區」廠務改由「瓶蓋工場」管轄，2002年台灣省菸酒公賣局改制為台灣菸酒股份有限公司，「建國廠區」同時更名為「台北啤酒工場 」，2003年11月「台北啤酒工場 」改由「竹南啤酒廠 」管轄，2107年4月30日台灣菸酒股份有限公司為周延文化保存、善盡社會責任，以任務編組方式，將台北啤酒工場業務獨立於啤酒事業部管轄，暫成立為「台北啤酒文化園區管理處」，俾能更專責辦理台灣啤酒文化保存之工作，並於2008年7月1日獨立建制為台北啤酒工場。\r\n\r\n廠址與面積\r\n台北啤酒工場舊地址為臺北市中正路1407號，臺北市改制後改為現行地址為臺北市八德路二段85號。土地面積為52,630平方公尺。都市計劃為第三種工業區。台北啤酒工場的廠房包含，糖化大樓、醱酵大樓、貯酒大樓、包裝工場、成品倉庫、行政大樓、修護工場及福利樓房。建築面積有25,627.71平方公尺，總樓地板面積34,638.91平方公尺。\r\n\r\n文化保存\r\n台北啤酒工場是台灣唯一具歷史價值之啤酒工廠，啤酒在台灣各種酒類中屬道道地地的舶來品到現在才不過百餘年歷史。帝國主義時期為供應殖民地的僑民飲用而輸入外國的啤酒，並在市場上銷售。台灣是先有啤酒才有啤酒廠。國外資本家利用我國的廉價原料與勞動人力，開始在台灣建立啤酒廠。\r\n\r\n未來展望\r\n產業保存暨古老建築再利用，世界進步的國家都有良好例子。例如日本北海道扎幌的「啤酒紀念館」，原是鑒於1890年磚造的國營啤酒廠，1966年經歷內部整修成為啤酒屋「扎幌啤酒苑」，現已成為扎幌市聖地。\r\n\r\n「台北啤酒工場」佔地廣闊，為讓重要文化產業---台灣啤酒發源地「台北啤酒工場」，保存流傳後世，保留現有生產線繼續生產，其他部分做有系統規劃，對其建築風格與原來功能，重新規劃為結合生產、觀光、商業、文化與休閒等多用途特區，以符合現代化進步都市的發展潮流，讓台北市成為一個有特色的城市。\r\n\r\n(文字參考/台北啤酒工場官方網站)",
+      "open_time": "全年無休(除夕例外)，每日上午9點~下午5點",
+      "zipcode": "104",
+      "distric": "中山區",
+      "address": "104 臺北市中山區八德路二段85號",
+      "tel": "+886-2-27719131",
+      "fax": "",
+      "email": "",
+      "months": "01,07,02,08,03,09,04,10,05,11,06,12",
+      "nlat": 25.04592,
+      "elong": 121.53573,
+      "official_site": "https://event.ttl.com.tw/tp/",
+      "facebook": "",
+      "ticket": "",
+      "remind": "",
+      "staytime": "",
+      "modified": "2024-03-21 16:36:41 +08:00",
+      "url": "https://www.travel.taipei/zh-tw/attraction/details/91",
+      "category": [
+        {
+          "id": 13,
+          "name": "歷史建築"
+        },
+        {
+          "id": 15,
+          "name": "藝文館所"
+        }
+      ],
+      "target": [
+        {
+          "id": 61,
+          "name": "親子共學"
+        },
+        {
+          "id": 62,
+          "name": "校外教學"
+        }
+      ],
+      "service": [
+        {
+          "id": 146,
+          "name": "公廁"
+        }
+      ],
+      "friendly": [],
+      "images": [
+        {
+          "src": "https://www.travel.taipei/image/112810",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/112811",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/112809",
+          "subject": "",
+          "ext": ".jpg"
+        }
+      ],
+      "files": [],
+      "links": []
+    },
+    {
+      "id": 90,
+      "name": "林安泰古厝民俗文物館",
+      "name_zh": null,
+      "open_status": 1,
+      "introduction": "林安泰古厝初建於1783年，至今已有200多年的歷史。這棟傳統閩南風格的單層2進4合院，是依照民間地理風水習俗而建造的，其屋脊結構採一條龍的單脊做法，以燕尾曲線呈現自然柔和的風貌；外埕舖有紅普石，是當時大陸商船來臺，為避免船身不穩，置於船底作壓艙之用，又稱為壓艙石，它的優點是不長青苔、防滑。材料上大量採用福州杉，石材則採用觀音石，並使用竹釘、木釘，採榫頭方式接合\r\n\r\n古厝前的月眉池，造型正如其名，在中國風水中，屬於聚寶收納的型制，不但具有防禦、防火、供水、降溫等功能，更替古厝環境生色不少。\r\n\r\n走訪古厝內外細細觀察，其中蘊含著無數傳統建築文化的精髓與智慧，也可窺見昔時生活的風貌情境。",
+      "open_time": "",
+      "zipcode": "104",
+      "distric": "中山區",
+      "address": "104 臺北市中山區濱江街5號",
+      "tel": "+886-2-25996026",
+      "fax": "",
+      "email": "",
+      "months": "01,07,02,08,03,09,04,10,05,11,06,12",
+      "nlat": 25.07175,
+      "elong": 121.53035,
+      "official_site": "https://linantai.taipei/",
+      "facebook": "https://www.facebook.com/LinAnTai/",
+      "ticket": "免費入園參觀",
+      "remind": "（一）每星期二至星期日09:00-17:00（最後入園時間為16:45）\r\n（二）暑假7-8月期間特別開放至18:00（最後入園時間為17:45）\r\n（三）星期一及民俗節日－春節連假、清明節、端午節、中秋節休館。\r\n（四）免費入園參觀，歡迎租借場地。\r\n\r\n預約申請\r\n（一）提供團體導覽服務，請於活動7日前向駐館人員（02-25996026）申請預約。\r\n（二）攝影相關活動，請依該館規定實名登記入館。",
+      "staytime": "",
+      "modified": "2024-03-21 16:34:15 +08:00",
+      "url": "https://www.travel.taipei/zh-tw/attraction/details/90",
+      "category": [
+        {
+          "id": 13,
+          "name": "歷史建築"
+        },
+        {
+          "id": 15,
+          "name": "藝文館所"
+        }
+      ],
+      "target": [
+        {
+          "id": 61,
+          "name": "親子共學"
+        },
+        {
+          "id": 62,
+          "name": "校外教學"
+        }
+      ],
+      "service": [
+        {
+          "id": 146,
+          "name": "公廁"
+        }
+      ],
+      "friendly": [],
+      "images": [
+        {
+          "src": "https://www.travel.taipei/image/388",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/64149",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/64150",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/64151",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/64152",
+          "subject": "",
+          "ext": ".jpg"
+        }
+      ],
+      "files": [],
+      "links": []
+    },
+    {
+      "id": 2267,
+      "name": "龍船岩步道",
+      "name_zh": null,
+      "open_status": 1,
+      "introduction": "「龍船岩步道」入口由內湖區碧山路 62號，沿著石板路步道走，全長只有600公尺，沿途是觀察生態的好地方。\r\n\r\n「龍船岩」位於開眼山稜線的下方，是一塊白色石英裸露岩，標高 300公尺，因形似一艘龍舟，所以當地人都稱它為「石船」，又稱「龍船岩」。龍船岩因為位於山脊線上，站在岩石上一邊是90度懸崖，一邊是45度峭壁，請注意自身安全。鄰近的開眼山、碧山、白石湖山、五指山等皆為內湖區內的山嶺，隸屬五指山系。近龍船岩附近有公車可達入口處，在石崁站下車後約步行一公里路程左右可到達，步道的小徑是由石板鋪至而成，沿途各式蕨類及野生植物叢生，讓步行的旅途上多了一份樂趣，一路直行可達山頂。站在岩頂上可遠眺石崁山與開眼山，一片天際遼闊，令人流連忘返遠離都市喧囂，而其周邊田園景色優美繁多，別有一番鄉野氣息，令人心曠神怡。\r\n\r\n(資料來源:白石湖休閒農業區)",
+      "open_time": "",
+      "zipcode": "114",
+      "distric": "內湖區",
+      "address": "114 臺北市內湖區龍船岩步道",
+      "tel": "+886-2-27593001",
+      "fax": "",
+      "email": "",
+      "months": "01,07,02,08,03,09,04,10,05,11,06,12",
+      "nlat": 25.103506335203832,
+      "elong": 121.59638699144125,
+      "official_site": "",
+      "facebook": "",
+      "ticket": "",
+      "remind": "",
+      "staytime": "",
+      "modified": "2024-03-21 16:33:23 +08:00",
+      "url": "https://www.travel.taipei/zh-tw/attraction/details/2267",
+      "category": [
+        {
+          "id": 16,
+          "name": "戶外踏青"
+        }
+      ],
+      "target": [
+        {
+          "id": 66,
+          "name": "健行族"
+        }
+      ],
+      "service": [],
+      "friendly": [],
+      "images": [
+        {
+          "src": "https://www.travel.taipei/image/182414",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/182422",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/182425",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/182426",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/182427",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/182428",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/182429",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/182431",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/182432",
+          "subject": "",
+          "ext": ".jpg"
+        }
+      ],
+      "files": [],
+      "links": []
+    },
+    {
+      "id": 89,
+      "name": "中華民國總統府",
+      "name_zh": null,
+      "open_status": 1,
+      "introduction": "日本人統治臺灣，並不是一個單純的領土擴張，而是整個東亞殖民地計畫的第一步，所以處處都要是最好的模範，將來才好展示給其它「歸順」的新殖民地。在這個殖民地的目標下，他們學習的對象是西方，在臺灣蓋了很多歐洲巴洛克風格的建築，這些建築技術在今天看來都是很傑出的。\r\n\r\n總統府是日本時期的總督府，於1919年完工，當時總督在辦公室面向東方，可以眺望到四獸山以內的整個臺北市，每天看著旭日東昇，擘劃著永續的宏圖偉業。從第7任總督開始，總共有13位總督在此辦公，光復後陳誠的東南軍政長官公署和中華民國行政院、中華民國總統府共用此建築，而後的歷任總統，均以此為總統府，在此日理萬機。",
+      "open_time": "",
+      "zipcode": "100",
+      "distric": "中正區",
+      "address": "100 臺北市中正區重慶南路1段122號",
+      "tel": "+886-2-23113731",
+      "fax": "",
+      "email": "",
+      "months": "01,07,02,08,03,09,04,10,05,11,06,12",
+      "nlat": 25.04009,
+      "elong": 121.51195,
+      "official_site": "https://www.president.gov.tw/",
+      "facebook": "https://www.facebook.com/presidentialoffice.tw/",
+      "ticket": "免費參觀",
+      "remind": "*總統府開放參觀完全免費，詳細參觀資訊請參考官方網站。\r\n*團體請於3天(不含參觀日、預約日及放假日)前辦理網路預約，洽詢專線+886-2-2320-6921、+886-2-2320-6347 (詳如「總統府開放參觀須知」)。",
+      "staytime": "",
+      "modified": "2024-03-21 16:28:54 +08:00",
+      "url": "https://www.travel.taipei/zh-tw/attraction/details/89",
+      "category": [
+        {
+          "id": 13,
+          "name": "歷史建築"
+        }
+      ],
+      "target": [
+        {
+          "id": 61,
+          "name": "親子共學"
+        }
+      ],
+      "service": [
+        {
+          "id": 146,
+          "name": "公廁"
+        }
+      ],
+      "friendly": [],
+      "images": [
+        {
+          "src": "https://www.travel.taipei/image/215849",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/215850",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/215851",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/215852",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/215853",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/215854",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/215855",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/215856",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/215857",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/215858",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/215859",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/215860",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/215861",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/215862",
+          "subject": "",
+          "ext": ".jpg"
+        }
+      ],
+      "files": [],
+      "links": []
+    },
+    {
+      "id": 88,
+      "name": "北門_承恩門",
+      "name_zh": null,
+      "open_status": 1,
+      "introduction": "臺北古城有一共有5個城門：東門（景福門）、西門（寶成門）、南門（麗正門）、小南門（重熙門）、北門（承恩門），是清光緒年代，劉銘傳時期所建造，鼓勵商人在臺北城內，投資興建房舍，形成街道，活絡發展。\r\n\r\n北門又稱承恩門，面向北方有「承接天恩」之意，是台北僅存的閩南式建築原貌城門，它的區位重要性，在現代是老台北城區「西區」的樞紐地標，在清領時期而言，更是「城內」通往「大稻埕」的核心門戶。是以，西區門戶計畫以北門為核心並聯結周邊日治「鐵道部」、「台北郵局」、「大阪商社」、「三井倉庫」以及清領時期「撫臺街洋樓」、「機器局」......古蹟群，形成「面狀」的歷史景點脈絡，並營造臺北車站前行旅廣場為國家門戶意象，串連臺北車站至北門間軸帶。\r\n\r\n近年建設規劃中原要被拆除的北門，隨著保存文化遺產的觀念興起，於是原樣留下了北門古蹟，北門成為5門當中，唯一以清領時期風貌保留的古城門，是臺北最珍貴的國定古蹟之一，也由於早期具有的防禦功能，成為國防的歷史見證。",
+      "open_time": "",
+      "zipcode": "100",
+      "distric": "中正區",
+      "address": "100 臺北市中正區忠孝西路、博愛路交叉口",
+      "tel": "+886-2-27208889",
+      "fax": "",
+      "email": "",
+      "months": "01,07,02,08,03,09,04,10,05,11,06,12",
+      "nlat": 25.04773,
+      "elong": 121.51123,
+      "official_site": "",
+      "facebook": "",
+      "ticket": "",
+      "remind": "",
+      "staytime": "",
+      "modified": "2024-03-21 16:25:10 +08:00",
+      "url": "https://www.travel.taipei/zh-tw/attraction/details/88",
+      "category": [
+        {
+          "id": 13,
+          "name": "歷史建築"
+        },
+        {
+          "id": 25,
+          "name": "無障礙旅遊推薦景點"
+        }
+      ],
+      "target": [],
+      "service": [
+        {
+          "id": 141,
+          "name": "無障礙設施"
+        }
+      ],
+      "friendly": [],
+      "images": [
+        {
+          "src": "https://www.travel.taipei/image/64142",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/64143",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/64144",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/64145",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/64135",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/64136",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/64137",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/64139",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/64140",
+          "subject": "",
+          "ext": ".jpg"
+        }
+      ],
+      "files": [],
+      "links": []
+    },
+    {
+      "id": 87,
+      "name": "臺北市鄉土教育中心_剝皮寮歷史街區",
+      "name_zh": null,
+      "open_status": 1,
+      "introduction": "穿梭在臺北市萬華區的老舊巷弄中，有一處名為「剝皮寮」的老街區，這裡依然延續著百餘年前清代街道的風貌，紅色的磚牆、拱型的騎樓、雕花的窗櫺，呈現典雅樸實之美。\r\n\r\n剝皮寮歷史街區位於龍山寺旁，康定路、廣州街及昆明街口，街區內保存有相當完整的清代街型、清代傳統店屋，其建築空間見證了艋舺市街的發展，擁有獨特之歷史文化和建築特色。\r\n\r\n「臺北市鄉土教育中心」以融入式教育與文化之理念，使其作為推展鄉土教育之園地，將學校教育和社區文化相結合，規劃不同主題展覽，及剝皮寮相關歷史特展，並辦理各項教育活動，以達寓教於樂的功能。\r\n\r\n近年來，剝皮寮街區的發展除了推廣電影文化與活動及教育，更廣納優質的藝文展演，成為文化體驗平臺的入口，期望串聯在地特色，創造故事的流動與回憶，賦予這個空間更多的意義。詳情可見剝皮寮歷史街區營運中心(網址 http://www.bopiliao.taipei)",
+      "open_time": "街區：週二～週日 09:00~21:00\r\n室內：週二～週日 09:00~18:00\r\n休館：週一固定休館",
+      "zipcode": "108",
+      "distric": "萬華區",
+      "address": "108 臺北市萬華區康定路173巷",
+      "tel": "+886-2-23023199",
+      "fax": "",
+      "email": "bopiliao@redhouse.org.tw",
+      "months": "01,07,02,08,03,09,04,10,05,11,06,12",
+      "nlat": 25.03666,
+      "elong": 121.50327,
+      "official_site": "http://www.bopiliao.taipei/",
+      "facebook": "https://www.facebook.com/Bopiliao/",
+      "ticket": "免費入場\r\n\r\n街區：週二～週日 09:00~21:00\r\n室內：週二～週日 09:00~18:00",
+      "remind": "團體採預約制，個人可自由參觀，採總量管制入場。",
+      "staytime": "",
+      "modified": "2024-03-21 15:58:03 +08:00",
+      "url": "https://www.travel.taipei/zh-tw/attraction/details/87",
+      "category": [
+        {
+          "id": 13,
+          "name": "歷史建築"
+        },
+        {
+          "id": 15,
+          "name": "藝文館所"
+        },
+        {
+          "id": 18,
+          "name": "公共藝術"
+        },
+        {
+          "id": 19,
+          "name": "親子共遊"
+        }
+      ],
+      "target": [],
+      "service": [
+        {
+          "id": 146,
+          "name": "公廁"
+        }
+      ],
+      "friendly": [],
+      "images": [
+        {
+          "src": "https://www.travel.taipei/image/176584",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/176585",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/176586",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/176587",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/176588",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/176589",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/176576",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/176577",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/176578",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/176579",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/176580",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/176581",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/176582",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/176583",
+          "subject": "",
+          "ext": ".jpg"
+        }
+      ],
+      "files": [],
+      "links": []
+    },
+    {
+      "id": 85,
+      "name": "MAISON ACME｜圓山別邸",
+      "name_zh": null,
+      "open_status": 1,
+      "introduction": "日治時期，台北大稻埕茶商，經營永裕號的陳朝駿，於1913年在台北市基隆河畔圓山地區，起建一棟英國都鐸式風格的洋樓，1914年完工，以作為他招待台灣士紳、政要以及各國茶商的聚會場所，也作為家庭成員休憩、度假及聚會所在地。陳朝駿曾任同業組合台北茶商公會會長，為當時正蓬勃的台灣茶產業重要人物之一。\r\n\r\n這棟房子落成時，正是日治時期，當時政府為建立台灣成為政治、金融及學術教育的中心，有計劃地擴建台北市街，鋪設環城三線林蔭大道；並且引進各種歐洲建築風格，加以混合、變化，使得此時的台灣建築展現了極為繁複的特色，陳朝駿起建的這棟房子正是在這樣的時代風潮下建造的。\r\n\r\n陳朝駿在1923年過世後房子幾經易手，經歷過多次轉變。二次世界大戰後，曾經作為前立法院院長黃國書的住宅，1979年由台北市政府進行徵購，並將此地暫時做為公園路燈管理處北區分隊駐在所，供辦公及置放器具。1987年12月正式交由台北市立美術館管理，於1990年成立「美術家聯誼中心」，1998年被指定為古蹟，調查與修復的工作先後展開。\r\n\r\n在古蹟再利用的理念下，2003年4月19日至2015年4月18日，這棟古蹟由陳國慈女士認養並贊助成立「台北故事館」對外開放，以介紹台灣生活文化和推廣古蹟再利用為目的，透過多樣的活動和展覽讓社會大眾輕鬆的親近古蹟，讓古蹟有了新生命。\r\n\r\n2015年5月起由財團法人郭木生文教基金會接續經營台北故事館，以食、衣、住、行、娛樂為主軸，策劃相關主題展覽及藝文活動、推廣茶文化，持續在「台北故事館」說故事。同時，結合附近社區、民眾和社會資源，一起參與維護古蹟推動文化資產保存教育，延續百年老屋的歷史。\r\n\r\n台北故事館，為仿英國都鐸時期的半木構造建築，是台灣罕見的建築形式。建築一樓以磚造作為承重牆，入口處為愛奧尼克式門柱。二樓為木結構，利用曲線、垂直、水平的木條構成二樓牆外樹枝狀優美的壁面。歌德式塔樓與煙囪則是磚造，塔樓屋頂有弧形屋簷，採用銅瓦鋪成，銅瓦歷久產生銅綠，留下歲月痕跡。\r\n\r\n古蹟入口上方的塔樓鑲嵌著綠、黃、紅三色的彩繪玻璃，室內有著造形優美的壁爐兩座，以及大量流行於二十世紀初，富含大自然、花草圖案的「新藝術」風格凸花磁磚和吊燈。整體室內空間配置，乃至於室外陽台、露台，均與周遭的景觀密切結合，呈現出典雅的風格。\r\n\r\n2021年ACME團隊正式接手台北市定古蹟圓山別莊（原台北故事館）的經營權。興建於1913年，難得的都鐸式風格建築，靜靜地在基隆河畔，跨越超過一世紀的風華洗鍊過去它是大稻埕傳奇茶商的豪邸，也曾是當年頂尖藝術創作者及大文豪的社交中心，我們將其重新定位，作為一座融合新與舊的現代宅邸展演空間。\r\n\r\n▲MAISON ACME｜圓山別邸_入口_(圖片來源：高讚賢)\r\n\r\n▲MAISON ACME｜圓山別邸_玻璃牆面_(圖片來源：高讚賢)\r\n\r\n&nbsp;",
+      "open_time": "台北故事館 10:00~17:30；週一公休。\r\n定時導覽：每日 11:00、15:30。\r\n故事書坊 10:00~﻿17:30；週一公休。",
+      "zipcode": "104",
+      "distric": "中山區",
+      "address": "104 臺北市中山區中山北路三段181之1號",
+      "tel": "+886-2-66177979",
+      "fax": "",
+      "email": "",
+      "months": "01,07,02,08,03,09,04,10,05,11,06,12",
+      "nlat": 25.07313,
+      "elong": 121.52459,
+      "official_site": "",
+      "facebook": "https://www.facebook.com/maison.acme",
+      "ticket": "",
+      "remind": "每周一休館",
+      "staytime": "",
+      "modified": "2024-03-21 15:41:47 +08:00",
+      "url": "https://www.travel.taipei/zh-tw/attraction/details/85",
+      "category": [
+        {
+          "id": 13,
+          "name": "歷史建築"
+        },
+        {
+          "id": 15,
+          "name": "藝文館所"
+        }
+      ],
+      "target": [
+        {
+          "id": 61,
+          "name": "親子共學"
+        },
+        {
+          "id": 62,
+          "name": "校外教學"
+        }
+      ],
+      "service": [
+        {
+          "id": 146,
+          "name": "公廁"
+        }
+      ],
+      "friendly": [],
+      "images": [
+        {
+          "src": "https://www.travel.taipei/image/374100",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/374101",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/374102",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/374103",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/374104",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/374095",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/374096",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/374097",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/374098",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/374099",
+          "subject": "",
+          "ext": ".jpg"
+        }
+      ],
+      "files": [],
+      "links": []
+    },
+    {
+      "id": 82,
+      "name": "臺北清真寺",
+      "name_zh": null,
+      "open_status": 1,
+      "introduction": "走在新生南路上，一定會看到一棟特殊的建築，它有著15公尺高的圓拱頂，每個人經過它，都無法不轉過頭去多看兩眼，這就是臺北的大清真寺。\r\n\r\n清真寺是伊斯蘭教（回教）的禮拜場所。臺北大清真寺面積2,747平方公尺，落成於1960年4月13日，由臺灣與沙烏地阿拉伯共同籌募興建，建築設計者為知名建築師楊卓成先生，他也是圓山飯店的設計師。\r\n\r\n其主體結構採鋼筋混凝土永久式樑柱，外牆加強磚並敷以水泥細石、表面處理及馬賽克圖案裝飾。圓形石柱以斬石加工，主要門窗採大型落地式設計。另外一大特點是大殿之內的圓頂離地有15公尺高，跨距15公尺，中間卻無樑柱支撐。\r\n\r\n大殿內鋪設友邦國王贈送之手工波斯羊毛地毯與懸掛宮廷吊燈，外側之兩座喚拜塔樓高逾20公尺，建築壯觀宏偉。40餘年來，世界各回教國家國王、總統及各界領袖來華訪問，均將蒞臨清真寺為重要行程之一，充分發揮國際外交與民間交流之功能。\r\n\r\n參觀清真寺，需注意禮貌，大禮拜堂和2樓的女士禮拜堂，限回教徒才可以進入。\r\n",
+      "open_time": "每日09:00~20:00",
+      "zipcode": "106",
+      "distric": "大安區",
+      "address": "106 臺北市大安區新生南路二段62號",
+      "tel": "+886-2-23219445",
+      "fax": "+886-2-23935283",
+      "email": "",
+      "months": "01,07,02,08,03,09,04,10,05,11,06,12",
+      "nlat": 25.0279,
+      "elong": 121.53403,
+      "official_site": "http://www.taipeimosque.org.tw/",
+      "facebook": "https://www.facebook.com/taipeimosque/?fref=ts",
+      "ticket": "",
+      "remind": "",
+      "staytime": "",
+      "modified": "2024-03-21 15:22:26 +08:00",
+      "url": "https://www.travel.taipei/zh-tw/attraction/details/82",
+      "category": [
+        {
+          "id": 14,
+          "name": "宗教信仰"
+        }
+      ],
+      "target": [
+        {
+          "id": 61,
+          "name": "親子共學"
+        }
+      ],
+      "service": [
+        {
+          "id": 146,
+          "name": "公廁"
+        }
+      ],
+      "friendly": [],
+      "images": [
+        {
+          "src": "https://www.travel.taipei/image/64078",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/64079",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/64075",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/64077",
+          "subject": "",
+          "ext": ".jpg"
+        }
+      ],
+      "files": [],
+      "links": []
+    },
+    {
+      "id": 81,
+      "name": "李春生紀念教會",
+      "name_zh": null,
+      "open_status": 1,
+      "introduction": "著名的大稻埕富商李春生，是因做洋行買辦起家而致富的大稻埕傳奇人物，他幫助英商經營臺灣北部茶葉產銷，成效甚佳，被稱為「臺灣茶葉之父」，是外銷臺灣茶到歐美各地的先驅者。因為他本身是基督徒、也是當地知名富商，常出面為外商與本地居民協調並解決糾紛，讓事情圓滿落幕，且為人樂善好施、熱心公益，在民間享有極高的聲望。除此之外，在劉銘傳推動現代化建設時，他亦有不少的貢獻。由後代捐建的李春生紀念教會，即是為了紀念這位不朽的商人。\r\n\r\n這棟2層樓的建築，位在貴德街上，這裡在清末是外國人居住的地區，富商、洋行聚集，是大稻埕最繁華的街區。因為在淡水河邊，河水經常氾濫成災，所以這裡的房屋地基比一般高。雖已重新翻修過建築的外部面磚，但其正面特徵保存尚稱完好，彷彿人的臉龐，入口為嘴，兩個牛耳窗為眼睛。此建築樣式為臺北市僅有，十分具有特色。",
+      "open_time": "",
+      "zipcode": "103",
+      "distric": "大同區",
+      "address": "103 臺北市大同區貴德街44號",
+      "tel": "+886-2-25580753",
+      "fax": "+886-2-25592562",
+      "email": "",
+      "months": "01,07,02,08,03,09,04,10,05,11,06,12",
+      "nlat": 25.05511,
+      "elong": 121.50825,
+      "official_site": "http://www.pct.org.tw/churchdata.aspx?strOrgNo=C03001",
+      "facebook": "",
+      "ticket": "",
+      "remind": "",
+      "staytime": "",
+      "modified": "2024-03-21 15:21:24 +08:00",
+      "url": "https://www.travel.taipei/zh-tw/attraction/details/81",
+      "category": [
+        {
+          "id": 14,
+          "name": "宗教信仰"
+        },
+        {
+          "id": 15,
+          "name": "藝文館所"
+        },
+        {
+          "id": 18,
+          "name": "公共藝術"
+        }
+      ],
+      "target": [
+        {
+          "id": 61,
+          "name": "親子共學"
+        }
+      ],
+      "service": [
+        {
+          "id": 146,
+          "name": "公廁"
+        }
+      ],
+      "friendly": [],
+      "images": [
+        {
+          "src": "https://www.travel.taipei/image/64065",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/64066",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/64063",
+          "subject": "",
+          "ext": ".jpg"
+        }
+      ],
+      "files": [],
+      "links": []
+    },
+    {
+      "id": 80,
+      "name": "天主教台北聖家堂",
+      "name_zh": null,
+      "open_status": 1,
+      "introduction": "新生南路素有「天堂之路」的稱號，因為許多宗教的聖堂、寺廟、佛堂及禮拜所都聚集在此，從南到北計有懷恩堂、真理堂、清真寺、聖家堂、臺北教會、衛理堂等，不同宗教都在同一條新生南路上，而不同的宗教有其不同的特色，值得人們前去拜訪。\r\n\r\n聖家堂位於大安森林公園對面，鳥瞰呈十字架型，夜晚在燈光的照射下，發出淡淡的白光，有著高貴潔淨引人走向天主的氣氛。聖家堂高約63尺，無樑柱，屬於帳棚式的建築，使人無空間壓迫感，無視覺障礙的建築特色，是為了幫助人靜心靈修，舉心向上。堂內妙運用彩色玻璃及天光，使聖家堂呈現自然神聖的氛圍，好像進入神聖的聖地，可掃除人內心世俗的煩擾。\r\n\r\n於1998年從比利時運來，已有百餘年歷史的18幅聖經故事的彩繪鑲嵌玻璃，是法國著名的藝術家李維克的作品，在彩繪玻璃的下端還有解釋每段聖經小故事，值得去閱讀其中的知識及欣賞美麗的藝術作品。",
+      "open_time": "彌撒時間請參考網站，來訪前請先致電詢問。",
+      "zipcode": "106",
+      "distric": "大安區",
+      "address": "106 臺北市大安區新生南路二段50號",
+      "tel": "+886-2-23920701",
+      "fax": "",
+      "email": "",
+      "months": "01,07,02,08,03,09,04,10,05,11,06,12",
+      "nlat": 25.02888,
+      "elong": 121.53395,
+      "official_site": "http://www.holyfamilytaipei.org/",
+      "facebook": "https://www.facebook.com/profile.php?id=100064289697293",
+      "ticket": "",
+      "remind": "",
+      "staytime": "",
+      "modified": "2024-03-21 15:13:56 +08:00",
+      "url": "https://www.travel.taipei/zh-tw/attraction/details/80",
+      "category": [
+        {
+          "id": 14,
+          "name": "宗教信仰"
+        }
+      ],
+      "target": [
+        {
+          "id": 61,
+          "name": "親子共學"
+        }
+      ],
+      "service": [
+        {
+          "id": 146,
+          "name": "公廁"
+        }
+      ],
+      "friendly": [],
+      "images": [
+        {
+          "src": "https://www.travel.taipei/image/64024",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/64026",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/64027",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/64028",
+          "subject": "",
+          "ext": ".jpg"
+        }
+      ],
+      "files": [],
+      "links": []
+    },
+    {
+      "id": 79,
+      "name": "景美集應廟",
+      "name_zh": null,
+      "open_status": 1,
+      "introduction": "位於景美老街的集應廟，原來蓋在景尾竹圍內，供奉著福建省泉州府安溪縣人的保護神──保儀尊王張巡和保儀大夫許遠。後來因風水不好，於西元1867（同治6年）將廟遷建景尾街下街，就是今日的廟址。\r\n\r\n400年前，安溪人移民來到臺北，因為他們大部分都是茶農，所以選擇了文山這個潮濕的山丘地來種茶，同時帶來他們的鄉土保護神，保儀尊王、保儀大夫、清水祖師等神明。那時候的安溪人主要是高、張、林3大姓，隨著時間的進展，人口逐漸增加，開墾的土地從景美一直拓展到木柵、深坑、石碇等地，當然供奉安溪縣鄉土神明的人也越來越多，因此就將集應廟拓展成3座，現在景美市場內的高氏集應廟，就是其中之一。\r\n\r\n這裡有著景美老街的歷史感，也是三級古蹟，外觀及內部相當莊嚴，有許多壁飾與精緻的石雕，另外廊道也深具木質的美感，木造的窗戶及房屋，洋溢著古時的氣氛，與景美的老街融合為一。",
+      "open_time": "全年無休，自6:00-21:00",
+      "zipcode": "116",
+      "distric": "文山區",
+      "address": "116 臺北市文山區景美街37號",
+      "tel": "+886-2-29348446",
+      "fax": "",
+      "email": "",
+      "months": "01,07,02,08,03,09,04,10,05,11,06,12",
+      "nlat": 24.99166,
+      "elong": 121.54183,
+      "official_site": "http://jm-jiyingtemple.org.tw/",
+      "facebook": "https://www.facebook.com/%E4%B8%89%E7%B4%9A%E5%8F%A4%E8%B9%9F-%E6%99%AF%E7%BE%8E%E9%9B%86%E6%87%89%E5%BB%9F-1812201288921035/",
+      "ticket": "",
+      "remind": "",
+      "staytime": "",
+      "modified": "2024-03-21 10:52:06 +08:00",
+      "url": "https://www.travel.taipei/zh-tw/attraction/details/79",
+      "category": [
+        {
+          "id": 13,
+          "name": "歷史建築"
+        },
+        {
+          "id": 14,
+          "name": "宗教信仰"
+        }
+      ],
+      "target": [
+        {
+          "id": 61,
+          "name": "親子共學"
+        }
+      ],
+      "service": [
+        {
+          "id": 146,
+          "name": "公廁"
+        }
+      ],
+      "friendly": [],
+      "images": [
+        {
+          "src": "https://www.travel.taipei/image/89359",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/89360",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/89361",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/89357",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/89358",
+          "subject": "",
+          "ext": ".jpg"
+        }
+      ],
+      "files": [],
+      "links": []
+    },
+    {
+      "id": 77,
+      "name": "天恩宮",
+      "name_zh": null,
+      "open_status": 1,
+      "introduction": "「天恩宮」位於貓空的內彎一帶，屬於「一貫道」的道場。外觀是傳統中國宮殿式的建築，有三層樓高，白欄橙瓦紅柱，莊嚴肅穆。據說天恩宮建廟之初，曾請掘井公司在廟地找水，掘井公司挖了好幾處，甚至深至二十尺仍找不到水。於是當時的主任委員通知台灣各地所屬信徒，在同一天晚上叩求上天慈悲賜水，三日後，在後方擋土牆處竟奇蹟式的冒出泉水，清澈甘甜，水質極佳。因感謝上天鴻恩賜水，故取名：「天恩泉」。\r\n\r\n「天恩宮」一樓大殿中間供奉著笑口常開、快樂無憂的彌勒佛，兩邊分別是觀世音菩薩及關聖帝君。在假日設有各種修道的課程及活動，並以恢復本性之自然，啟發良知良能之至善，己立立人，己達達人為各種課程、活動之宗旨。\r\n\r\n另外「天恩宮」亦推廣素食，旁邊有販賣部，有著各式口味的素餅及茶點，很受大眾歡迎。",
+      "open_time": "※疫情期間開放前廊供遊客參拜",
+      "zipcode": "116",
+      "distric": "文山區",
+      "address": "116 臺北市文山區指南路三段38巷37-2號",
+      "tel": "+886-2-29382888",
+      "fax": "",
+      "email": "",
+      "months": "01,07,02,08,03,09,04,10,05,11,06,12",
+      "nlat": 24.97021,
+      "elong": 121.5922,
+      "official_site": "",
+      "facebook": "https://www.facebook.com/tienann.gon/",
+      "ticket": "",
+      "remind": "",
+      "staytime": "",
+      "modified": "2024-03-21 10:46:33 +08:00",
+      "url": "https://www.travel.taipei/zh-tw/attraction/details/77",
+      "category": [
+        {
+          "id": 14,
+          "name": "宗教信仰"
+        }
+      ],
+      "target": [
+        {
+          "id": 61,
+          "name": "親子共學"
+        }
+      ],
+      "service": [
+        {
+          "id": 146,
+          "name": "公廁"
+        }
+      ],
+      "friendly": [],
+      "images": [
+        {
+          "src": "https://www.travel.taipei/image/107623",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/107624",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/107626",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/107627",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/129352",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/129354",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/129355",
+          "subject": "",
+          "ext": ".jpg"
+        }
+      ],
+      "files": [],
+      "links": []
+    },
+    {
+      "id": 75,
+      "name": "財團法人劍潭古寺",
+      "name_zh": null,
+      "open_status": 1,
+      "introduction": "劍潭有一段傳奇，傳說鄭成功有一次領兵經過此潭，潭中時有蛟龍之類的水怪興風作浪，害人無數，鄭成功把腰邊佩掛的寶劍，往潭中蛟怪擲去，從此潭水平靜，而此潭也因鄭成功的擲劍平妖，而名為「劍潭」。\r\n\r\n推算劍潭古寺的年代，於臺灣府誌說「觀音寺，在八芝蘭劍潭」。按淡水廳誌記載「劍潭寺，乾隆38年，由吳廷誥等人捐建。該寺有碑記，描述僧人榮華和尚，路經此地，遇到一條蛇擋路，以卜筮占吉兇，大吉，便在此建場興寺。之後，又有白衣大士托夢指示，將有八隻舟楫從上海經過基隆，可以籌募基金，果然靈驗，劍潭寺遂成」，所以至今應該有350年以上的歷史，但日據後期被迫遷建至大直現址。入廟前有一牌樓，青綠色的瓦頂下寫著「劍潭古寺」四字，裡面的小巷道，就是劍潭古寺的原址，在這一片林園當中，園內保留著劍潭古寺舊有的廟柱及石碑，柱上殘留的許多痕跡，都是一段一段的歷史，有著濃厚的歷史感。",
+      "open_time": "",
+      "zipcode": "104",
+      "distric": "中山區",
+      "address": "104 臺北市中山區北安路805巷6號",
+      "tel": "+886-2-25323834",
+      "fax": "",
+      "email": "",
+      "months": "01,07,02,08,03,09,04,10,05,11,06,12",
+      "nlat": 25.08618,
+      "elong": 121.55536,
+      "official_site": "",
+      "facebook": "",
+      "ticket": "",
+      "remind": "",
+      "staytime": "",
+      "modified": "2024-03-21 10:35:44 +08:00",
+      "url": "https://www.travel.taipei/zh-tw/attraction/details/75",
+      "category": [
+        {
+          "id": 14,
+          "name": "宗教信仰"
+        }
+      ],
+      "target": [
+        {
+          "id": 61,
+          "name": "親子共學"
+        }
+      ],
+      "service": [
+        {
+          "id": 146,
+          "name": "公廁"
+        }
+      ],
+      "friendly": [],
+      "images": [
+        {
+          "src": "https://www.travel.taipei/image/89371",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/89372",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/89367",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/89368",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/89369",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/89370",
+          "subject": "",
+          "ext": ".jpg"
+        }
+      ],
+      "files": [],
+      "links": []
+    },
+    {
+      "id": 74,
+      "name": "艋舺青山宮",
+      "name_zh": null,
+      "open_status": 1,
+      "introduction": "三國孫權的將軍張滾，治理泉州惠安有成，去世後地方建立青山宮奉祀，張滾被尊稱為青山王或靈安尊王。青山王一向被認為有可以消除瘟疫的威靈，掌握司法、賞懲善惡，配祭的神明有八司、枷將軍和鎖將軍等。\r\n\r\n艋舺青山宮已有百餘年的歷史，是一座三進的木石混合造寺廟，經歷了多次的整修，相當精美，如八角形藻井，相當可觀，整修用料也都頗有典故，如前殿的石柱與石垛，就是取自圓山神社所遺之石材。另外青山王的神像，眼神犀利，從每個角度去凝視，都會感覺不同，民眾可以來這裡親自體會。\r\n\r\n每年的農曆10月23日是青山王聖誕的日子，傳說在前兩天青山王會率領部將巡視艋舺地區的大街小巷，保佑艋舺地區人民的平安。在22日舉辦王爺神轎的夜間遶境活動熱鬧非凡，有著許多的表演活動，像是八家將、鼓陣，樂隊等，家家戶戶在路邊擺設香案和供品，這就是所謂的「艋舺大拜拜」，與大稻埕霞海城隍廟、保生大帝出巡並稱臺北市的3大廟會之一。",
+      "open_time": "",
+      "zipcode": "108",
+      "distric": "萬華區",
+      "address": "108 臺北市萬華區貴陽街二段218號",
+      "tel": "+886-2-23822296",
+      "fax": "",
+      "email": "",
+      "months": "01,07,02,08,03,09,04,10,05,11,06,12",
+      "nlat": 25.03993,
+      "elong": 121.49951,
+      "official_site": "",
+      "facebook": "https://www.facebook.com/mongaqimgshantempie/",
+      "ticket": "",
+      "remind": "",
+      "staytime": "",
+      "modified": "2024-03-21 10:29:23 +08:00",
+      "url": "https://www.travel.taipei/zh-tw/attraction/details/74",
+      "category": [
+        {
+          "id": 14,
+          "name": "宗教信仰"
+        }
+      ],
+      "target": [
+        {
+          "id": 61,
+          "name": "親子共學"
+        }
+      ],
+      "service": [
+        {
+          "id": 146,
+          "name": "公廁"
+        },
+        {
+          "id": 149,
+          "name": "廣播服務"
+        }
+      ],
+      "friendly": [],
+      "images": [
+        {
+          "src": "https://www.travel.taipei/image/64010",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/64013",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/64015",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/64016",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/64018",
+          "subject": "",
+          "ext": ".jpg"
+        }
+      ],
+      "files": [],
+      "links": []
+    },
+    {
+      "id": 73,
+      "name": "艋舺清水巖",
+      "name_zh": null,
+      "open_status": 1,
+      "introduction": "清水巖位於康定路與長沙路街交叉口，主祀「清水祖師」，故有人稱為清水巖或清水岩，也有人稱它為祖師廟。清水祖師，臺灣民間習慣稱祂祖師公、烏（黑）面祖師、蓬萊祖師、落鼻祖師等等稱呼不一。\r\n\r\n清水祖師為北宋人，生於福建省，俗家名傳說不一，有陳昭、陳應、陳昭應。自幼習佛悟道，曾在蓬萊山的山巖構築一間小精舍修行，由於巖洞內之的水清澈冷冽，精舍被稱為清水巖（岩），此為「清水祖師」名稱的由來。\r\n\r\n相傳清水祖師在清水巖內修行時，有鬼怪用大火將祖師燻得「面目全黑」，而祖師卻是毫髮未傷，「烏（黑）面祖師」由此而來。而「落鼻祖師」之稱，是因為傳說每當祖師廟附近有災難將要發生時，祖師的鼻子就會自動脫落下來，以警示居民與信眾。\r\n\r\n於清水巖的龍、虎二堵牆壁可見磚雕圖騰，正門對聯書：「為清水，為蓬萊，此地並分法界；是金身，是鐵面，入門便見真容。」皆為1817年的重修藝術作品。另外值得一提的是古匾方面，有光緒皇帝御賜「功資拯濟」匾額一面。\r\n\r\n\r\n\r\n\r\n",
+      "open_time": "",
+      "zipcode": "108",
+      "distric": "萬華區",
+      "address": "108 臺北市萬華區康定路81號",
+      "tel": "+886-2-23711517",
+      "fax": "",
+      "email": "",
+      "months": "01,07,02,08,03,09,04,10,05,11,06,12",
+      "nlat": 25.04028,
+      "elong": 121.50265,
+      "official_site": "",
+      "facebook": "",
+      "ticket": "",
+      "remind": "",
+      "staytime": "",
+      "modified": "2024-03-21 10:22:39 +08:00",
+      "url": "https://www.travel.taipei/zh-tw/attraction/details/73",
+      "category": [
+        {
+          "id": 14,
+          "name": "宗教信仰"
+        }
+      ],
+      "target": [
+        {
+          "id": 61,
+          "name": "親子共學"
+        }
+      ],
+      "service": [
+        {
+          "id": 146,
+          "name": "公廁"
+        },
+        {
+          "id": 149,
+          "name": "廣播服務"
+        }
+      ],
+      "friendly": [],
+      "images": [
+        {
+          "src": "https://www.travel.taipei/image/63980",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63981",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63983",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63985",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63986",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63988",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63992",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63993",
+          "subject": "",
+          "ext": ".jpg"
+        }
+      ],
+      "files": [],
+      "links": []
+    },
+    {
+      "id": 72,
+      "name": "士林慈諴宮",
+      "name_zh": null,
+      "open_status": 1,
+      "introduction": "士林慈諴宮又稱士林媽祖廟，主祀天上聖母，位於遠近馳名的士林夜市之內。慈諴宮的前身為1796年（清嘉慶元年）業主何錦堂獻地所建的廟，當時稱為天后宮。1859年（咸豐9年），發生漳、泉械鬥，芝蘭街也遭波及火焚，天后宮亦付之一炬。舊街慘遭焚毀後，縉紳潘永清力主遷地另建新街，得到大多數街民的贊同，於是選擇在下樹林處建設新街，即今日的士林新街。同時在街區中央規劃為廟址，即現今慈諴宮所在地。\r\n\r\n慈諴宮是一座採兩殿、兩廊、兩護龍平面配置的廟宇，一共形成5個天井，兩殿之間以過水廊連接護龍，為典型殿堂式閩南式廟宇。第一進的三川殿的屋頂，是以歇山重簷式的翹脊屋頂，亦即俗稱的「太子樓」形式，正殿中門的單蟠龍八角柱為光緒年間所造，左右麒麟堵則是1828年的作品。門上的彩繪宮娥及門神尉遲宮、秦淑寶，畫工相當的精細，是近代重要的匠師陳玉峰的作品。正殿之旁有一幅士林舊街的石壁，讓人憑此懷想昔日士林的街道面貌景色。",
+      "open_time": "每日06:00-22:00",
+      "zipcode": "111",
+      "distric": "士林區",
+      "address": "111 臺北市士林區大南路84號",
+      "tel": "+886-2-28802972",
+      "fax": "+886-2-28802974",
+      "email": "",
+      "months": "01,07,02,08,03,09,04,10,05,11,06,12",
+      "nlat": 25.08959,
+      "elong": 121.52471,
+      "official_site": "http://www.cixian.org.tw/",
+      "facebook": "https://www.facebook.com/mazu1796/",
+      "ticket": "",
+      "remind": "※本景點為【士林北藝-無圍牆博物館】景點範圍",
+      "staytime": "",
+      "modified": "2024-03-21 09:40:16 +08:00",
+      "url": "https://www.travel.taipei/zh-tw/attraction/details/72",
+      "category": [
+        {
+          "id": 14,
+          "name": "宗教信仰"
+        }
+      ],
+      "target": [
+        {
+          "id": 61,
+          "name": "親子共學"
+        }
+      ],
+      "service": [
+        {
+          "id": 146,
+          "name": "公廁"
+        }
+      ],
+      "friendly": [],
+      "images": [
+        {
+          "src": "https://www.travel.taipei/image/63967",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63970",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63975",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63976",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63977",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63978",
+          "subject": "",
+          "ext": ".jpg"
+        }
+      ],
+      "files": [],
+      "links": []
+    },
+    {
+      "id": 70,
+      "name": "台北天后宮",
+      "name_zh": null,
+      "open_status": 1,
+      "introduction": "台北天后宮，俗稱「西門町媽祖廟」，主祀天上聖母媽祖，現位於臺灣臺北市萬華區成都路上，於1746年時由郊商捐建（當時名為新興宮），與艋舺龍山寺和艋舺祖師廟並稱臺灣清領時期艋舺3大寺廟。1943年因西園路馬路拓寬，所以遭到拆除，神像寄於龍山寺。\r\n\r\n1948年，信徒將暫時寄人籬下的天上聖母神像從龍山寺迎接出來，改供奉在成都路北側近西寧南路口交叉口的「弘法寺」，原先是日本時期日本人所建立的弘法寺，戰後失火燒毀後，新興宮弘法寺的正殿改建更名為「台灣省天后宮」，不久又改稱「台北天后宮」，真是一段曲折的歷史。\r\n\r\n媽祖被視為海上的守護神。早期臺灣有賴海洋以維生，又有東南沿海一帶渡海來臺墾拓，碼頭處即為群眾所居，寺廟亦常築於河巷，是以各地港口多建有媽祖廟，其廟口朝向河對岸的山頭，希望保佑每個討海人及渡海移民安全。\r\n\r\n寺廟內入口處龍邊宮置有古鐘一座，由鐘上所鑄字樣可以得知可見清朝建廟之時其名即為「新興宮」，鑄造年代為1792年（乾隆57年），鑄造地為江蘇無錫。入口處虎邊則置放一座「八仙香爐行宮神龕，八仙蓮花木燭」，原為新興宮神龕，為1820年唐山師傅刻造。\r\n\r\n從1973年以來，日本高野山金剛峰寺及東京別院每年10月到12月間都輪流派遣高僧到台北天后宮，舉行朝聖禮佛法會。台北天后宮的主神是媽祖，陪神是弘法大師，全臺只有台北天后宮有供奉弘法大師，因此往往吸引了許多日本觀光客專程遠道前來參拜。",
+      "open_time": "每日07:00~22:00(最後進場時間21:00)",
+      "zipcode": "108",
+      "distric": "萬華區",
+      "address": "108 臺北市萬華區成都路51號",
+      "tel": "+886-2-23310421",
+      "fax": "+886-2-23122685",
+      "email": "",
+      "months": "01,07,02,08,03,09,04,10,05,11,06,12",
+      "nlat": 25.04279,
+      "elong": 121.50633,
+      "official_site": "http://xn--djrpt1c90vgrd.tw/Index.aspx?fbclid=IwAR2n4byhykd_jQoXh0x1tpEOn2EhiIO1tR1PWIENUulkWsJigSDRJNp-Tzw",
+      "facebook": "https://www.facebook.com/pages/category/Religious-Organization/%E5%8F%B0%E5%8C%97%E5%A4%A9%E5%90%8E%E5%AE%AE-452095124870698/",
+      "ticket": "",
+      "remind": "",
+      "staytime": "",
+      "modified": "2024-03-21 09:22:11 +08:00",
+      "url": "https://www.travel.taipei/zh-tw/attraction/details/70",
+      "category": [
+        {
+          "id": 14,
+          "name": "宗教信仰"
+        }
+      ],
+      "target": [
+        {
+          "id": 61,
+          "name": "親子共學"
+        }
+      ],
+      "service": [
+        {
+          "id": 146,
+          "name": "公廁"
+        }
+      ],
+      "friendly": [],
+      "images": [
+        {
+          "src": "https://www.travel.taipei/image/63955",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63956",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63958",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63960",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63953",
+          "subject": "",
+          "ext": ".jpg"
+        }
+      ],
+      "files": [],
+      "links": []
+    },
+    {
+      "id": 69,
+      "name": "台北霞海城隍廟",
+      "name_zh": null,
+      "open_status": 1,
+      "introduction": "位於迪化街一段的霞海城隍廟，建於西元1856（咸豐六年），占地約46餘坪，雖沒有巍峨之廟貌，然其信仰圈極廣、香火鼎盛，每逢迎神賽會總是熱鬧非凡、蔚為地方大事，與大稻埕的地方發展息息相關。城隍廟內主祀霞海城隍老爺，從祀二判官（文、武判）、謝范二將軍（七、八爺），配祀三十八義勇公。城隍夫人、八司官、八將軍、馬使爺、及月下老人等，這座著名的古廟，目前有200尊左右的神像，是臺灣神像密度最高的廟。\r\n\r\n在霞海城隍廟中，除了城隍爺之外，最吸引遊客的，莫過於拜月老，每年帶著禮餅來答謝者超過6000對，而其中最搶手的就是馭夫鞋（又名幸福鞋），是臺北市有名的「愛情御守」，平均每年到霞海城隍廟「求鞋」民眾更超過200對家庭。相傳城隍爺和城隍夫人相差約70歲，「老夫疼少妻」下，民間深信這對「神仙伴侶」可為家庭帶來幸福，造就了「馭夫鞋」的由來。\r\n\r\n城隍廟在坊間傳說中，還有著1段神蹟故事。1884年，中法戰爭時，法軍來攻臺灣，當時的臺北人來此虔誠祈禱霞海城隍爺的保護。城隍爺果然大顯靈赫，最終法軍只到五堵為止就被擊敗，未能攻佔臺北，所以民間都尊稱霞海城隍為威靈公。",
+      "open_time": "每日早上6:16分至晚上7:47時，全年無休。(除公告之颱風、天然災害外)",
+      "zipcode": "103",
+      "distric": "大同區",
+      "address": "103 臺北市大同區迪化街一段61號",
+      "tel": "+886-2-25580346",
+      "fax": "",
+      "email": "",
+      "months": "01,07,02,08,03,09,04,10,05,11,06,12",
+      "nlat": 25.0556,
+      "elong": 121.51017,
+      "official_site": "http://www.tpecitygod.org/hot-news.html",
+      "facebook": "https://www.facebook.com/tpecitygod",
+      "ticket": "",
+      "remind": "",
+      "staytime": "",
+      "modified": "2024-03-21 09:14:07 +08:00",
+      "url": "https://www.travel.taipei/zh-tw/attraction/details/69",
+      "category": [
+        {
+          "id": 13,
+          "name": "歷史建築"
+        },
+        {
+          "id": 14,
+          "name": "宗教信仰"
+        }
+      ],
+      "target": [
+        {
+          "id": 61,
+          "name": "親子共學"
+        }
+      ],
+      "service": [
+        {
+          "id": 146,
+          "name": "公廁"
+        }
+      ],
+      "friendly": [],
+      "images": [
+        {
+          "src": "https://www.travel.taipei/image/182535",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/182536",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/182537",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/182538",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/182539",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/182540",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/182542",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/182543",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/182544",
+          "subject": "",
+          "ext": ".jpg"
+        }
+      ],
+      "files": [],
+      "links": []
+    },
+    {
+      "id": 68,
+      "name": "艋舺龍山寺",
+      "name_zh": null,
+      "open_status": 1,
+      "introduction": "艋舺，今名萬華，為臺北市發源地，其最古老市街在紗帽廚社的故址大溪口，即今貴陽街與環河南路口。清康熙四十八年（西元1709年）陳賴章墾號請墾大佳臘，福建泉州之晉江、南安、惠安三邑人士渡海來此而漸成聚落，當時平埔族人以獨木舟自淡水河上游載運蕃薯等農產品與漢人交易，時稱蕃薯市；而獨木舟在平埔族語言中之發音為Banka，漢人乃音譯為「艋舺」。\r\n\r\n早年臺灣北部為一蠻煙瘴癘之地，俗諺「三在六亡一回頭」，環境十分險惡，漢人前來墾殖時為求神佑，多攜帶家鄉廟宇香火以為庇護，後因漢人聚落漸增，三邑人士遂於清乾隆三年（西元1738年）合資興建龍山寺，並迎請福建省晉江縣安海龍山寺觀世音菩薩分靈來臺。龍山寺不僅是居民信仰中心，舉凡議事、訴訟等均祈求神靈公斷。光緒十年（西元1884年）中法戰爭中，法軍侵占基隆獅球嶺，當地居民乃組織義軍，以龍山寺印行文官署，協助擊退法軍，獲光緒皇帝賜「慈暉遠蔭」匾額。\r\n\r\n初創之龍山寺，規模雄偉，雕塑精緻，歷經嘉慶二十年（西元1815年）大地震重修，同治六年（西元1867年）暴風雨侵襲再行修築，至民國八年棟樑遭白蟻蛀蝕，當時住持福智大師率先捐出一生積蓄七千餘元，集資修復，奠定今日龍山寺之規模。民國卅四年於第二次世界大戰期間受空襲摧殘，中殿全毀，惟觀世音菩薩聖像仍端坐蓮臺，寶相莊嚴；以往遇有空襲，居民皆以觀世音菩薩蓮座下為避難所，然此次空襲前夕，避難居民因不堪兇蚊肆虐紛紛返家，以致中殿受毀時無人受難，居民相信是觀世音菩薩庇護而奔相走告，此一神蹟更使得觀世音菩薩成為艋舺居民一大精神支柱。\r\n\r\n龍山寺坐北朝南，面呈回字形，為中國古典三進四合院之宮殿式建築，由前殿、正殿、後殿及左右護龍構成。前殿為11開間，分為三川殿、龍門廳、虎門廳。三川殿前有一對全臺僅見之銅鑄蟠龍柱，正面牆堵則由花崗石與青斗石混合組構而成，牆上故事多出自三國演義和封神榜，富於教育意義。正殿屋頂採歇山重簷式，四面走馬廊共42根柱子構成，殿外牆堵留有多幅著名書法家石刻，殿內的螺旋藻井不費一釘一鐵，全由斗栱相嵌築構而成。後殿屋頂採歇山重簷式，為典型儒、道教諸神佛供奉處。左右護龍各配有鐘樓與鼓樓，晨鐘暮鼓，其轎頂式扁六角形的屋頂，造形獨特。全寺屋頂脊帶和飛簷由龍鳳、麒麟等吉祥物造形，飾以剪黏和交趾陶，色彩瑰麗，堪稱臺灣剪黏藝術之精華。\r\n\r\n民國七十四年政府公告艋舺龍山寺為國家保護之二級古蹟，與國立故宮博物院、中正紀念堂並列為國際觀光客來臺旅遊的三大名勝。龍山寺並於板橋文化路興建文化廣場大樓，民國九十四年落成啟用後，辦理多項課程與講座，以善盡弘揚佛法、提倡社教的文化價值。艋舺龍山寺每年定期舉辦節慶祭典及民俗活動，如農曆正月花燈展覽、四月浴佛節、七月盂蘭盆勝會等，民眾來到艋舺龍山寺除了欣賞臺灣寺廟建築藝術之美，亦可以感受傳統民俗文化的樂趣。",
+      "open_time": "6:00~22:00 (辦事處7:00-21:00)",
+      "zipcode": "108",
+      "distric": "萬華區",
+      "address": "108 臺北市萬華區廣州街211號",
+      "tel": "+886-2-23025162",
+      "fax": "",
+      "email": "",
+      "months": "01,07,02,08,03,09,04,10,05,11,06,12",
+      "nlat": 25.03716,
+      "elong": 121.4999,
+      "official_site": "http://www.lungshan.org.tw/",
+      "facebook": "",
+      "ticket": "",
+      "remind": "",
+      "staytime": "",
+      "modified": "2024-03-20 17:31:19 +08:00",
+      "url": "https://www.travel.taipei/zh-tw/attraction/details/68",
+      "category": [
+        {
+          "id": 14,
+          "name": "宗教信仰"
+        },
+        {
+          "id": 25,
+          "name": "無障礙旅遊推薦景點"
+        }
+      ],
+      "target": [
+        {
+          "id": 61,
+          "name": "親子共學"
+        }
+      ],
+      "service": [
+        {
+          "id": 141,
+          "name": "無障礙設施"
+        },
+        {
+          "id": 146,
+          "name": "公廁"
+        },
+        {
+          "id": 148,
+          "name": "失物招領"
+        },
+        {
+          "id": 149,
+          "name": "廣播服務"
+        }
+      ],
+      "friendly": [],
+      "images": [
+        {
+          "src": "https://www.travel.taipei/image/63947",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63948",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63934",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63935",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63939",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63946",
+          "subject": "",
+          "ext": ".jpg"
+        }
+      ],
+      "files": [],
+      "links": []
+    },
+    {
+      "id": 67,
+      "name": "碧山巖開漳聖王廟",
+      "name_zh": null,
+      "open_status": 1,
+      "introduction": "碧山巖位於內湖碧山上。廟內奉祀開閩民族英雄陳元光及其部屬李伯瑤、馬仁兩位將軍。陳元光在唐末開拓福建漳州地方，被視為漳州人守護神，並尊稱「開漳聖王」。\r\n▲圖片來源：臺北市政府觀光傳播局\r\n\r\n碧山巖是臺灣最大開漳聖王廟之一，香火鼎盛。傳說漳州府人士黃某攜眷渡海來臺拓墾時，見此地為難得一見之吉地，故將隨身佩帶香火懸掛於石洞膜拜後離去。而後山下一帶盜匪猖獗，打家劫舍使得該處民不聊生，西元1751年，盜匪正打算攻頂時，忽見山頂鋒芒四射，戰鼓齊鳴，原來是當時所懸香火之神石一分為三，中塊乃聖王，而兩邊石塊則為李、馬兩將軍，周圍散石滾落山下，使得匪徒棄械逃亡。\r\n▲圖片來源：臺北市政府觀光傳播局\r\n\r\n附近居民聞訊至此膜拜，果然神靈賜福，於是興建石室小廟。後因香客漸眾，原石室小廟不敷大批香客膜拜，故在原址另建本殿。而後發生數次的天災，經過數次的整修後，在多數地方人士、信徒及寺廟管理委員的努力下，擴建至如今。\r\n▲圖片來源：臺北市政府觀光傳播局\r\n\r\n碧山巖居高臨下，除俯瞰臺北盆地外，站在廟前平台更可見蜿蜒的淡水河、鯉魚山及梯田等等，水光山色相互呼應。夜晚則可眺望臺北盆地，將臺北101大樓、圓山大飯店、松山機場等夜景之美盡收眼簾。",
+      "open_time": "",
+      "zipcode": "114",
+      "distric": "內湖區",
+      "address": "114 臺北市內湖區碧山路24號",
+      "tel": "+886-2-27963755",
+      "fax": "+886-2-27926177",
+      "email": "pkcswt55@ms62.hinet.net",
+      "months": "01,07,02,08,03,09,04,10,05,11,06,12",
+      "nlat": 25.09715,
+      "elong": 121.58762,
+      "official_site": "http://www.pkcswt.com.tw/",
+      "facebook": "",
+      "ticket": "",
+      "remind": "",
+      "staytime": "",
+      "modified": "2024-03-20 17:25:29 +08:00",
+      "url": "https://www.travel.taipei/zh-tw/attraction/details/67",
+      "category": [
+        {
+          "id": 13,
+          "name": "歷史建築"
+        },
+        {
+          "id": 14,
+          "name": "宗教信仰"
+        }
+      ],
+      "target": [
+        {
+          "id": 61,
+          "name": "親子共學"
+        }
+      ],
+      "service": [
+        {
+          "id": 146,
+          "name": "公廁"
+        }
+      ],
+      "friendly": [],
+      "images": [
+        {
+          "src": "https://www.travel.taipei/image/292421",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/292422",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/292423",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/292424",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/292425",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/292416",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/292417",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/292418",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/292419",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/292420",
+          "subject": "",
+          "ext": ".jpg"
+        }
+      ],
+      "files": [],
+      "links": []
+    },
+    {
+      "id": 65,
+      "name": "行天宮",
+      "name_zh": null,
+      "open_status": 1,
+      "introduction": "行天宮位於中山區民權東路和松江路口，是北臺灣參訪香客最多的廟宇，一天進出人數可達萬人之多。\r\n▲圖片來源：臺北市政府觀光傳播局\r\n\r\n行天宮恭奉南天文衡聖帝關恩主羽為主神、配祀南宮孚佑帝君呂恩主洞賓、九天司命真君張恩主單、先天豁落靈官王恩主善、精忠武穆王岳恩主飛、關聖太子平、周恩師倉，及儒釋道三教聖神仙佛。\r\n▲圖片來源：臺北市政府觀光傳播局\r\n\r\n自落成以來，之所以會成為大臺北地區，甚至是整個北臺灣參訪人數最多的廟宇，除了信仰普遍受到民眾接受外，還有一些特色包括：不設功德箱、不供拜牲禮、不焚化金紙、不收受金牌、不演戲酬神、不設乩扶鸞、不對外募捐及禁止商業行為。廟宇地點位於市中心，且有寬敞的廟埕，並率先成立宗教性的財團法人機構，確立其社會公益的屬性。\r\n▲圖片來源：臺北市政府觀光傳播局\r\n\r\n行天宮除了包含臺北本宮與三峽、北投兩間分宮在內的宗教事業，以及成立於1995年的「財團法人行天宮文教發展促進基金會」之外，還設有兩座附設圖書館(分別位於臺北市中心與北投)以及位於三峽的恩主公醫院，其公益性可見一般，使得宗教不只撫平民眾內心，也實質的助益了民眾的日常生活。",
+      "open_time": "平日參拜時間：凌晨04:00～晚上22:00\r\n收驚時間：平時是中午11:20 ～ 晚上20:00\r\n祭星日是中午12:20 ～晚上20:00",
+      "zipcode": "104",
+      "distric": "中山區",
+      "address": "104 臺北市中山區民權東路二段109號",
+      "tel": "+886-2-25027924",
+      "fax": "",
+      "email": "",
+      "months": "01,07,02,08,03,09,04,10,05,11,06,12",
+      "nlat": 25.06308,
+      "elong": 121.5339,
+      "official_site": "http://www.ht.org.tw/",
+      "facebook": "https://www.facebook.com/ht.org.tw/?ref=br_rs",
+      "ticket": "",
+      "remind": "*行天宮自103年8月26日起不再設置大香爐和供桌，鼓勵信眾不燒香、不備供品，用手敬拜、用心敬神。\r\n\r\n趨吉避凶－祭解項目\r\n祭解的意義，在於舉行消災法會，虔誠地誦念《南斗星君延壽真經》、《北斗星君賜福真經》，為信眾祈求元辰光彩，消災解厄，移凶化吉，運途亨通。內容包括下列四項，信眾可根據個人的需求參加：\r\n●祭　星－祈求行運安順。\r\n●祭元辰－祈求元辰光彩。\r\n●祭關限－祈求安度關卡。\r\n●掩　魂－意在護魂解厄。",
+      "staytime": "",
+      "modified": "2024-03-20 16:50:41 +08:00",
+      "url": "https://www.travel.taipei/zh-tw/attraction/details/65",
+      "category": [
+        {
+          "id": 14,
+          "name": "宗教信仰"
+        }
+      ],
+      "target": [
+        {
+          "id": 61,
+          "name": "親子共學"
+        }
+      ],
+      "service": [
+        {
+          "id": 146,
+          "name": "公廁"
+        }
+      ],
+      "friendly": [],
+      "images": [
+        {
+          "src": "https://www.travel.taipei/image/292768",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/292769",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/292770",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/292763",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/292764",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/292765",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/292766",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/292767",
+          "subject": "",
+          "ext": ".jpg"
+        }
+      ],
+      "files": [],
+      "links": []
+    },
+    {
+      "id": 64,
+      "name": "指南宮",
+      "name_zh": null,
+      "open_status": 1,
+      "introduction": "指南宮位於臺北市文山區指南山麓，創建於1890年，由淡水知縣王斌林自山西永樂宮分靈來臺。原為茅草建構，歷經前賢精心擘畫設計、重修擴建，成為現在的規模。\r\n\r\n指南宮主祀神純陽祖師呂洞賓，正式名稱是「孚佑帝君」，但民間習稱仙公或呂祖。呂祖是唐朝時人，飽讀詩書，曾考中進士，做過縣令，因為虔心慕道，得遇正陽祖師鍾離權仙師，以黃粱大夢點化，點石成金試測，傳授心法，終成大道，位列仙班。但因立有「度盡世人」的宏願，所以經常顯化民間「濟世度人，解難救厄」，留下了許多民間親和的神跡佳話，是我國民眾最親近和熟悉的道教神仙。\r\n\r\n宮殿園區佔地廣，古木參天，濃蔭蔽日。全宮共有純陽寶殿、凌霄寶殿、大雄寶殿及大成寶殿4大殿宇。主殿均是依山而建，宏偉莊嚴，建築多採堅固青斗石，部分殿宇並用銅瓦覆蓋，可歷千年。純陽與凌霄兩殿間有長廊相連，亭池台榭，四時花開，空氣清新，可以一覽臺北市遠近景觀，被譽為「天下第一靈山」。更經常辦理各項大型宗教活動，參與國際弘道事務，聲名遠播。\r\n\r\n貓空纜車通車以後，交通更加方便，任何時候都歡迎來訪。",
+      "open_time": "每日6:00-20:00(關廟門時間21:00)",
+      "zipcode": "116",
+      "distric": "文山區",
+      "address": "116 臺北市文山區萬壽路115號",
+      "tel": "+886-2-29399922",
+      "fax": "+886-2-29392272",
+      "email": "chihnan.temple@msa.hinet.net",
+      "months": "01,07,02,08,03,09,04,10,05,11,06,12",
+      "nlat": 24.97982,
+      "elong": 121.58662,
+      "official_site": "http://www.chih-nan-temple.org/index.php",
+      "facebook": "",
+      "ticket": "",
+      "remind": "",
+      "staytime": "",
+      "modified": "2024-03-20 16:44:50 +08:00",
+      "url": "https://www.travel.taipei/zh-tw/attraction/details/64",
+      "category": [
+        {
+          "id": 14,
+          "name": "宗教信仰"
+        }
+      ],
+      "target": [
+        {
+          "id": 61,
+          "name": "親子共學"
+        }
+      ],
+      "service": [
+        {
+          "id": 146,
+          "name": "公廁"
+        }
+      ],
+      "friendly": [],
+      "images": [
+        {
+          "src": "https://www.travel.taipei/image/63894",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63895",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63896",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63899",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63888",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63889",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63891",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63892",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63893",
+          "subject": "",
+          "ext": ".jpg"
+        }
+      ],
+      "files": [],
+      "links": []
+    },
+    {
+      "id": 63,
+      "name": "芝山巖惠濟宮",
+      "name_zh": null,
+      "open_status": 1,
+      "introduction": "在惠濟宮的山腳下，可以看到一個像草原的廣場，上面有著羊群的模型，好像先民在這裡放牧一樣。循著階梯向上，經過林間，昏暗的感覺，旁邊的岩壁上長著青苔，具有古意，在途中經過一個石頭拱門，是芝山的歷史遺蹟，在其後會發覺道路開闊許多，過一個彎，豁然開朗，平坦的路面，與先前的感覺截然不同，惠濟宮，就座落其間。\r\n\r\n漳州人來到士林，也把他們的守護神「開漳聖王」一塊兒帶來了。傳說芝山原本是富豪黃善的土地，約兩百年前，其漳州府平和縣的親戚黃澄清，帶著開漳聖王的香火來到臺灣，懸掛在芝山上，傳說有神蹟出現，大家就合力湊錢，在1752年搭建了惠濟宮。不久，因祭祀觀音佛祖，又名芝山巖寺。1840年士林士紳的潘永清在芝山巖上創建了文昌祠，聘請老師教育子弟。到了1874年，3座寺廟合併在一起，從此就統稱為惠濟宮了。\r\n\r\n目前來到惠濟宮，多半是祈求考試可以順利，這裡有隻文昌筆。傳說若是摸了「文昌筆」會得到保佑，因此家長都會帶著小孩來摸文昌筆，祈求考試順利。",
+      "open_time": "",
+      "zipcode": "111",
+      "distric": "士林區",
+      "address": "111 臺北市士林區至誠路一段326巷26號",
+      "tel": "+886-2-28315656",
+      "fax": "",
+      "email": "",
+      "months": "01,07,02,08,03,09,04,10,05,11,06,12",
+      "nlat": 25.1031,
+      "elong": 121.5308,
+      "official_site": "https://cloud.culture.tw/frontsite/inquiry/emapInquiryAction.do?method=showEmapDetail&indexId=44726",
+      "facebook": "https://www.facebook.com/hctemple5656/?fref=nf",
+      "ticket": "",
+      "remind": "※本景點為【士林北藝-無圍牆博物館】景點範圍",
+      "staytime": "",
+      "modified": "2024-03-20 16:35:26 +08:00",
+      "url": "https://www.travel.taipei/zh-tw/attraction/details/63",
+      "category": [
+        {
+          "id": 14,
+          "name": "宗教信仰"
+        }
+      ],
+      "target": [
+        {
+          "id": 61,
+          "name": "親子共學"
+        }
+      ],
+      "service": [
+        {
+          "id": 146,
+          "name": "公廁"
+        }
+      ],
+      "friendly": [],
+      "images": [
+        {
+          "src": "https://www.travel.taipei/image/63881",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63882",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63883",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63884",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63885",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63886",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63887",
+          "subject": "",
+          "ext": ".jpg"
+        }
+      ],
+      "files": [],
+      "links": []
+    },
+    {
+      "id": 62,
+      "name": "照明淨寺_情人廟",
+      "name_zh": null,
+      "open_status": 1,
+      "introduction": "照明淨寺（又稱照明寺、情人廟）座落於北投軍艦岩前之山坡上，四面環山，環境清幽，視野開闊，向前可以看到關渡平原，站在此地向前遠眺關渡平原，頓時覺得心胸開朗、心情為之輕鬆。\r\n\r\n這裡的建築相當有特色，主廟像是尖塔型，上面一隻龍盤踞在上頭，感覺極有靈氣。照明淨寺的主神為保佑健康、婚姻、光明及財富的「四面千手觀音」，過去因陳列著牛郎織女蠟像，所以又稱「情人廟」！\r\n\r\n廟內有十分受歡迎的許願幅。在紙及木牌上寫上你要祈求的事物，再去參拜四面千手觀音，並將紙投入觀音旁的許願箱中。之後就來到許願池，一旁的許願池裡有6個缽，分別代表祈求姻緣、健康、財富等。想要求什麼，就帶幾枚銅板往缽裡丟，並將木牌掛在旁邊的許願亭上留下見證。據說很靈驗，有拜有保佑！\r\n\r\n在寺廟廣場上的許願亭寫著「真情無人見，假情天有知」，是為了告誡天下有情人，要珍惜自己情感，不要虛情假意，希望全天下的情人都能成為佳偶。",
+      "open_time": "",
+      "zipcode": "112",
+      "distric": "北投區",
+      "address": "112 臺北市北投區崇仰七路51號",
+      "tel": "+886-2-28941362",
+      "fax": "",
+      "email": "",
+      "months": "01,07,02,08,03,09,04,10,05,11,06,12",
+      "nlat": 25.13161,
+      "elong": 121.51381,
+      "official_site": "",
+      "facebook": "",
+      "ticket": "",
+      "remind": "",
+      "staytime": "",
+      "modified": "2024-03-20 16:31:02 +08:00",
+      "url": "https://www.travel.taipei/zh-tw/attraction/details/62",
+      "category": [
+        {
+          "id": 14,
+          "name": "宗教信仰"
+        }
+      ],
+      "target": [
+        {
+          "id": 61,
+          "name": "親子共學"
+        }
+      ],
+      "service": [
+        {
+          "id": 146,
+          "name": "公廁"
+        }
+      ],
+      "friendly": [],
+      "images": [],
+      "files": [],
+      "links": []
+    },
+    {
+      "id": 61,
+      "name": "大龍峒保安宮",
+      "name_zh": null,
+      "open_status": 1,
+      "introduction": "大龍峒保安宮，肇建於1742年，1805年重建，主祀保生大帝，俗稱「大浪泵宮」或「大道公廟」，為國定古蹟。每年農曆3月15日，為慶祝保生大帝聖誕，特別舉辦為期2個月，結合宗教祭祀、民俗技藝、古蹟導覽、藝文研習、美學競賽、家姓戲、遶境踩街、過火、健康關懷與學術研討會的「保生文化祭」活動；是北臺灣最盛大、最熱鬧，人氣最旺的廟會活動，也使大龍峒成為北臺灣重要的文化重鎮。\r\n\r\n大龍峒保安宮廟宇的裝飾藝術，如石獅、龍柱、花鳥、剪黏、泥塑、交趾陶、木雕、彩繪壁畫等，這些遠近馳名的藝術瑰寶，每一件都具有歷史及藝術的價值。保安宮在興建時，就聘請郭塔及陳應彬兩位匠師，各自創作木雕，這種良性競爭就是當時流行的對場作。因此欣賞保安宮的裝飾藝術時，可同時欣賞左右兩邊，不同匠師的作品。正殿迴廊的7幅壁畫，是國寶級彩繪大師潘麗水的作品，吸引國內外的遊客流連忘返，讚嘆不已。\r\n\r\n大龍峒保安宮已從地方宮廟，轉型為集宗教、文化、教育、藝術於一身的廟宇，對於臺北市大同區地方文化的活化，產生深遠的影響。特別是古蹟建築與修復更是深受國內外矚目。保安宮重建以來雖經過多次整修增建，但由於建造年代已久，更遭風吹、日曬、蟲噬，嚴重影響建築本體，不復昔日丰采，更有安全之虞。為了維護文化資產，1995年，保安宮進行重建以來規模最大的修復工程，保安宮自力籌措全部經費，並自行統籌、監造，成為全國首宗民間籌資主導古蹟修復的案例；修復工程更於2003年獲得聯合國教科文組織「2003年亞太文化資產保存獎」，並於民國108指定為國定古蹟。",
+      "open_time": "每日06:00~22:00",
+      "zipcode": "103",
+      "distric": "大同區",
+      "address": "103 臺北市大同區哈密街61號",
+      "tel": "+886-2-25951676",
+      "fax": "+886-2-25982576",
+      "email": "",
+      "months": "01,07,02,08,03,09,04,10,05,11,06,12",
+      "nlat": 25.07321,
+      "elong": 121.51554,
+      "official_site": "http://www.baoan.org.tw/",
+      "facebook": "https://www.facebook.com/baoantw/",
+      "ticket": "",
+      "remind": "導覽時間\r\n1. 非假日時段：請利用網路或電洽大龍峒保安宮完成預約，電話+886-2-2595-1676轉圖書館。\r\n受理導覽服務時間：上午9：00~11：30，下午13：30~16：30\r\n*請詳填導覽時間：解說時間以30分或1小時為1場次　\r\n\r\n2. 假日時段：大龍峒保安宮在每週六、日固定安排史蹟解說老師免費為您進行導覽服務，無需預約。\r\n共分兩時段，上午9:00~11:30，下午2:00~4:30。\r\n\r\n註：人數達五人之團體，如欲參加假日時段導覽，敬請預先來電或完成線上預約，以利本宮安排史蹟解說老師，以維護您的導覽品質。\r\n\r\n預約須知\r\n1.請於導覽前二週完成預約。\r\n2.請詳填您的聯絡資料於官網預約表單，表單送出後，我們將主動與您聯絡確認並儘快安排解說老師。確定老師後我們也將以電子郵件及電話通知您。\r\n3.導覽二天前我們將再致電與您確認。若您的行程有所變動，請務必以電話知會我們。\r\n4.導覽雖為免費服務性質，請勿完成導覽約定後無故缺席，敬請大家共同珍惜資源。",
+      "staytime": "",
+      "modified": "2024-03-20 16:21:53 +08:00",
+      "url": "https://www.travel.taipei/zh-tw/attraction/details/61",
+      "category": [
+        {
+          "id": 13,
+          "name": "歷史建築"
+        },
+        {
+          "id": 14,
+          "name": "宗教信仰"
+        }
+      ],
+      "target": [
+        {
+          "id": 61,
+          "name": "親子共學"
+        }
+      ],
+      "service": [
+        {
+          "id": 146,
+          "name": "公廁"
+        }
+      ],
+      "friendly": [],
+      "images": [
+        {
+          "src": "https://www.travel.taipei/image/63868",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63869",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63871",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63875",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63877",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63880",
+          "subject": "",
+          "ext": ".jpg"
+        }
+      ],
+      "files": [],
+      "links": []
+    },
+    {
+      "id": 56,
+      "name": "臺北市藝文推廣處_城市舞台",
+      "name_zh": null,
+      "open_status": 1,
+      "introduction": "成立於1964年的臺北市立社會教育館，是大家熟悉的藝文空間，以推動藝術文化活動為首要目標，其開放區域以1樓大廳和3間展示廳以靜態展覽陳列為主，也不時推出各類音樂、舞蹈、戲劇活動的城市舞臺和藝術廣場。\r\n\r\n2003年館舍整修竣工後，表演部份更名為｢城市舞臺｣重新出發，成為更專業、具現代感的綜合型劇場，成為更符合現代化的城市活動空間。另外除了八德路社教館本館，更增建大同區的延平活動中心、文山區的文山分館及市府大樓的親子廣場，不僅紓解了本館使用人數的限制，也讓更多的民眾能方便參與社教活動。\r\n\r\n民國103年配合文化局組織規程修正定名為「臺北市藝文推廣處」，並於104年11月6日正式揭牌成立。",
+      "open_time": "",
+      "zipcode": "105",
+      "distric": "松山區",
+      "address": "105 臺北市松山區八德路三段25號",
+      "tel": "+886-2-25775931",
+      "fax": "+886-2-25779310",
+      "email": "",
+      "months": "01,07,02,08,03,09,04,10,05,11,06,12",
+      "nlat": 25.04839,
+      "elong": 121.55228,
+      "official_site": "https://www.tapo.gov.taipei/",
+      "facebook": "",
+      "ticket": "",
+      "remind": "",
+      "staytime": "",
+      "modified": "2024-03-20 15:56:24 +08:00",
+      "url": "https://www.travel.taipei/zh-tw/attraction/details/56",
+      "category": [
+        {
+          "id": 15,
+          "name": "藝文館所"
+        },
+        {
+          "id": 19,
+          "name": "親子共遊"
+        }
+      ],
+      "target": [
+        {
+          "id": 61,
+          "name": "親子共學"
+        },
+        {
+          "id": 62,
+          "name": "校外教學"
+        }
+      ],
+      "service": [
+        {
+          "id": 143,
+          "name": "場地租用"
+        },
+        {
+          "id": 146,
+          "name": "公廁"
+        }
+      ],
+      "friendly": [],
+      "images": [
+        {
+          "src": "https://www.travel.taipei/image/179352",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/179353",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/179354",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/179356",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/179357",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/179347",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/179349",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/179350",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/179351",
+          "subject": "",
+          "ext": ".jpg"
+        }
+      ],
+      "files": [],
+      "links": []
+    },
+    {
+      "id": 55,
+      "name": "敘舊布袋戲園",
+      "name_zh": null,
+      "open_status": 1,
+      "introduction": "「敘舊布袋戲園」（1992年創立）是台灣首創布袋戲主題餐館，30年來推出的「台灣布袋戲饗宴」吸引各國觀光團先來首都敘舊，坐在板凳上賞玩台文，邊享用台式風味餐飲，開啓寶島快樂旅程，公部門常安排各國貴賓、政要觀賞，帛琉總統（時任參議員）、諾魯總統伉儷特別看過2次（疫情期間接外交泡泡外賓），2013年美國TLC報導為「全球怪餐廳」。\r\n\r\n「敘舊布袋戲園」擁有同名傳統偶劇團，運用掌中、金光、電視COSPLAY、原住民等台灣各種人偶（因戲碼而異），具「在地、易懂、歡樂」表演特色，除可用台國語外，罕見可以全程用英語演出，採用活潑互動表演方式，讓國內外人士、各年齡層可以看的懂、把玩、上台演、笑聲不斷，拉近台灣傳藝和各國觀眾的距離。\r\n\r\n劇團多年來不斷獲各單位邀請到國內外表演，曾到大陸、日本（2014故宮國寶九州特展暨國慶酒會），韓國、新加坡、馬來西亞各數次（2017隨柯市長至吉隆坡宣傳世大運）、澳洲、荷蘭、德國（柏林ITB）國際旅展、2022 ITF「文化部」館展演（推展故事獲2022中華電信「有故事的台灣」比賽「民俗技藝」類冠軍）。\r\n\r\n(資料來源：敘舊布袋戲園)",
+      "open_time": "可參考官網公演節目表",
+      "zipcode": "104",
+      "distric": "中山區",
+      "address": "104 臺北市中山區吉林路144巷8號B1",
+      "tel": "+886-2-25231118、+886-9-53190345",
+      "fax": "",
+      "email": "",
+      "months": "01,07,02,08,03,09,04,10,05,11,06,12",
+      "nlat": 25.0559954,
+      "elong": 121.5297908,
+      "official_site": "http://www.see-join.com.tw/html/index.htm",
+      "facebook": "https://www.facebook.com/seejoin",
+      "ticket": "",
+      "remind": "注意事項請詳閱官網",
+      "staytime": "",
+      "modified": "2024-03-20 15:32:43 +08:00",
+      "url": "https://www.travel.taipei/zh-tw/attraction/details/55",
+      "category": [
+        {
+          "id": 15,
+          "name": "藝文館所"
+        },
+        {
+          "id": 18,
+          "name": "公共藝術"
+        },
+        {
+          "id": 19,
+          "name": "親子共遊"
+        }
+      ],
+      "target": [],
+      "service": [
+        {
+          "id": 143,
+          "name": "場地租用"
+        },
+        {
+          "id": 144,
+          "name": "餐飲"
+        },
+        {
+          "id": 145,
+          "name": "購物"
+        }
+      ],
+      "friendly": [],
+      "images": [],
+      "files": [],
+      "links": []
+    },
+    {
+      "id": 52,
+      "name": "胡適紀念館",
+      "name_zh": null,
+      "open_status": 1,
+      "introduction": "胡適是提倡自由主義的先驅，在思想上受到赫胥黎與杜威的影響，自稱赫胥黎教他怎樣懷疑，杜威先生教他怎樣思想。畢生倡言「大膽的假設，小心的求證」、「言必有徵」的治學方法。曾任駐美大使、北京大學校長、中央研究院院長等職，此胡適紀念館原是他晚年回臺灣就任中研院院長的南港住宅(1958-1962)。1962年2月24日胡適先生逝世後，中研院院務會議通過「胡適先生故居完全供作胡適紀念館之用」，隨即籌組「胡適紀念館管理委員會」，胡適紀念館也於同年12月10日正式成立；1998年元月改隸於近代史研究所。\r\n\r\n胡適紀念館包含3部分，一為胡適先生晚年回臺灣出任中研院院長的南港住宅 (1958-1962) ，即臺北胡適故居。故居的建築、廊道、擺設等格局，大體上仍保持先生生前生活起居的原有風貌。二為陳列室，係1964 年美國亞保險公司史帶(C. V. Starr) 捐贈建造，展示胡適先生的著作、手稿、照片、遺物與紀念物，以及胡適在臺灣紀錄片等。三為胡適墓園。墓園地區於1974 年增闢為「胡適公園」。公園依丘阜拾級而上，曲徑濃蔭，有山林幽靜景緻。開放以來，國內外慕名到此人士，瞻仰墓園之餘，別有遊觀登臨之勝。",
+      "open_time": "每週二 ~週六：09:00~17:00, 國定假日不開放參觀。",
+      "zipcode": "115",
+      "distric": "南港區",
+      "address": "115 臺北市南港區研究院路二段130號",
+      "tel": "+886-2-27899720、+886-2-27821147",
+      "fax": "+886-2-27898204",
+      "email": "",
+      "months": "01,07,02,08,03,09,04,10,05,11,06,12",
+      "nlat": 25.04053,
+      "elong": 121.61621,
+      "official_site": "https://www.mh.sinica.edu.tw/koteki/Default.aspx?fbclid=IwAR13QzfZeBpV4SaI3EPr_4w1m1vD63a1U7AgfpbpYcG1gcu3v4IO-ePHUaI",
+      "facebook": "https://www.facebook.com/mhhushih/",
+      "ticket": "全館免費參觀",
+      "remind": "1、 同一時間參觀人數過多時，館方得限制進場人數。\r\n2、 展覽場內溫度較低，請自行添加衣物。\r\n3、 展覽場禁止吸煙、喧嘩、飲食及寵物入場；故居禁止拍照、錄影；陳列室拍照禁止使用閃光燈及自拍棒，且禁止錄影。\r\n4、 為顧及來賓自身安全，館內禁止奔跑、追逐、觸碰展品與拍打玻璃。\r\n5、 展覽場提供服務：中英文簡介資料免費索取、多媒體影音、紀念品販售。",
+      "staytime": "",
+      "modified": "2024-03-20 15:16:04 +08:00",
+      "url": "https://www.travel.taipei/zh-tw/attraction/details/52",
+      "category": [
+        {
+          "id": 13,
+          "name": "歷史建築"
+        },
+        {
+          "id": 15,
+          "name": "藝文館所"
+        },
+        {
+          "id": 18,
+          "name": "公共藝術"
+        }
+      ],
+      "target": [
+        {
+          "id": 61,
+          "name": "親子共學"
+        },
+        {
+          "id": 62,
+          "name": "校外教學"
+        }
+      ],
+      "service": [
+        {
+          "id": 146,
+          "name": "公廁"
+        }
+      ],
+      "friendly": [],
+      "images": [
+        {
+          "src": "https://www.travel.taipei/image/63834",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63835",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63831",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63832",
+          "subject": "",
+          "ext": ".jpg"
+        },
+        {
+          "src": "https://www.travel.taipei/image/63833",
+          "subject": "",
+          "ext": ".jpg"
+        }
+      ],
+      "files": [],
+      "links": []
+    }
+  ]
+}
