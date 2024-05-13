@@ -12,6 +12,12 @@ export default {
   // 建立生命週期函式
   mounted() {
     this.getAuthorizationHeader()
+    const script = document.createElement('script')
+    script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDqHRDB5XqddRHK-DS70urhILDlgv4kHMs&libraries=places&callback=initMap'
+    script.async = true
+    script.defer = true
+    document.head.appendChild(script)
+    window.initMap = this.initMap
   },
   methods: {
     // 取得 Authorization Header
@@ -67,21 +73,35 @@ export default {
           console.error(textStatus, thrownError)
         }
       })
+    },
+    //============
+    initMap() {
+      const map = new google.maps.Map(document.getElementById('map'), {
+        center: { lat: 25.041160583496094, lng: 121.55579376220703 },
+        zoom: 15
+      })
+
+      const input = document.getElementById('searchInput')
+      const autocomplete = new google.maps.places.Autocomplete(input)
+      autocomplete.bindTo('bounds', map)
     }
   }
 }
 
+
 </script>
 
 <template>
-  <div>
+  <!-- <div>
     <h3>取得憑證資料:</h3>
     <pre>{{ accessToken }}</pre>
 
     <h3>api 資料:</h3>
     <pre>{{ apiResponse }}</pre>
-  </div>
+  </div> -->
+
+  <div id="map" style="height: 500px; width: 100%;"></div>
 
 </template>
 
-<style></style>
+<style scoped lang="scss"></style>
