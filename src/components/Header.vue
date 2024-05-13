@@ -13,7 +13,7 @@ export default{
     <RouterLink class="routerItem" to="/1/1">交通</RouterLink>
     <RouterLink class="routerItem" to="/2/2">住宿</RouterLink>
     <RouterLink class="routerItem" to="/3/3">餐廳</RouterLink>
-    <RouterLink class="routerItem" to="/4/4">觀光景點</RouterLink>
+    <RouterLink class="routerItem" to="/4/AboutViewcopy">觀光景點</RouterLink>
 </div>
 
 </template>

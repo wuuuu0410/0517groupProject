@@ -25,9 +25,9 @@ const router = createRouter({
       component: () => import('../views/3/3.vue')
     },
     {
-      path: '/4/4',
+      path: '/4/AboutViewcopy',
       name: '4',
-      component: () => import('../views/4/4.vue')
+      component: () => import('../views/4/AboutViewcopy.vue')
     }
   ]
 })
