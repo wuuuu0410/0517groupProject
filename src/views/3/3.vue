@@ -1,4 +1,5 @@
 <script>
+import TopCarousel from '@/components/TopCarousel.vue';
 export default {
     data() {
         return {
@@ -10,8 +11,20 @@ export default {
             selectList: [],
             selectValue: "",
             currentIndex: 0,
+            myCarouselImg:[
+            { image: '../public/4.jpg' },
+            { image: '../public/5.jpg' },
+            { image: '../public/3.jpg' },
+            // { image: '../public/4.jpg' },
+            // { image: '../public/5.jpg' },
+            ],
         };
     },
+
+    components:{
+        TopCarousel
+    },
+
     created() {
         this.getTaipeiRestaurants();  //從全台灣餐廳過濾出臺北市餐廳
     },
@@ -75,7 +88,7 @@ export default {
 
 
 <template>
-    <div class="headerCarousel"></div>
+    <TopCarousel :carouselImg = "myCarouselImg" />
     <div class="select">
         <select @change="checkSelect" name="" id="select">
             <option value="">請選擇區域</option>
@@ -111,7 +124,7 @@ export default {
 
     <div class="footer">
         <a class="logo_a" href="https://www.gov.taipei/" target="_blank">
-            <img class="taipei_city_logo" src="D:\VSCode\InFrontData\0517groupProject\public\Emblem_of_Taipei_City.svg"  alt="">
+            <img class="taipei_city_logo" src="..\public\Emblem_of_Taipei_City.svg"  alt="">
         </a>
         <div class="footerRight">
         <h3>臺北市政府觀光傳播局</h3><br>
@@ -132,11 +145,7 @@ export default {
 
 
 
-.headerCarousel {
-    width: 100%;
-    height: 80dvh;
-    border: 1px solid black;
-}
+
 
 .select {
     width: 100%;

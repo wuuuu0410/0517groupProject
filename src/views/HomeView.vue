@@ -48,8 +48,11 @@ export default {
 
 <template>
     <TopCarousel :carouselImg = "myCarouselImg" />
-    <div class="newsList">
-        <ul v-for="item in newsDataList">{{ item.title }}<hr></ul>
+    <p>最新消息</p>
+    <div class="newsList" v-for="item in newsDataList">
+        <ul ><a :href="item.Source" target="_blank"><h3>{{ item.title }}</h3></a><br>
+        <li><strong>活動開始時間:</strong>{{ item.活動開始時間 }} <strong>活動結束時間:</strong>活動結束時間:{{ item.活動結束時間 }}</li>
+        </ul>
     </div>
     
 </template>
@@ -58,7 +61,28 @@ export default {
 
 .newsList{
     width: 65%;
-    border: 1px solid black;
+    height: 12dvh;
+    padding: 1% ;
     margin: 0 auto;
+    border: 1px solid black;
+    background: rgb(240, 255, 255);
+    
+}
+h3{
+    font-size: 20px;
+    font-weight: 900;
+}
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+p{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
 }
 </style>

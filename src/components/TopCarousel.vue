@@ -50,16 +50,23 @@ export default {
 
 <style>
 .mainCarousel{
-    width: 100%;
-    height: 80dvh;
+    width: 70%;
+    height: 70dvh;
     margin: 0 auto;
     overflow: hidden;
     position: relative;
     .img{
+        width: 100%;
+        height: 70dvh;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%)    
+        }
+    img{
+        width: 100%;
+        height: 70dvh;
+        object-fit: 100% 100%;
         }
     }
 .fade-enter-active, .fade-leave-active{
