@@ -12,7 +12,7 @@ export default{
 
 
 <div class="headerArea">
-    <img src="/titleTaipei.png" alt="" width="150px" height="100px">
+    <img src="/titleTaipei.png" alt="" width="150px" height="90px">
     <RouterLink class="routerItem" to="/">Home</RouterLink>
     <RouterLink class="routerItem" to="/1/1">交通</RouterLink>
     <RouterLink class="routerItem" to="/2/2">住宿</RouterLink>
