@@ -98,6 +98,7 @@ export default {
       this.isCartsMouseDown =true;
       const carts = document.querySelector('.carts');
       carts.style.cursor = 'grab';
+      event.preventDefault();
     },
     cartsDragHandler(event){
       const carts = document.querySelector('.carts');
@@ -113,13 +114,11 @@ export default {
       this.isCartsMouseDown =false;
     }, 
     cartsLeftButtonMouseDownHandler(event){
-      this.isCartsMouseDown =true;
       const carts = document.querySelector('.carts');
       carts.scrollLeft -= 500;
       event.preventDefault();
     },
     cartsRightButtonMouseDownHandler(event){
-      this.isCartsMouseDown =true;
       const carts = document.querySelector('.carts');
       carts.scrollLeft += 500;
       event.preventDefault();
