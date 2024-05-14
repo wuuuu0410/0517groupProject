@@ -10,11 +10,12 @@ export default {
       filterData: null,
       cityName: "",
       periodTime: 0,
-      perPage: 50,
+      perPage: 7,
       eventType: [],
       isCartsMouseDown: false,
       item_index:0,
       imagePath:"",
+      showMapContainer: false,
     }
   },
   // 建立生命週期函式
@@ -61,7 +62,7 @@ export default {
     },
     // 取得 api 資料
     getApiResponse() {
-      let api_url = 'https://tdx.transportdata.tw/api/basic/v2/Tourism/Activity?%24top=50&%24format=JSON';
+      let api_url = `https://tdx.transportdata.tw/api/basic/v2/Tourism/Activity?%24top=${this.perPage}&%24format=JSON`;
       if (this.cityName !== "") {
         api_url = `https://tdx.transportdata.tw/api/basic/v2/Tourism/Activity/${this.cityName}?%24top=${this.perPage}&%24format=JSON`;
       }
@@ -88,6 +89,7 @@ export default {
               return false;
             })
           }
+          // 過濾活動時間
           if (this.periodTime !== 0) {
             this.filterData = this.filterData.filter((item) => {
               let StartTime = new Date(item.StartTime);
@@ -102,11 +104,13 @@ export default {
         }
       })
     },
+    // 點擊搜尋按鈕
     cartsMouseDownHandler(event) {
       this.isCartsMouseDown = true;
       const carts = document.querySelector('.carts');
       carts.style.cursor = 'grab';
     },
+    // 拖曳搜尋結果
     cartsDragHandler(event) {
       const carts = document.querySelector('.carts');
       if (this.isCartsMouseDown) {
@@ -114,6 +118,7 @@ export default {
         event.preventDefault();
       }
     },
+    // 放開搜尋結果
     cartsUpHandler(event) {
       this.isCartsMouseDown = false;
     },
@@ -165,6 +170,16 @@ export default {
       // const marker = new google.maps.Marker({ map: map })
       // // autocomplete.bindTo('bounds', map)
     },
+    // 移動頁面至地圖容器
+    scrollToMapContainer() {
+      const mapContainer = this.$refs.mapContainer;
+      if (mapContainer) {
+        window.scrollTo({
+          top: mapContainer.offsetTop,
+          behavior: 'smooth'
+        });
+      }
+    }
   }
 }
 
@@ -244,7 +259,6 @@ export default {
             <a href="#sidebar" @click="itemSeletedHandler(filterData.indexOf(item))">詳細資訊</a>
           </div>
         </div>
-
       </div>
       <button @mousedown="cartsRightButtonMouseDownHandler" @mouseup="cartsUpHandler">往右</button>
     </div>
@@ -277,7 +291,7 @@ export default {
     </div>
     <!-- 地圖 -->
     <div class="map-wrapper">
-      <div id="map" class="map-container"></div>
+      <div id="map" class="map-container" ref="mapContainer"></div>
     </div>
   </div>
 </template>
@@ -293,43 +307,20 @@ template{
 }
 //設定整個容器的樣式
 .background {
-  background: url(https://www.finalfantasyxiv.com/freetrial/static/eb21a694cb608a7dd2a52fede01db68f/c69a4/texture.png);
-  }
+  background: url(https://www.finalfantasyxiv.com/freetrial/static/eb21a694cb608a7dd2a52fede01db68f/c69a4/texture.png) ;
+}
 
-.container {
+.map-Container {
   display: flex;
   height: 150vh;
 }
+
 
 //設定左側欄位的樣式
 .sidebar {
   width: 800px;
   padding: 20px;
   background: url(https://www.finalfantasyxiv.com/freetrial/static/eb21a694cb608a7dd2a52fede01db68f/c69a4/texture.png) rgba(60, 60, 60, 0.146);
-
-  .sidebar-body{
-    display: flex;
-    flex-direction: column;
-    *{
-      margin: 1rem;
-    }
-    label{
-      font-weight:bold;
-    }
-    label,p,a{
-      font-size: 2rem;
-    }
-    img{
-      width: 40%;
-    }
-    .sidebar-body-description{
-      height: 25vh;
-      overflow-y: scroll;
-      border-style: none;
-      background-color: white;
-      padding: 1rem;
-    }
-  }
 }
 
 //將地圖容器包裝在一個 .map-wrapper 容器中,並使用 flex: 1 佔滿剩餘空間。
@@ -341,6 +332,7 @@ template{
 .map-container {
   height: 100%;
   width: 100%;
+  margin-left: 1rem;
 }
 
 
@@ -393,6 +385,28 @@ template{
   }
 }
 
+.buttonArea {
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.custom-button {
+  padding: 10px 20px !important;
+  border: none !important;
+  background-color: transparent !important;
+  position: absolute;
+  margin-left: 31rem;
+  padding-bottom: 15rem;
+  font-size: 20px !important;
+  text-decoration: underline;
+
+  &:hover {
+    color: rgb(42, 18, 255) !important;
+    cursor: pointer !important;
+  }
+}
+
+
 .main {
   display: flex;
   flex-direction: row;
@@ -443,6 +457,7 @@ template{
       .cart-body {
         margin-top: 2rem;
         overflow: visible;
+        position: relative;
         display: flex;
         flex-direction: column;
         p {
@@ -458,6 +473,8 @@ template{
           text-align: center;
         }
       }
+
+
 
     }
   }
