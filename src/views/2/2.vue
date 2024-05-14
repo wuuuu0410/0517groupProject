@@ -187,7 +187,7 @@ export default {
       </diV> -->
     <!--this is for data test-->
     <div class="main">
-      <button @mousedown="cartsLeftButtonMouseDownHandler" @mouseup="cartsUpHandler" @mouseleave="cartsMouseLeaveHandler">往左</button>
+      <button @mousedown="cartsLeftButtonMouseDownHandler" @mouseup="cartsUpHandler">往左</button>
       <div class="carts" @mouseup="cartsUpHandler" @mousedown="cartsMouseDownHandler" @mouseleave="cartsMouseLeaveHandler" @mousemove="cartsDragHandler">
         <div v-for="item in filterData" :key="item" class="cart">
           <div class="cart-title">活動名稱：<br>{{ item.ActivityName }}</div>
@@ -202,7 +202,7 @@ export default {
         </div>
         
       </div>
-      <button @mousedown="cartsRightButtonMouseDownHandler" @mouseup="cartsUpHandler" @mouseleave="cartsMouseLeaveHandler">往右</button>
+      <button @mousedown="cartsRightButtonMouseDownHandler" @mouseup="cartsUpHandler">往右</button>
     </div>
   </div>
 
