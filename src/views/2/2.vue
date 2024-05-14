@@ -42,7 +42,7 @@ export default {
         data: parameter,
         async: false,
         success: (data) => {
-          this.accessToken = data
+          this.accessToken = data;
           this.getApiResponse();
         },
         // 取得 access_token 失敗
@@ -80,6 +80,13 @@ export default {
               return false;
             })
           }
+          if(this.periodTime !==0){
+            this.filterData=this.filterData.filter((item)=>{
+              let StartTime = new Date(item.StartTime);
+              console(StartTime);
+              return true;
+            })
+          }
         },
         // 取得 api 資料失敗
         error: (xhr, textStatus, thrownError) => {
@@ -109,11 +116,13 @@ export default {
       this.isCartsMouseDown =true;
       const carts = document.querySelector('.carts');
       carts.scrollLeft -= 500;
+      event.preventDefault();
     },
     cartsRightButtonMouseDownHandler(event){
       this.isCartsMouseDown =true;
       const carts = document.querySelector('.carts');
       carts.scrollLeft += 500;
+      event.preventDefault();
     }
   }
 }
