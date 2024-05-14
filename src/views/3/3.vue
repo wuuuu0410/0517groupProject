@@ -260,8 +260,7 @@ li{
     display: flex;
     justify-content:space-around;
     align-items: center;
-    margin: 0 auto;
-    margin-bottom: 20px;
+    margin: 20px auto;
 }
 .card{
     width: 23%;
@@ -269,6 +268,9 @@ li{
     border: 1px solid black;
     border-radius: 10px;
     background: #fdecef
+}
+.card:hover {
+    transform: scale(1.02);
 }
 .cardTopImg{
         height: auto;

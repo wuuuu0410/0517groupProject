@@ -37,5 +37,9 @@ export default{
         font-weight: 900;
     }
 }
+.routerItem:hover {
+    transform: scale(1.2);
+}
+
 
 </style>
