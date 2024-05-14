@@ -47,7 +47,7 @@ const arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
         <div class="third bigArea">
 
             <div class="second">
-                <img class="young" src="/就要這樣玩.jpg" alt="">
+                <img class="young" src="https://www.travel.taipei/Content/images/content/must-visit/list/Attractions-m.jpg" alt="">
             </div>
 
             <div class="topTitlee">
@@ -55,9 +55,9 @@ const arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
             </div>
             <div class="thirdBox" v-for="item in arr">
                 <div class="leftPhoto">
-                    <img style="width: 100%; height: 100%;" v-if="spots.data[item].images != ''"
+                    <img style="width: 100%; height: 100%; border-radius: 5%;" v-if="spots.data[item].images != ''"
                         v-bind:src="spots.data[item].images[0].src" alt="" width="300px">
-                    <img style="width: 100%; height: 100%;" v-else
+                    <img style="width: 100%; height: 100%; border-radius: 5%;" v-else
                         src="https://memeprod.sgp1.digitaloceanspaces.com/user-wtf/1581909112681.jpg" alt=""
                         width="300px">
                 </div>
@@ -69,7 +69,7 @@ const arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 
                     <p class="related">相關連結</p>
-                    <a :href="spots.data[item].facebook" target="_blank">
+                    <a class="aaa" :href="spots.data[item].facebook" target="_blank">
                         <p class="link">{{ spots.data[item].name }}</p>
                     </a>
 
@@ -91,7 +91,7 @@ const arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
             <nav aria-label="Page navigation example">
                 <ul class="pagination">
-                    <li class="page-item"><a class="page-link" @click="getSpots2(nowPage - 1)" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" @click="getSpots2(nowPage - 1)" href="#">上一頁</a></li>
                     <li class="page-item"><a class="page-link" @click="getSpots2(1)" href="#">1</a></li>
                     <li class="page-item"><a class="page-link" @click="getSpots2(2)" href="#">2</a></li>
                     <li class="page-item"><a class="page-link" @click="getSpots2(3)" href="#">3</a></li>
@@ -102,7 +102,7 @@ const arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
                     <li class="page-item"><a class="page-link" @click="getSpots2(8)" href="#">8</a></li>
                     <li class="page-item"><a class="page-link" @click="getSpots2(9)" href="#">9</a></li>
                     <li class="page-item"><a class="page-link" @click="getSpots2(10)" href="#">10</a></li>
-                    <li class="page-item"><a class="page-link" @click="getSpots2(nowPage + 1)" href="#">Next</a></li>
+                    <li class="page-item"><a class="page-link" @click="getSpots2(nowPage + 1)" href="#">下一頁</a></li>
                 </ul>
             </nav>
 
@@ -167,6 +167,7 @@ const arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
     }
 
     .thirdBox {
+        width: 100%;
         height: 45dvh;
         display: flex;
         justify-content: center;
@@ -182,6 +183,7 @@ const arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
         width: 45%;
         height: 100%;
         border: 1px solid black;
+        border-radius: 5%;
         // height: 50%;
         // border: 1px solid red;
     }
@@ -191,12 +193,12 @@ const arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
         height: 100%;
         // height: 45dvh;
         // border: 1px solid red;
-        padding-left: 2%;
+        padding-left: 5%;
         position: relative;
 
         .bbox{
-            width: 500px;
-            height: 60%;
+            width: 600px;
+            height: 65%;
             border: 1px solid black;
             overflow: scroll;
             overflow-x: hidden;
@@ -206,15 +208,20 @@ const arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
     .related {
         color: #566ea7;
         position: absolute;
-        left: 3%;
-        bottom: 12%;
+        left: 8.5%;
+        bottom: 9%;
     }
 
     .link {
         color: #017978;
         position: absolute;
-        left: 3%;
-        bottom: 5%;
+        left: 8.5%;
+        bottom: 1%;
+        transition: 0.5s;
+
+        &:hover{
+            scale: 1.1;
+        }
     }
 
     .title {
@@ -229,7 +236,17 @@ const arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
     .pagination {
         justify-content: center;
         margin-bottom: 5%;
+        
+        .page-link{
+            border: none;
+            &:hover{
+                background: #e8e9ec;
+                scale: 1.2;
+            }
+        }
+        
     }
+
 }
 
 .footer {
