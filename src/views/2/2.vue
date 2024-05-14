@@ -10,9 +10,11 @@ export default {
       filterData: null,
       cityName: "",
       periodTime: 0,
-      perPage: 30,
+      perPage: 50,
       eventType: [],
       isCartsMouseDown: false,
+      item_index:0,
+      imagePath:"",
     }
   },
   // 建立生命週期函式
@@ -59,7 +61,7 @@ export default {
     },
     // 取得 api 資料
     getApiResponse() {
-      let api_url = 'https://tdx.transportdata.tw/api/basic/v2/Tourism/Activity?%24top=30&%24format=JSON';
+      let api_url = 'https://tdx.transportdata.tw/api/basic/v2/Tourism/Activity?%24top=50&%24format=JSON';
       if (this.cityName !== "") {
         api_url = `https://tdx.transportdata.tw/api/basic/v2/Tourism/Activity/${this.cityName}?%24top=${this.perPage}&%24format=JSON`;
       }
@@ -130,6 +132,22 @@ export default {
       carts.scrollLeft += 500;
       event.preventDefault();
     },
+    itemSeletedHandler(item_index){
+      this.item_index =item_index;
+      if(this.filterData[item_index].Picture.PictureUrl1){
+      this.imagePath = this.filterData[item_index].Picture.PictureUrl1;
+      console.log(this.imagePath);
+      }else{
+        this.imagePath="";
+      }
+      console.log("hi");
+      const mapElement = document.querySelector('.map-container');
+      console.log(this.filterData[item_index].Position.PositionLon);
+      const map = new google.maps.Map(mapElement, {
+        center: { lat: this.filterData[item_index].Position.PositionLat, lng: this.filterData[item_index].Position.PositionLon },
+        zoom: 15
+      })
+    },
     //============
     initMap() {
       // 建立地圖物件
@@ -146,7 +164,7 @@ export default {
       // // 將搜尋結果顯示在地圖上
       // const marker = new google.maps.Marker({ map: map })
       // // autocomplete.bindTo('bounds', map)
-    }
+    },
   }
 }
 
@@ -205,10 +223,10 @@ export default {
       <button @click="getApiResponse">搜尋</button>
     </div>
     <!--this is for data test-->
-    <!-- <diV>
-        <h3>api 資料:</h3>
-        <pre>{{ filterData }}</pre>
-      </diV> -->
+    <!-- <div>
+      <h3>api 資料:</h3>
+      <pre>{{ filterData }}</pre>
+    </div> -->
     <!--this is for data test-->
     <div class="main">
       <button @mousedown="cartsLeftButtonMouseDownHandler" @mouseup="cartsUpHandler">往左</button>
@@ -223,6 +241,7 @@ export default {
             <p>活動時間：{{ item.StartTime.split('T')[0] }} - {{ item.EndTime.split('T')[0] }}</p>
             <p v-if="item.Class1 || item.Class2">活動類型：{{ item.Class1 }} {{ item.Class2 }}</p>
             <p v-else>活動類型：無</p>
+            <a href="#sidebar" @click="itemSeletedHandler(filterData.indexOf(item))">詳細資訊</a>
           </div>
         </div>
 
@@ -231,8 +250,30 @@ export default {
     </div>
   </div>
   <div class="container">
-    <div class="sidebar">
+    <div class="sidebar" id="sidebar">
       <!-- 左側欄位，活動內容 -->
+        <div class="sidebar-body" v-if="filterData">
+          <h1>活動名稱：</h1>
+          <h1>{{ filterData[item_index].ActivityName }}</h1>
+          <label>活動描述：</label> 
+          <p class="sidebar-body-description">{{ filterData[item_index].Description }} </p>
+          <label>主辦單位：</label>
+          <p>{{ filterData[item_index].Organizer }} </p>
+          <label>活動類型：</label>
+          <p v-if="filterData[item_index].Class1 || filterData[item_index].Class2">{{ filterData[item_index].Class1 }} {{ filterData[item_index].Class2 }}</p>
+          <p v-else>無</p>
+          <label>活動時間：</label>
+          <p>{{ filterData[item_index].StartTime.split('T')[0] }} - {{ filterData[item_index].EndTime.split('T')[0] }} </p>
+          <label>地點：</label> 
+          <p v-if="filterData[item_index].Location"> {{ filterData[item_index].Location }}</p>
+          <p v-else>活動類型：無</p>
+          <label>活動照片：</label>
+          <img v-if="imagePath" :src="imagePath">
+          <p v-else>無</p>
+          <label>活動官網：</label>
+          <a target="_blank" v-if="filterData[item_index].WebsiteUrl" :href="filterData[item_index].WebsiteUrl">{{filterData[item_index].WebsiteUrl}}</a>
+          <p v-else>無</p>
+        </div>
     </div>
     <!-- 地圖 -->
     <div class="map-wrapper">
@@ -242,6 +283,14 @@ export default {
 </template>
 
 <style scoped lang="scss">
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+template{
+  scroll-behavior: smooth;
+}
 //設定整個容器的樣式
 .background {
   background: url(https://www.finalfantasyxiv.com/freetrial/static/eb21a694cb608a7dd2a52fede01db68f/c69a4/texture.png);
@@ -249,14 +298,38 @@ export default {
 
 .container {
   display: flex;
-  height: 95vh;
+  height: 150vh;
 }
 
 //設定左側欄位的樣式
 .sidebar {
-  width: 400px;
+  width: 800px;
   padding: 20px;
   background: url(https://www.finalfantasyxiv.com/freetrial/static/eb21a694cb608a7dd2a52fede01db68f/c69a4/texture.png) rgba(60, 60, 60, 0.146);
+
+  .sidebar-body{
+    display: flex;
+    flex-direction: column;
+    *{
+      margin: 1rem;
+    }
+    label{
+      font-weight:bold;
+    }
+    label,p,a{
+      font-size: 2rem;
+    }
+    img{
+      width: 40%;
+    }
+    .sidebar-body-description{
+      height: 25vh;
+      overflow-y: scroll;
+      border-style: none;
+      background-color: white;
+      padding: 1rem;
+    }
+  }
 }
 
 //將地圖容器包裝在一個 .map-wrapper 容器中,並使用 flex: 1 佔滿剩餘空間。
@@ -270,11 +343,6 @@ export default {
   width: 100%;
 }
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
 
 .cart-search {
   display: flex;
@@ -375,11 +443,19 @@ export default {
       .cart-body {
         margin-top: 2rem;
         overflow: visible;
-
+        display: flex;
+        flex-direction: column;
         p {
           margin: 1.5rem;
           padding: 0.5rem;
           font-size: 1.5rem;
+        }
+        a{
+          margin-top: 3rem;
+          color: blue;
+          scroll-behavior: smooth;
+          font-size: 3rem;
+          text-align: center;
         }
       }
 
