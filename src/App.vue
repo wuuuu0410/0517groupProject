@@ -7,12 +7,15 @@ import Header from './components/Header.vue'
   <div class="header">
     <Header />
   </div>
-  <RouterView />
-</template>
+
+    <RouterView />
+  </template>
 
 <style scoped lang="scss">
   .header{
-    width: 100dvw;
-    height: 7dvh;
+
+    height: 10dvh;
   }
+
+
 </style>

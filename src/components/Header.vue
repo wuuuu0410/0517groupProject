@@ -8,12 +8,17 @@ export default{
 </script>
 
 <template>
+
+
+
 <div class="headerArea">
+    <img src="/titleTaipei.png" alt="" width="150px" height="100px">
     <RouterLink class="routerItem" to="/">Home</RouterLink>
     <RouterLink class="routerItem" to="/1/1">交通</RouterLink>
     <RouterLink class="routerItem" to="/2/2">住宿</RouterLink>
     <RouterLink class="routerItem" to="/3/3">餐廳</RouterLink>
     <RouterLink class="routerItem" to="/4/AboutViewcopy">觀光景點</RouterLink>
+    <img src="/headertaipei.png" alt="" width="280px" height="200px">
 </div>
 
 </template>
@@ -27,12 +32,11 @@ export default{
     background: linear-gradient(to right, rgb(255, 255, 255),#F8C3CD);
     text-align: center;
     display: flex;
-    justify-content: center;
+    justify-content:space-between;
     align-items: center;
     .routerItem{
         color: rgb(0, 0, 0);
         font-size: 30px;
-        margin: 0 1%;
         text-decoration: none;
         font-weight: 900;
     }

@@ -64,7 +64,7 @@ export default {
         },
         //比對select選取的value,並收集相同行政區的餐廳
         checkSelect() {
-            const select = document.querySelector("#select")
+            const select = document.querySelector("#vue3select")
             this.selectValue = select.value;
             this.selectList = [];
             for (let i = 0; i < this.taipeiRestaurantsList.length; i++) {
@@ -100,14 +100,14 @@ export default {
 
 <template>
     <TopCarousel :carouselImg = "myCarouselImg" />
-    <div class="select">
-        <select @change="checkSelect" name="" id="select">
+    <div class="vue3select">
+        <select @change="checkSelect" name="" id="vue3select">
             <option value="">請選擇區域</option>
             <option v-for="item in this.town" v-bind:value="item">{{ item }}</option>
         </select>
     </div>
 
-    <div class="list" v-for="item in selectList" >
+    <div class="vue3list" v-for="item in selectList" >
         <div class="listImages">
             <img v-if="item.Images.length>=1" v-bind:src="item.Images[0].URL" alt="" width="68%" height="68%">
             <!-- <img v-if="item.Images.length>=2" v-bind:src="item.Images[1].URL" alt="" width="68%" height="68%">
@@ -115,15 +115,15 @@ export default {
         </div>
 
         <div class="ulSpace">
-            <ul class="restName">
-                <li>
-                    <h2>{{ item.RestaurantName }}</h2>
+            <ul class="restName vue3Ul">
+                <li class="vue3Li">
+                    <h2 class="vue3H2">{{ item.RestaurantName }}</h2>
                 </li>
-                <li>{{ item.Description }}</li>
+                <li class="vue3Li">{{ item.Description }}</li>
                 <br>
-                <li>{{ "地址:" + item.PostalAddress.StreetAddress }}</li>
-                <li>{{ "營業時間:" + item.ServiceTimeInfo }}</li>
-                <li><a :href="item.SameAsURLs" target="_blank">詳細介紹</a> </li>
+                <li class="vue3Li">{{ "地址:" + item.PostalAddress.StreetAddress }}</li>
+                <li class="vue3Li">{{ "營業時間:" + item.ServiceTimeInfo }}</li>
+                <li class="vue3Li"><a :href="item.SameAsURLs" target="_blank">詳細介紹</a> </li>
             </ul>
         </div>
     </div>
@@ -134,23 +134,23 @@ export default {
                 <img class="cardImg" v-bind:src="taipeiRestaurantsList[item].Images[0].URL" alt="" width="100%" height=auto>
             </div>
             <div class="cardBottomText">
-                <a v-bind:href="taipeiRestaurantsList[item].SameAsURLs" target="_blank"><h2>{{taipeiRestaurantsList[item].RestaurantName}}</h2></a><br>
-                <h4>{{taipeiRestaurantsList[item].PostalAddress.City }}&nbsp;{{taipeiRestaurantsList[item].PostalAddress.Town }}</h4>
-                <h4>{{taipeiRestaurantsList[item].PostalAddress.StreetAddress }}</h4>
+                <a v-bind:href="taipeiRestaurantsList[item].SameAsURLs" target="_blank"><h4 vue3H4>{{taipeiRestaurantsList[item].RestaurantName}}</h4></a><br>
+                <h5 class="vue3H5">{{taipeiRestaurantsList[item].PostalAddress.City }}&nbsp;{{taipeiRestaurantsList[item].PostalAddress.Town }}</h5>
+                <h5 class="vue3H5">{{taipeiRestaurantsList[item].PostalAddress.StreetAddress }}</h5>
             </div>
         </div>
     </div>
 
-    <div class="footer">
-        <a class="logo_a" href="https://www.gov.taipei/" target="_blank">
+    <div class="vue3footer">
+        <a class="vue3logo_a" href="https://www.gov.taipei/" target="_blank">
             <img class="taipei_city_logo" src="/Logo.svg" alt="">
         </a>
         <div class="footerRight">
-        <h3>臺北市政府觀光傳播局</h3><br>
-            <ul>
-                <li>地址 : 110024臺北市信義區市府路1號4樓中央區</li><br>
-                <li>電話 : 02-27208889-代表號 臺北市民當家熱線 1999各科室聯絡電話及傳真</li><br>
-                <li>服務時間 : 周一至周五08:30-12:30,13:30-17:305</li><br>
+        <h3 class="vue3H3">臺北市政府觀光傳播局</h3><br>
+            <ul class="vue3Ul">
+                <li class="vue3Li">地址 : 110024臺北市信義區市府路1號4樓中央區</li><br>
+                <li class="vue3Li">電話 : 02-27208889-代表號 臺北市民當家熱線 1999各科室聯絡電話及傳真</li><br>
+                <li class="vue3Li">服務時間 : 周一至周五08:30-12:30,13:30-17:305</li><br>
             </ul>
         </div>
     </div>
@@ -170,7 +170,7 @@ export default {
     border: 1px solid black;
 }
 
-.select {
+.vue3select {
     width: 100%;
     height: 10dvh;
     display: flex;
@@ -178,7 +178,7 @@ export default {
     justify-content: center;
 }
 
-#select {
+#vue3select {
     width: 25%;
     height: 5dvh;
     background:#F8C3CD;
@@ -193,14 +193,15 @@ option{
     border: 1px solid black;
 }
 
-.list {
+.vue3list {
     width: 70%;
     margin: 0 auto;
-    /* background-image: url(../public/紙.jpg); */
+    background-image: url(/list紙.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     border: 1px solid black;
     display: flex;
+    
 
 }
 
@@ -219,19 +220,15 @@ option{
     align-items: center;
     
 
-}
+} 
 
-.slide{
-        width:"68%";
-        height:"68%"
-    }
-    
 .ulSpace {
     width: 65%;
     height: 280px;
+    padding: 1%;
 }
 
-.footer{
+.vue3footer{
     width: 70%;
     margin: 0 auto;
     display: flex;
@@ -240,11 +237,11 @@ option{
     background: linear-gradient(to right, rgb(255, 255, 255),#F8C3CD);
 }
 
-li{
+.vue3Li{
     list-style: none;
     }
 
-.logo_a{
+.vue3logo_a{
     width: 15%;
     height: 15%;
 }
@@ -282,4 +279,5 @@ li{
 .cardImg{
     border-radius: 10px 10px 0 0;
 }
+
 </style>
