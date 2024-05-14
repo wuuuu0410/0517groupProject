@@ -24,13 +24,17 @@ export default{
 .headerArea{
     width: 100%;
     height: 100%;
-    background: #F8C3CD;
-
+    background: linear-gradient(to right, rgb(255, 255, 255),#F8C3CD);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     .routerItem{
-        color: white;
-        font-size: 24px;
+        color: rgb(0, 0, 0);
+        font-size: 30px;
         margin: 0 1%;
         text-decoration: none;
+        font-weight: 900;
     }
 }
 

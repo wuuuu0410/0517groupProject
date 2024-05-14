@@ -19,6 +19,8 @@ export default {
             { image: '/餐廳輪播圖5.jpg' },
             { image: '/餐廳輪播圖6.jpg' },
             ],
+            randomNumber:"",
+            randomArr:[],
         };
     },
     components:{
@@ -46,6 +48,7 @@ export default {
                 }
                 console.log(this.taipeiRestaurantsList);
                 this.getTown();
+                this.getRandomCards()
             } catch (error) {
                 console.error(error);
             }
@@ -80,7 +83,15 @@ export default {
             if (this.currentIndex < this.selectList[currentIndex].length - 1) {
                 this.currentIndex++;
             }
-        }
+        },
+        getRandomCards() {
+            this.randomArr=[];
+            for(let i = 0 ; i<4; i++){
+                this.randomNumber = Math.floor(Math.random() * 148) ;
+                this.randomArr.push(this.randomNumber)
+            }
+            console.log(this.randomArr)
+        }   
     },
 };
 </script>
@@ -117,8 +128,17 @@ export default {
         </div>
     </div>
 
-    <div class="card">
-
+    <div class="cards">
+        <div class="card"v-for="item in randomArr">
+            <div class="cardTopImg" >
+                <img class="cardImg" v-bind:src="taipeiRestaurantsList[item].Images[0].URL" alt="" width="100%" height=auto>
+            </div>
+            <div class="cardBottomText">
+                <a v-bind:href="taipeiRestaurantsList[item].SameAsURLs" target="_blank"><h2>{{taipeiRestaurantsList[item].RestaurantName}}</h2></a><br>
+                <h4>{{taipeiRestaurantsList[item].PostalAddress.City }}&nbsp;{{taipeiRestaurantsList[item].PostalAddress.Town }}</h4>
+                <h4>{{taipeiRestaurantsList[item].PostalAddress.StreetAddress }}</h4>
+            </div>
+        </div>
     </div>
 
     <div class="footer">
@@ -161,10 +181,16 @@ export default {
 #select {
     width: 25%;
     height: 5dvh;
-    background: black;
-    color: white;
+    background:#F8C3CD;
+    color: rgb(0, 0, 0);
     font-size: 25px;
     text-align: center;
+    border-radius: 10px;
+    border: none;
+    font-weight: 900;
+}
+option{
+    border: 1px solid black;
 }
 
 .list {
@@ -226,5 +252,32 @@ li{
 .taipei_city_logo{
     width: 100%;
     height: 100%;
+}
+
+.cards{
+    width: 70%;
+    height: 50dvh;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.card{
+    width: 23%;
+    height: 50dvh;
+    border: 1px solid black;
+    border-radius: 10px;
+    background: #fdecef
+}
+.cardTopImg{
+        height: auto;
+    }
+.cardBottomText{
+        height: auto;
+        padding: 5%;
+    }
+.cardImg{
+    border-radius: 10px 10px 0 0;
 }
 </style>

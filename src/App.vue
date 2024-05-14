@@ -13,6 +13,6 @@ import Header from './components/Header.vue'
 <style scoped lang="scss">
   .header{
     width: 100dvw;
-    height: 10dvh;
+    height: 7dvh;
   }
 </style>

@@ -5,6 +5,7 @@ export default {
     data() {
         return {
             newsDataList:[],
+            currentDataList:[],
             myCarouselImg:[
             { image: '/消息輪播1.jpg'},
             { image: '/消息輪播2.jpg'},
@@ -41,13 +42,15 @@ export default {
         },
 
 
+
+
     }
 };
 </script>
 
 <template>
     <TopCarousel :carouselImg = "myCarouselImg" />
-    <p>最新消息</p>
+    <p class="newTitle">最新消息</p>
     <div class="newsList" v-for="item in newsDataList">
         <ul ><a :href="item.Source" target="_blank"><h3>{{ item.title }}</h3></a><br>
         <li><strong>活動開始時間:</strong>{{ item.活動開始時間 }} <strong>&nbsp;&nbsp;&nbsp;活動結束時間:</strong>{{ item.活動結束時間 }}</li>
@@ -56,7 +59,7 @@ export default {
 
     <div class="footer">
         <a class="logo_a" href="https://www.gov.taipei/" target="_blank">
-            <img class="taipei_city_logo" src="/tpe_logo.jpg" alt="">
+            <img class="taipei_city_logo" src="/Logo.svg" alt="">
         </a>
         <div class="footerRight">
         <h3>臺北市政府觀光傳播局</h3><br>
@@ -98,7 +101,11 @@ p{
     font-size: 30px;
     font-weight: 900;
 }
-
+.newTitle{
+    font-size: 40px;
+    font-weight: 900;
+    margin: 2% 0;
+}
 .footer{
     width: 70%;
     margin: 0 auto;
