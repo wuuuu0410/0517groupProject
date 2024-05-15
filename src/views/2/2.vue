@@ -61,7 +61,7 @@ export default {
     },
     // 取得 api 資料
     getApiResponse() {
-      let api_url = 'https://tdx.transportdata.tw/api/basic/v2/Tourism/Activity/Taipei?%24top=30&%24format=JSON';
+      let api_url = 'https://tdx.transportdata.tw/api/basic/v2/Tourism/Activity/Taipei?%24top=200&%24format=JSON';
       $.ajax({
         // 設定請求
         type: 'GET',
@@ -286,69 +286,6 @@ export default {
   background: url(https://www.finalfantasyxiv.com/freetrial/static/eb21a694cb608a7dd2a52fede01db68f/c69a4/texture.png);
 }
 
-.container {
-  display: flex;
-  height: 120vh;
-}
-
-//設定左側欄位的樣式
-.sidebar {
-  width: 400px;
-  padding: 20px;
-  background: url(https://www.finalfantasyxiv.com/freetrial/static/eb21a694cb608a7dd2a52fede01db68f/c69a4/texture.png) rgba(60, 60, 60, 0.146);
-
-  .sidebar-main {
-    * {
-      margin: 1.2rem;
-    }
-
-    p {
-      font-size: 1.2rem;
-    }
-
-    h1 {
-      font-weight: bold;
-      font-size: 1.5rem;
-    }
-
-    .sidebar-body {
-      height: 30vh;
-      overflow-y: scroll;
-      background-color: white;
-      padding: 1rem;
-      border: 1px solid black;
-    }
-
-    img {
-      width: 60%;
-    }
-
-    a {
-      text-align: center;
-      font-size: 1.2rem;
-      color: blue;
-      text-decoration: underline;
-
-    }
-  }
-}
-
-//將地圖容器包裝在一個 .map-wrapper 容器中,並使用 flex: 1 佔滿剩餘空間。
-.map-wrapper {
-  flex: 1;
-}
-
-//設定地圖的高度和寬度
-.map-container {
-  height: 100%;
-  width: 100%;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
 
 // 設定活動搜尋欄位的樣式
 .cart-search {
@@ -473,5 +410,63 @@ export default {
 
     }
   }
+}
+.container {
+  display: flex;
+  height: 80vh;
+  flex-wrap: wrap;
+  justify-content: space-between;;
+  //設定左側欄位的樣式
+    .sidebar {
+    flex: 2 1 500px;
+    padding: 20px;
+    background: url(https://www.finalfantasyxiv.com/freetrial/static/eb21a694cb608a7dd2a52fede01db68f/c69a4/texture.png) rgba(60, 60, 60, 0.146);
+
+      .sidebar-main {
+        * {
+          margin: 1.2rem;
+        }
+
+        p {
+          font-size: 1.2rem;
+        }
+
+        h1 {
+          font-weight: bold;
+          font-size: 1.5rem;
+        }
+
+        .sidebar-body {
+          height: 30vh;
+          overflow-y: scroll;
+          background-color: white;
+          padding: 1rem;
+          border: 1px solid black;
+        }
+
+        img {
+          width: 60%;
+        }
+
+        a {
+          text-align: center;
+          font-size: 1.2rem;
+          color: blue;
+          text-decoration: underline;
+
+        }
+      }
+  }
+
+  //將地圖容器包裝在一個 .map-wrapper 容器中,並使用 flex: 1 佔滿剩餘空間。
+  .map-wrapper {
+    flex:2 1 500px; 
+    .map-container {
+      height: 100%;
+    }
+  }
+
+  //設定地圖的高度和寬度
+ 
 }
 </style>
