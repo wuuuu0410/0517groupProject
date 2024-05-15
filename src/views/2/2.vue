@@ -286,12 +286,6 @@ export default {
 </template>
 
 <style scoped lang="scss">
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 //設定整個容器的樣式
 .background {
   background: url(https://www.finalfantasyxiv.com/freetrial/static/eb21a694cb608a7dd2a52fede01db68f/c69a4/texture.png);
@@ -425,14 +419,11 @@ export default {
 
 .container {
   display: flex;
-  height: 80vh;
+  height: 100vh;
   flex-wrap: wrap;
-  justify-content: space-between;
-  ;
-
   //設定左側欄位的樣式
-  .sidebar {
-    flex: 2 1 500px;
+    .sidebar {
+    flex:1 1 500px;
     padding: 20px;
     background: url(https://www.finalfantasyxiv.com/freetrial/static/eb21a694cb608a7dd2a52fede01db68f/c69a4/texture.png) rgba(60, 60, 60, 0.146);
 
@@ -474,8 +465,7 @@ export default {
 
   //將地圖容器包裝在一個 .map-wrapper 容器中,並使用 flex: 1 佔滿剩餘空間。
   .map-wrapper {
-    flex: 2 1 500px;
-
+    flex:2 1 500px;
     .map-container {
       height: 100%;
     }
