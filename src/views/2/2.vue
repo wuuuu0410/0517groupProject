@@ -13,6 +13,7 @@ export default {
       perPage: 30,
       eventType: [],
       isCartsMouseDown: false,
+      selected_item_index:0,
     }
   },
   // 建立生命週期函式
@@ -59,10 +60,7 @@ export default {
     },
     // 取得 api 資料
     getApiResponse() {
-      let api_url = 'https://tdx.transportdata.tw/api/basic/v2/Tourism/Activity?%24top=30&%24format=JSON';
-      if (this.cityName !== "") {
-        api_url = `https://tdx.transportdata.tw/api/basic/v2/Tourism/Activity/${this.cityName}?%24top=${this.perPage}&%24format=JSON`;
-      }
+      let api_url = 'https://tdx.transportdata.tw/api/basic/v2/Tourism/Activity/Taipei?%24top=30&%24format=JSON';
       $.ajax({
         // 設定請求
         type: 'GET',
@@ -88,9 +86,12 @@ export default {
           }
           if (this.periodTime !== 0) {
             this.filterData = this.filterData.filter((item) => {
-              let StartTime = new Date(item.StartTime);
-              console(StartTime);
-              return true;
+              let StartTime = Date.parse(item.StartTime.split('T')[0]);
+              let EndTime = Date.now()-this.periodTime*24*60*60;
+              if(EndTime>StartTime){
+                return true;
+              }
+              return false;
             })
           }
         },
@@ -117,18 +118,21 @@ export default {
     },
     cartsMouseLeaveHandler(event) {
       this.isCartsMouseDown = false;
+      carts.style.cursor = 'default';
     },
     cartsLeftButtonMouseDownHandler(event) {
-      this.isCartsMouseDown = true;
       const carts = document.querySelector('.carts');
       carts.scrollLeft -= 500;
       event.preventDefault();
     },
     cartsRightButtonMouseDownHandler(event) {
-      this.isCartsMouseDown = true;
       const carts = document.querySelector('.carts');
       carts.scrollLeft += 500;
       event.preventDefault();
+    },
+    itemSeletedHandler(item_index){
+      this.selected_item_index = item_index;
+      this.selected_item_initMap();
     },
     //============
     initMap() {
@@ -146,52 +150,29 @@ export default {
       // // 將搜尋結果顯示在地圖上
       // const marker = new google.maps.Marker({ map: map })
       // // autocomplete.bindTo('bounds', map)
+    },
+    selected_item_initMap(){
+      const mapElement = document.querySelector('.map-container')
+      // 建立地圖
+      const map = new google.maps.Map(mapElement, {
+        center: { lat: this.filterData[this.selected_item_index].Position.PositionLat, lng: this.filterData[this.selected_item_index].Position.PositionLon },
+        zoom: 15
+      })
     }
   }
 }
-
-
 </script>
-
 <template>
   <div class="background">
     <div class="cart-search">
-      <div class="cart-search-cityname">
-        <label for="cityname">選擇縣市：</label>
-        <br>
-        <select name="cityname" id="cityname" v-model="cityName" required>
-          <option value="Taipei">臺北市</option>
-          <option value="NewTaipei">新北市</option>
-          <option value="Taoyuan">桃園市</option>
-          <option value="Taichung">台中市</option>
-          <option value="Tainan">台南市</option>
-          <option value="Kaohsiung">高雄市</option>
-          <option value="Keelung">基隆市</option>
-          <option value="Hsinchu">新竹縣</option>
-          <option value="HsinchuCounty">新竹市</option>
-          <option value="MiaoliCounty">苗栗縣</option>
-          <option value="NantouCounty">南投縣</option>
-          <option value="ChanghuaCounty">彰化縣</option>
-          <option value="YunlinCounty">雲林縣</option>
-          <option value="ChiayiCounty">嘉義縣</option>
-          <option value="Chiayi">嘉義市</option>
-          <option value="PingtungCounty">屏東縣</option>
-          <option value="YilanCounty">宜蘭縣</option>
-          <option value="HualienCounty">花蓮縣</option>
-          <option value="TaitungCounty">臺東縣</option>
-          <option value="PenghuCounty">澎湖縣</option>
-          <option value="KinmenCounty">金門縣</option>
-          <option value="LienchiangCounty">連江縣</option>
-        </select>
-        <br>
-      </div>
       <div class="cart-search-periodTime">
         <label for="periodtime">選擇起始日：</label>
         <br>
         <select name="periodtime" id="periodtime" v-model="periodTime">
-          <option value=90>三個月內</option>
-          <option value=180>半年內</option>
-          <option value=365>一年內</option>
+          <option value=90>三個月前</option>
+          <option value=180>半年前</option>
+          <option value=365>一年前</option>
+          <option valuw=730>兩年前</option>
         </select>
       </div>
       <div class="cart-search-eventtype">
@@ -211,7 +192,7 @@ export default {
       </diV> -->
     <!--this is for data test-->
     <div class="main">
-      <button @mousedown="cartsLeftButtonMouseDownHandler" @mouseup="cartsUpHandler">往左</button>
+      <button @mousedown="cartsLeftButtonMouseDownHandler">往左</button>
       <div class="carts" @mouseup="cartsUpHandler" @mousedown="cartsMouseDownHandler"
         @mouseleave="cartsMouseLeaveHandler" @mousemove="cartsDragHandler">
         <div v-for="item in filterData" :key="item" class="cart">
@@ -223,16 +204,31 @@ export default {
             <p>活動時間：{{ item.StartTime.split('T')[0] }} - {{ item.EndTime.split('T')[0] }}</p>
             <p v-if="item.Class1 || item.Class2">活動類型：{{ item.Class1 }} {{ item.Class2 }}</p>
             <p v-else>活動類型：無</p>
+            <a href="#sidebar" @click="itemSeletedHandler(filterData.indexOf(item))">詳細資訊</a>
           </div>
         </div>
 
       </div>
-      <button @mousedown="cartsRightButtonMouseDownHandler" @mouseup="cartsUpHandler">往右</button>
+      <button @mousedown="cartsRightButtonMouseDownHandler">往右</button>
     </div>
   </div>
   <div class="container">
-    <div class="sidebar">
-      <!-- 左側欄位，活動內容 -->
+    <div class="sidebar" id="sidebar">
+      <div v-if="filterData" class="sidebar-main">
+        <h1>活動名稱：</h1>
+        <h1>{{ filterData[selected_item_index].ActivityName }}</h1>
+        <h1>活動描述：</h1>
+        <p class="sidebar-body">{{ filterData[selected_item_index].Description }}</p>
+        <h1>主辦單位：</h1>
+        <p>{{ filterData[selected_item_index].Organizer }}</p>
+        <h1>活動照片：</h1>
+        <img v-if="filterData[selected_item_index].Picture.PictureUrl1" :src="filterData[selected_item_index].Picture.PictureUrl1">
+        <p v-else>無</p>
+        <h1>官網：</h1>
+        <a v-if="filterData[selected_item_index].WebsiteUrl" :href="filterData[selected_item_index].WebsiteUrl">{{filterData[selected_item_index].WebsiteUrl}}</a>
+        <p v-else>無</p>
+      </div>
+      <div v-else>近期無活動可顯示</div>
     </div>
     <!-- 地圖 -->
     <div class="map-wrapper">
@@ -242,6 +238,11 @@ export default {
 </template>
 
 <style scoped lang="scss">
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 //設定整個容器的樣式
 .background {
   background: url(https://www.finalfantasyxiv.com/freetrial/static/eb21a694cb608a7dd2a52fede01db68f/c69a4/texture.png);
@@ -249,7 +250,7 @@ export default {
 
 .container {
   display: flex;
-  height: 95vh;
+  height: 120vh;
 }
 
 //設定左側欄位的樣式
@@ -257,6 +258,35 @@ export default {
   width: 400px;
   padding: 20px;
   background: url(https://www.finalfantasyxiv.com/freetrial/static/eb21a694cb608a7dd2a52fede01db68f/c69a4/texture.png) rgba(60, 60, 60, 0.146);
+  .sidebar-main{
+      *{
+        margin: 1.2rem;
+      }
+      p{
+        font-size: 1.2rem;
+      }
+      h1{
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+      .sidebar-body{
+        height: 30vh;
+        overflow-y: scroll;
+        background-color: white;
+        padding: 1rem;
+        border: 1px solid black;
+      }
+      img{
+        width: 60%;
+      }
+      a{
+          text-align: center;
+          font-size: 1.2rem;
+          color: blue;
+          text-decoration: underline;
+              
+        }
+    }
 }
 
 //將地圖容器包裝在一個 .map-wrapper 容器中,並使用 flex: 1 佔滿剩餘空間。
@@ -375,11 +405,19 @@ export default {
       .cart-body {
         margin-top: 2rem;
         overflow: visible;
-
+        display: flex;
+        flex-direction: column;
         p {
-          margin: 1.5rem;
+          margin: 1rem;
           padding: 0.5rem;
           font-size: 1.5rem;
+        }
+        a{
+          text-align: center;
+          font-size: 2rem;
+          color: blue;
+          text-decoration: underline;
+          
         }
       }
 
