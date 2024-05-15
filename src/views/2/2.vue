@@ -61,7 +61,7 @@ export default {
     },
     // 取得 api 資料
     getApiResponse() {
-      let api_url = 'https://tdx.transportdata.tw/api/basic/v2/Tourism/Activity/Taipei?%24top=30&%24format=JSON';
+      let api_url = 'https://tdx.transportdata.tw/api/basic/v2/Tourism/Activity/Taipei?%24top=200&%24format=JSON';
       $.ajax({
         // 設定請求
         type: 'GET',
@@ -87,17 +87,22 @@ export default {
           }
           // 如果有城市名稱，篩選出該城市的活動
           if (this.periodTime !== 0) {
+            const specifiedTimeInPast = Date.now() - Math.abs(this.periodTime) * 24 * 60 * 60 * 1000;
+
             this.filterData = this.filterData.filter((item) => {
-              // 轉換時間字串為時間
-              let StartTime = Date.parse(item.StartTime.split('T')[0]);
-              // 取得指定時間之前的時間
-              let specifiedTime = Date.now() - this.periodTime * 24 * 60 * 60 * 1000;
-              // 比較時間
-              if (StartTime > specifiedTime) {
-                return true;
+              const startTime = Date.parse(item.StartTime.split('T')[0]);
+
+              if (this.periodTime === -1) {
+                return startTime > Date.now();
+              } else {
+                return startTime > specifiedTimeInPast;
               }
-              return false;
-            })
+            });
+
+            // 檢查結果數量
+            if (this.filterData.length === 0) {
+              alert('沒有符合條件的活動');
+            }
           }
         },
         // 取得 api 資料失敗
@@ -196,9 +201,10 @@ export default {
   <div class="background">
     <div class="cart-search">
       <div class="cart-search-periodTime">
-        <label for="periodtime">選擇起始日：</label>
+        <label for="periodtime">選擇時間範圍：</label>
         <br>
         <select name="periodtime" id="periodtime" v-model="periodTime">
+          <option value="-1">即將到來的活動</option>
           <option value=90>最近三個月內</option>
           <option value=180>最進六個月內</option>
           <option value=365>最近一年內</option>
@@ -217,9 +223,9 @@ export default {
     </div>
     <!--this is for data test-->
     <!-- <diV>
-        <h3>api 資料:</h3>
-        <pre>{{ filterData }}</pre>
-      </diV> -->
+      <h3>api 資料:</h3>
+      <pre>{{ filterData }}</pre>
+    </diV> -->
     <!--this is for data test-->
     <div class="main">
       <!-- 左右按鈕 -->
