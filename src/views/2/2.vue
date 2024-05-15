@@ -87,14 +87,13 @@ export default {
           }
           // 如果有城市名稱，篩選出該城市的活動
           if (this.periodTime !== 0) {
-            // 篩選出活動時間在指定時間內的活動
             this.filterData = this.filterData.filter((item) => {
-              // 轉換時間字串為時間戳
+              // 轉換時間字串為時間
               let StartTime = Date.parse(item.StartTime.split('T')[0]);
-              // 計算活動結束時間
-              let EndTime = Date.now() - this.periodTime * 24 * 60 * 60;
-              // 判斷活動時間是否在指定時間內
-              if (EndTime > StartTime) {
+              // 取得指定時間之前的時間
+              let specifiedTime = Date.now() - this.periodTime * 24 * 60 * 60 * 1000;
+              // 比較時間
+              if (StartTime > specifiedTime) {
                 return true;
               }
               return false;
@@ -200,10 +199,10 @@ export default {
         <label for="periodtime">選擇起始日：</label>
         <br>
         <select name="periodtime" id="periodtime" v-model="periodTime">
-          <option value=90>三個月前</option>
-          <option value=180>半年前</option>
-          <option value=365>一年前</option>
-          <option valuw=730>兩年前</option>
+          <option value=90>最近三個月內</option>
+          <option value=180>最進六個月內</option>
+          <option value=365>最近一年內</option>
+          <option valuw=730>最近兩年內</option>
         </select>
       </div>
       <div class="cart-search-eventtype">
