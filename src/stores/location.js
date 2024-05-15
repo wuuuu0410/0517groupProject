@@ -3,7 +3,7 @@ import { defineStore } from "pinia";
 export default defineStore("location",{
     state(){
         return{
-            page:1,
+            page:null,
         }
     },
     getters:{

@@ -1,5 +1,7 @@
 <script>
 import $ from 'jquery'
+import location from '@/stores/location';
+import { mapState,mapActions } from 'pinia';
 
 export default {
   name: 'App',
@@ -18,6 +20,7 @@ export default {
   },
   // 建立生命週期函式
   mounted() {
+    this.setPage(2);
     this.getAuthorizationHeader();
     const script = document.createElement('script')
     script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDqHRDB5XqddRHK-DS70urhILDlgv4kHMs&libraries=places&callback=initMap'
@@ -26,7 +29,11 @@ export default {
     document.head.appendChild(script)
     window.initMap = this.initMap
   },
+  computed:{
+    ...mapState(location,["page","pageInfo"]),
+  },
   methods: {
+    ...mapActions(location,["setPage"]),
     // 取得 Authorization Header
     getAuthorizationHeader() {
       const parameter = {

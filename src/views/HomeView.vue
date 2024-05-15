@@ -63,7 +63,7 @@ export default {
         },
         changePage(index) {
             this.currentPage = index;
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            window.scrollTo({ top: 770, behavior: 'smooth' });
             this.isActive = index;
         },
         

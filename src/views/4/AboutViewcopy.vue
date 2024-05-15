@@ -1,42 +1,48 @@
-<script setup>
-import { ref } from 'vue';
-import axios from 'axios';
+<script>
+import location from '@/stores/location';
+import { mapState,mapActions } from 'pinia';
+import axios from "axios";
+export default {
+    data() {
+        return {
+            nowPage: 1,
+            spots: {},
+            arr: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        }
+    },
+    methods: {
+        ...mapActions(location,["setPage"]),
+        async getSpots2(page) {
+            if (page == 0) {
+                page = 1
+            }
+            if (page == 11) {
+                page = 10
+            }
 
-async function getSpots2(page) {
-
-    //如果當前頁面等於 0 則當前頁面等於 1
-    if (page == 0) {
-        page = 1
-    }
-    //如果當前頁面等於 11 則當前頁面等於 10
-    if (page == 11) {
-        page = 10
-    }
-
-    try {
-        // this.isloading = true;
-        let spotdata = await axios.get('../spotData' + page + '.json')
-        spots.value = spotdata.data
-        console.log(spots)
-        console.log(123)
-    } catch (error) {
-        console.log(error);
-        console.log(321)
-    }
-    nowPage = page
+            try {
+                // this.isloading = true;
+                let spotdata = await axios.get('../spotData' + page + '.json')
+                this.spots = spotdata.data
+                console.log(this.spots.data)
+                console.log(123)
+            } catch (error) {
+                console.log(error);
+                console.log(321)
+            }
+            this.nowPage = page
+        }
+    },
+    created(){
+        this.getSpots2(1)
+    },
+    mounted() {
+        this.setPage(4)
+    },
+    computed: {
+        ...mapState(location,["page","pageInfo"]),
+    },
 }
-
-let nowPage = 1;
-
-
-
-
-let spots = ref({});
-getSpots2(1)
-
-const arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-
 </script>
 
 <template>
@@ -55,22 +61,22 @@ const arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
             </div>
             <div class="thirdBox" v-for="item in arr">
                 <div class="leftPhoto">
-                    <img style="width: 100%; height: 100%; border-radius: 5%;" v-if="spots.data[item].images != ''"
-                        v-bind:src="spots.data[item].images[0].src" alt="" width="300px">
+                    <img style="width: 100%; height: 100%; border-radius: 5%;" v-if="this.spots.data[item].images != ''"
+                        v-bind:src="this.spots.data[item].images[0].src" alt="" width="300px">
                     <img style="width: 100%; height: 100%; border-radius: 5%;" v-else
                         src="https://memeprod.sgp1.digitaloceanspaces.com/user-wtf/1581909112681.jpg" alt=""
                         width="300px">
                 </div>
                 <div class="rightText">
-                    <h1 class="title">{{ spots.data[item].name }}</h1>
+                    <h1 class="title">{{ this.spots.data[item].name }}</h1>
                     <div class="bbox">
-                        <p>{{ spots.data[item].introduction }}</p>
+                        <p>{{ this.spots.data[item].introduction }}</p>
                     </div>
 
 
                     <p class="related">相關連結</p>
-                    <a class="aaa" :href="spots.data[item].facebook" target="_blank">
-                        <p class="link">{{ spots.data[item].name }}</p>
+                    <a class="aaa" :href="this.spots.data[item].facebook" target="_blank">
+                        <p class="link">{{ this.spots.data[item].name }}</p>
                     </a>
 
                     <!-- <p>
