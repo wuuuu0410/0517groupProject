@@ -1,75 +1,76 @@
 <script>
 export default {
-    data(){
-        return{
+    data() {
+        return {
 
             currentImg: 0,
             intervalId: null,
             intervalDuration: 4000
         }
     },
-    props:{
-        carouselImg:{
-            default:[]
+    props: {
+        carouselImg: {
+            default: []
         }
     },
-    mounted(){
+    mounted() {
         this.startCarousel();
     },
-    created(){
+    created() {
 
     },
-    methods:{
-        startCarousel(){
-            this.intervalId = setInterval(()=>
-        {
-            this.nextImg();
-        } ,this.intervalDuration);
+    methods: {
+        startCarousel() {
+            this.intervalId = setInterval(() => {
+                this.nextImg();
+            }, this.intervalDuration);
         },
-        nextImg(){
+        nextImg() {
             this.currentImg = (this.currentImg + 1) % this.carouselImg.length;
             this.$emit("currentImg", this.currentImg);
         },
-        beforeDestroy(){
+        beforeDestroy() {
             clearInterval(this.intervalId);
         },
-        prevImg(){
-        this.currentImg = (this.currentImg - 1 + this.carouselImg.length) % this.carouselImg.length;
-        this.$emit("currentImg", this.currentImg);
-    },
+        prevImg() {
+            this.currentImg = (this.currentImg - 1 + this.carouselImg.length) % this.carouselImg.length;
+            this.$emit("currentImg", this.currentImg);
+        },
     }
 }
 </script>
 //class="img" 類別名暫定
 <template>
-<div class="mainCarousel">
-    <transition-group name="fade" tag="div">
-        <div v-bind:key="currentImg" class="img"> 
-        <img v-bind:src="carouselImg[currentImg].image">
-        </div>
-    </transition-group>
-<button class="previousImg" @click="prevImg"><i class="fa-solid fa-less-than"></i></button>
-<button class="NextImg" @click="nextImg"><i class="fa-solid fa-greater-than"></i></button>
-</div>
+    <div class="mainCarousel">
+        <transition-group name="fade" tag="div">
+            <div v-bind:key="currentImg" class="img">
+                <img v-bind:src="carouselImg[currentImg].image">
+            </div>
+        </transition-group>
+        <button class="previousImg" @click="prevImg"><i class="fa-solid fa-less-than"></i></button>
+        <button class="NextImg" @click="nextImg"><i class="fa-solid fa-greater-than"></i></button>
+    </div>
 
 </template>
 
 <style>
-.mainCarousel{
+.mainCarousel {
     width: 100%;
     height: 70dvh;
     margin: 0 auto;
     overflow: hidden;
     position: relative;
-    .img{
+
+    .img {
         width: 100%;
         height: 70dvh;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%)
-        }
-    .previousImg{
+    }
+
+    .previousImg {
         position: absolute;
         width: 57px;
         left: 20px;
@@ -79,9 +80,10 @@ export default {
         border: none;
         font-size: 40px;
         border-radius: 50%;
-        
+
     }
-    .NextImg{
+
+    .NextImg {
         position: absolute;
         width: 57px;
         right: 20px;
@@ -90,28 +92,32 @@ export default {
         border: none;
         color: white;
         font-size: 40px;
-        border-radius: 50%; 
+        border-radius: 50%;
     }
-    .previousImg:hover{
+
+    .previousImg:hover {
         transform: scale(1.2);
     }
-    .NextImg:hover{
+
+    .NextImg:hover {
         transform: scale(1.2);
     }
-    img{
+
+    img {
         width: 100%;
         height: 80dvh;
         object-fit: 100% 100%;
     }
-    }
-.fade-enter-active, .fade-leave-active{
+}
+
+.fade-enter-active,
+.fade-leave-active {
     transition: opacity 0.5s, transform 0.5s;
     opacity: 1;
 }
-.fade-enter, .fade-leave-to{
+
+.fade-enter,
+.fade-leave-to {
     opacity: 0;
 }
-
-
-
 </style>

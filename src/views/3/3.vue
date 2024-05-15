@@ -20,7 +20,6 @@ export default {
             { image: '/餐廳輪播圖3.png' },
             { image: '/餐廳輪播圖4.jpg' },
             { image: '/餐廳輪播圖5.jpg' },
-            { image: '/餐廳輪播圖6.jpg' },
             ],
             randomNumber:"",
             randomArr:[],

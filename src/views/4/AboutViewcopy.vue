@@ -1,17 +1,24 @@
 <script>
 import location from '@/stores/location';
-import { mapState,mapActions } from 'pinia';
+import { mapState, mapActions } from 'pinia';
+import TopCarousel from '@/components/TopCarousel.vue';
 import axios from "axios";
 export default {
     data() {
         return {
             nowPage: 1,
             spots: {},
-            arr: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+            arr: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+            myCarouselImg: [
+                { image: '/景點輪播1.webp' },
+                { image: '/景點輪播2.jpg' },
+                { image: '/景點輪播3.png' },
+                { image: '/餐廳輪播圖6.jpg' },
+            ],
         }
     },
     methods: {
-        ...mapActions(location,["setPage"]),
+        ...mapActions(location, ["setPage"]),
         async getSpots2(page) {
             if (page == 0) {
                 page = 1
@@ -33,28 +40,30 @@ export default {
             this.nowPage = page
         }
     },
-    created(){
+    created() {
         this.getSpots2(1)
     },
     mounted() {
         this.setPage(4)
     },
     computed: {
-        ...mapState(location,["page","pageInfo"]),
+        ...mapState(location, ["page", "pageInfo"]),
+    },
+    components: {
+        TopCarousel
     },
 }
 </script>
 
 <template>
 
-
+<TopCarousel :carouselImg = "myCarouselImg" />
     <div class="body">
 
+        
         <div class="third bigArea">
 
-            <div class="second">
-                <img class="young" src="https://www.travel.taipei/Content/images/content/must-visit/list/Attractions-m.jpg" alt="">
-            </div>
+
 
             <div class="topTitlee">
                 <h1 class="location">精選景點</h1>
@@ -147,17 +156,6 @@ export default {
     align-items: center;
 }
 
-.second {
-    width: 100%;
-    height: 60dvh;
-    // border: 1px solid blue;
-
-    .young {
-        width: 100%;
-        height: 100%;
-    }
-}
-
 .third {
     height: 100%;
     width: 70%;
@@ -200,7 +198,7 @@ export default {
         padding-left: 5%;
         position: relative;
 
-        .bbox{
+        .bbox {
             width: 100%;
             height: 65%;
             border: 1px solid black;
@@ -220,11 +218,11 @@ export default {
     .link {
         color: #017978;
         position: absolute;
-        right:8.5%; 
+        right: 8.5%;
         bottom: 1%;
         transition: 0.5s;
 
-        &:hover{
+        &:hover {
             scale: 1.1;
         }
     }
@@ -241,16 +239,17 @@ export default {
     .pagination {
         justify-content: center;
         margin-bottom: 5%;
-        
-        .page-link{
+
+        .page-link {
             border: none;
             background: none;
-            &:hover{
+
+            &:hover {
                 background: #e8e9ec;
                 scale: 1.2;
             }
         }
-        
+
     }
 
 }
