@@ -231,7 +231,7 @@ export default {
       <!--this is for data test-->
       <div class="main">
         <!-- 左右按鈕 -->
-        <button v-if="filterData" @mousedown="cartsLeftButtonMouseDownHandler">往左</button>
+        <button v-if="filterData" @mousedown="cartsLeftButtonMouseDownHandler" class="left-right-button">往左</button>
         <!-- 活動卡片 -->
         <transition name="fade" mode="out-in">
           <transition-group name="list" tag="div" class="carts" @mouseup="cartsUpHandler"
@@ -239,7 +239,7 @@ export default {
             <!-- 使用 v-for 指令，遍歷 filterData 陣列，產生活動卡片 -->
             <div v-for="item in filterData" :key="item" class="cart">
               <!-- 活動卡片標題 -->
-              <div class="cart-title">活動名稱：<br>{{ item.ActivityName }}</div>
+              <div class="cart-title">{{ item.ActivityName }}</div>
               <!-- 活動卡片內容 -->
               <div class="cart-body">
                 <p v-if="item.Description.length >= 100">活動描述：{{ item.Description.substr(0, 101) }} ...</p>
@@ -254,7 +254,7 @@ export default {
 
           </transition-group>
         </transition>
-        <button v-if="filterData" @mousedown="cartsRightButtonMouseDownHandler">往右</button>
+        <button v-if="filterData" @mousedown="cartsRightButtonMouseDownHandler" class="left-right-button">往右</button>
       </div>
     </div>
     <div class="container">
@@ -297,10 +297,11 @@ export default {
   display: flex;
   margin: 2rem;
   font-size: 2rem;
-  border: 1px solid black;
+  // border: 2px solid black;
   border-radius: 2rem;
   flex-wrap: wrap;
   align-items: center;
+  box-shadow: 0px 4px 6px 4px rgba(0, 0, 0, 0.2);
 
   * {
     margin: 2rem;
@@ -338,10 +339,42 @@ export default {
   }
 
   button {
-    flex: 0.5 0.5 80px;
-    height: 10vh;
-    font-size: 2rem;
+  flex: 0.5 0.5 80px;
+  height: 10vh;
+  font-size: 2rem;
+  border-radius: 8px;
+  background: linear-gradient(to bottom, #ffffff, #f2f2f2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #c9c9c9;
+  color: #333333;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s, color 0.3s;
+
+  &:hover {
+    background: linear-gradient(to bottom, #f2f2f2, #e5e5e5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #555555;
+    cursor: pointer;
   }
+
+  &:active {
+    transform: scale(0.95);
+    box-shadow: none;
+    animation: coolAnimation 0.5s infinite alternate;
+  }
+
+  &::before {
+    margin-right: 5px;
+  }
+}
+
+@keyframes coolAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
 }
 
 // 設定活動卡片的樣式
@@ -352,12 +385,76 @@ export default {
   justify-content: center;
   margin: 1rem;
 
-  button {
-    padding: 2rem;
-    min-height: 10vh;
-    font-size: 1rem;
-    text-align: center;
+  .left-right-button {
+  padding: 0.6em 1em; /* 設定內邊距 */
+  border: none; /* 移除邊框 */
+  outline: none; /* 移除輪廓 */
+  color: rgb(0, 0, 0); /* 文字顏色設為白色 */
+  background: #111; /* 背景顏色設為深灰色 */
+  cursor: pointer; /* 鼠標樣式設為指針 */
+  position: relative; /* 定位設為相對 */
+  z-index: 0; /* 層疊順序設為0 */
+  border-radius: 10px; /* 邊框圓角設為10px */
+  transition: all 0.3s ease-in-out; /* 設定動畫 */
+  font-size: 1.3rem;
+
+  &:hover {
+    scale: 1.1; /* 放大1.1倍 */
+    }
+}
+
+.left-right-button:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  ); /* 設定漸變背景 */
+  position: absolute; /* 定位設為絕對 */
+  top: -2px; /* 上偏移-2px */
+  left: -2px; /* 左偏移-2px */
+  background-size: 400%; /* 背景大小設為400% */
+  z-index: -1; /* 層疊順序設為-1 */
+  filter: blur(5px); /* 設定模糊效果 */
+  -webkit-filter: blur(5px); /* 設定模糊效果（適用於舊版瀏覽器） */
+  width: calc(100% + 4px); /* 寬度設為100% + 4px */
+  height: calc(100% + 4px); /* 高度設為100% + 4px */
+  animation: glowing-left-right-button 20s linear infinite; /* 設定動畫 */
+  transition: opacity 0.3s ease-in-out; /* 設定過渡效果 */
+  border-radius: 10px; /* 邊框圓角設為10px */
+}
+
+@keyframes glowing-left-right-button {
+  0% {
+    background-position: 0 0;
   }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.left-right-button:after {
+  z-index: -1; 
+  content: "";
+  position: absolute; 
+  width: 100%; 
+  height: 100%;
+  background: #eaeaea; 
+  left: 0; 
+  top: 0; 
+  border-radius: 10px; 
+}
+
 
   .carts {
     display: flex;
@@ -379,10 +476,18 @@ export default {
       height: 900px;
       padding: 0.5rem;
       margin: 1rem;
-      border: 1px solid black;
       background-color: rgb(255, 255, 255);
       align-items: flex-start;
       border-radius: 2rem;
+      box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease-in-out;
+      background: url(https://www.finalfantasyxiv.com/freetrial/static/eb21a694cb608a7dd2a52fede01db68f/c69a4/texture.png) rgba(107, 106, 115, 0.08);
+
+      &:hover {
+        cursor: pointer;
+        background-color: rgb(240, 240, 240);
+        scale: 1.015;
+      }
 
       .cart-title {
         margin-top: 3rem;
@@ -407,8 +512,9 @@ export default {
         a {
           text-align: center;
           font-size: 2rem;
-          color: blue;
+          color: rgb(106, 106, 233);
           text-decoration: underline;
+          font-size: bold;
 
         }
       }
