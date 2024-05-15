@@ -1,4 +1,7 @@
 <script>
+//import location and pinia
+import location from '@/stores/location';
+import { mapState,mapActions } from 'pinia';
 import TopCarousel from '@/components/TopCarousel.vue';
 export default {
     data() {
@@ -23,15 +26,25 @@ export default {
             randomArr:[],
         };
     },
-    components:{
-        TopCarousel
-    },
 
     created() {
         this.getTaipeiRestaurants();  //從全台灣餐廳過濾出臺北市餐廳
     },
+    
+    mounted() {
+        this.setPage(3)
+    },
+
+    components:{
+        TopCarousel
+    },
+
+    computed:{
+        ...mapState(location,["page","pageInfo"])
+    },
 
     methods: {
+        ...mapActions(location,["setPage"]),
         //篩選出台北餐廳後執行getTown()
         async getTaipeiRestaurants() {
             try {
@@ -189,7 +202,9 @@ export default {
     border: none;
     outline: none;
     font-weight: 700;
+    box-shadow: 5px 3px 4px rgb(119, 114, 114);
 }
+
 option{
     border: 1px solid black;
 }
@@ -241,6 +256,7 @@ option{
 
 .vue3Li{
     list-style: none;
+    font-weight: 600;
     }
 
 .vue3logo_a{

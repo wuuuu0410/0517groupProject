@@ -1,4 +1,6 @@
 <script >
+import location from '@/stores/location';
+import { mapState,mapActions } from 'pinia';
 import TopCarousel from '@/components/TopCarousel.vue';
 
 export default {
@@ -15,30 +17,35 @@ export default {
             ],
             currentPage: 0, 
             itemsPerPage: 10,
+            isActive: 0,
         };
     },
     created() {
         this.getNewsdata();
     },
+    mounted() {
+        this.isActive = 0;
+        this.setPage(0)
+    },
     computed: {
-      pages() {
+        ...mapState(location,["page","pageInfo"]),
+        pages() {
         const pages = [];
         for (let i = 0; i < this.newsDataList.length; i += this.itemsPerPage) {
-          pages.push(this.newsDataList.slice(i, i + this.itemsPerPage));
+            pages.push(this.newsDataList.slice(i, i + this.itemsPerPage));
         }
         return pages;
-      },
-      // 生成按钮文本
-      buttons() {
-        return Array.from({ length: Math.ceil(this.newsDataList.length / this.itemsPerPage) }, (_, index) => index + 1);
-      }
+        },
+        buttons() {
+            return Array.from({ length: Math.ceil(this.newsDataList.length / this.itemsPerPage) }, (_, index) => index + 1);
+        }
     },
     components:{
         TopCarousel
     },
 
     methods: {
-
+        ...mapActions(location,["setPage"]),
         async getNewsdata() {
             try {
                 const response = await fetch('../最新消息.json');
@@ -57,8 +64,9 @@ export default {
         changePage(index) {
             this.currentPage = index;
             window.scrollTo({ top: 0, behavior: 'smooth' });
+            this.isActive = index;
         },
-
+        
     }
 };
 </script>
@@ -83,7 +91,7 @@ export default {
         </div>
     </div>
     <div class="buttonList">
-        <button class="buttons" v-for="(button, index) in buttons" :key="index" @click="changePage(index)">{{ button }}</button>
+        <button class="buttons" v-for="(button, index) in buttons" :key="index" @click="changePage(index)" :class="{ 'active': isActive === index }">{{ button }}</button>
     </div>
 
     <div class="homefooter">
@@ -115,10 +123,11 @@ export default {
 
 .homeLi{
     list-style: none;
+    color: #69747C;
 }
 a{
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: #34373a;
 }
 
 .newTitle{
@@ -153,16 +162,30 @@ a{
 
 .buttonList{
     width: 100%;
-    height: 5dvh;
+    height: 10dvh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .buttons{
-    width: 25px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     margin: 0 0.5%;
-    background: black;
-    color: white;
+    font-weight: 700;
+    background: #F8C3CD;
+    color: #69747C;
+    border-radius: 50%;
+    border: none;
+}
+.buttons:hover {
+    transform: scale(1.2);
+}
+.buttons:active {
+    color: #F8C3CD;
+    background: #69747C;
+}
+.buttons.active {
+    background: #d81871;
+    color: #F8C3CD;
 }
 </style>

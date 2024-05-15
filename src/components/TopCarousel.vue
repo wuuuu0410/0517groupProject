@@ -90,8 +90,13 @@ export default {
         border: none;
         color: white;
         font-size: 40px;
-        border-radius: 50%;
-        
+        border-radius: 50%; 
+    }
+    .previousImg:hover{
+        transform: scale(1.2);
+    }
+    .NextImg:hover{
+        transform: scale(1.2);
     }
     img{
         width: 100%;
