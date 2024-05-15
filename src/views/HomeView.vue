@@ -13,11 +13,25 @@ export default {
             { image: '/消息輪播4.jpg'},
             { image: '/消息輪播5.jpg'},
             ],
+            currentPage: 0, 
+            itemsPerPage: 10,
         };
     },
     created() {
         this.getNewsdata();
-
+    },
+    computed: {
+      pages() {
+        const pages = [];
+        for (let i = 0; i < this.newsDataList.length; i += this.itemsPerPage) {
+          pages.push(this.newsDataList.slice(i, i + this.itemsPerPage));
+        }
+        return pages;
+      },
+      // 生成按钮文本
+      buttons() {
+        return Array.from({ length: Math.ceil(this.newsDataList.length / this.itemsPerPage) }, (_, index) => index + 1);
+      }
     },
     components:{
         TopCarousel
@@ -40,9 +54,10 @@ export default {
                 console.error(error);
             }
         },
-
-
-
+        changePage(index) {
+            this.currentPage = index;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        },
 
     }
 };
@@ -51,10 +66,24 @@ export default {
 <template>
     <TopCarousel :carouselImg = "myCarouselImg" />
     <p class="newTitle homeP">最新消息</p>
-    <div class="newsList" v-for="item in newsDataList">
+    <!-- <div class="newsList" v-for="item in newsDataList">
         <ul class="homeUl"><a :href="item.Source" target="_blank"><h3>{{ item.title }}</h3></a><br>
         <li class="homeLi"><strong>活動開始時間:</strong>{{ item.活動開始時間 }} <strong>&nbsp;&nbsp;&nbsp;活動結束時間:</strong>{{ item.活動結束時間 }}</li>
         </ul>
+    </div> -->
+    <div v-for="(page, index) in pages" :key="index" v-show="currentPage === index">
+        <div class="newsList" v-for="(item, itemIndex) in page" :key="itemIndex">
+            <ul class="homeUl">
+                <a :href="item.Source" target="_blank">
+                    <h3>{{ item.title }}</h3>
+                </a>
+                <br>
+                <li class="homeLi"><strong>活動開始時間:</strong>{{ item.活動開始時間 }} <strong>&nbsp;&nbsp;&nbsp;活動結束時間:</strong>{{ item.活動結束時間 }}</li>
+            </ul>
+        </div>
+    </div>
+    <div class="buttonList">
+        <button class="buttons" v-for="(button, index) in buttons" :key="index" @click="changePage(index)">{{ button }}</button>
     </div>
 
     <div class="homefooter">
@@ -81,10 +110,8 @@ export default {
     padding: 1% ;
     margin: 0 auto;
     border: 1px solid black;
-    background: rgb(240, 255, 255);
-
+    background: #fcdde3;
 }
-
 
 .homeLi{
     list-style: none;
@@ -95,8 +122,8 @@ a{
 }
 
 .newTitle{
-    font-size: 40px;
-    font-weight: 900;
+    font-size: 35px;
+    font-weight: 700;
     margin: 2% 0;
     text-align: center;
 }
@@ -108,16 +135,12 @@ a{
     padding: 3%;
 
 }
-.homeP{
-    text-align: center;
-    font-size: 30px;
-    font-weight: 900;
-}
 
 .homeH3{
-    font-size: 20px;
-    font-weight: 900;
+    font-size: 16px;
+    font-weight: 100;
 }
+
 .logo_a{
     width: 15%;
     height: 15%;
@@ -126,5 +149,20 @@ a{
 .taipei_city_logo{
     width: 100%;
     height: 100%;
+}
+
+.buttonList{
+    width: 100%;
+    height: 5dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttons{
+    width: 25px;
+    height: 30px;
+    margin: 0 0.5%;
+    background: black;
+    color: white;
 }
 </style>

@@ -5,7 +5,7 @@ export default {
 
             currentImg: 0,
             intervalId: null,
-            intervalDuration: 3000
+            intervalDuration: 4000
         }
     },
     props:{
@@ -33,6 +33,10 @@ export default {
         beforeDestroy(){
             clearInterval(this.intervalId);
         },
+        prevImg(){
+        this.currentImg = (this.currentImg - 1 + this.carouselImg.length) % this.carouselImg.length;
+        this.$emit("currentImg", this.currentImg);
+    },
     }
 }
 </script>
@@ -44,6 +48,8 @@ export default {
         <img v-bind:src="carouselImg[currentImg].image">
         </div>
     </transition-group>
+<button class="previousImg" @click="prevImg"><i class="fa-solid fa-less-than"></i></button>
+<button class="NextImg" @click="nextImg"><i class="fa-solid fa-greater-than"></i></button>
 </div>
 
 </template>
@@ -63,6 +69,30 @@ export default {
         left: 50%;
         transform: translate(-50%, -50%)
         }
+    .previousImg{
+        position: absolute;
+        width: 57px;
+        left: 20px;
+        top: 50%;
+        background: #F8C3CD;
+        color: white;
+        border: none;
+        font-size: 40px;
+        border-radius: 50%;
+        
+    }
+    .NextImg{
+        position: absolute;
+        width: 57px;
+        right: 20px;
+        top: 50%;
+        background: #F8C3CD;
+        border: none;
+        color: white;
+        font-size: 40px;
+        border-radius: 50%;
+        
+    }
     img{
         width: 100%;
         height: 80dvh;
@@ -76,5 +106,7 @@ export default {
 .fade-enter, .fade-leave-to{
     opacity: 0;
 }
+
+
 
 </style>

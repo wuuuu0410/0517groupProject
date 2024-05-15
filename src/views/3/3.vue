@@ -109,7 +109,7 @@ export default {
 
     <div class="vue3list" v-for="item in selectList" >
         <div class="listImages">
-            <img v-if="item.Images.length>=1" v-bind:src="item.Images[0].URL" alt="" width="68%" height="68%">
+            <img v-if="item.Images.length>=1" v-bind:src="item.Images[0].URL" alt="" width="250px" height="250px">
             <!-- <img v-if="item.Images.length>=2" v-bind:src="item.Images[1].URL" alt="" width="68%" height="68%">
             <img v-if="item.Images.length>=3" v-bind:src="item.Images[2].URL" alt="" width="68%" height="68%"> -->
         </div>
@@ -134,7 +134,7 @@ export default {
                 <img class="cardImg" v-bind:src="taipeiRestaurantsList[item].Images[0].URL" alt="" width="100%" height=auto>
             </div>
             <div class="cardBottomText">
-                <a v-bind:href="taipeiRestaurantsList[item].SameAsURLs" target="_blank"><h4 vue3H4>{{taipeiRestaurantsList[item].RestaurantName}}</h4></a><br>
+                <a v-bind:href="taipeiRestaurantsList[item].SameAsURLs" target="_blank"><h4 class="vue3H4">{{taipeiRestaurantsList[item].RestaurantName}}</h4></a><br>
                 <h5 class="vue3H5">{{taipeiRestaurantsList[item].PostalAddress.City }}&nbsp;{{taipeiRestaurantsList[item].PostalAddress.Town }}</h5>
                 <h5 class="vue3H5">{{taipeiRestaurantsList[item].PostalAddress.StreetAddress }}</h5>
             </div>
@@ -172,22 +172,23 @@ export default {
 
 .vue3select {
     width: 100%;
-    height: 10dvh;
+    height: 20dvh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 #vue3select {
-    width: 25%;
-    height: 5dvh;
+    width: 15%;
+    height: 9dvh;
     background:#F8C3CD;
     color: rgb(0, 0, 0);
     font-size: 25px;
     text-align: center;
     border-radius: 10px;
     border: none;
-    font-weight: 900;
+    outline: none;
+    font-weight: 700;
 }
 option{
     border: 1px solid black;
@@ -211,19 +212,20 @@ option{
 }
 
 .listImages {
-    width: 35%;
+    width: 25%;
     height: 85%;
     left: 0;
     flex-wrap: wrap;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1%;
     
 
 } 
 
 .ulSpace {
-    width: 65%;
+    width: 75%;
     height: 280px;
     padding: 1%;
 }
@@ -262,9 +264,9 @@ option{
 .card{
     width: 23%;
     height: 50dvh;
-    border: 1px solid black;
+    background:  #fdecef;
     border-radius: 10px;
-    background: #fdecef
+    box-shadow: 5px 3px 4px rgb(119, 114, 114);
 }
 .card:hover {
     transform: scale(1.02);
@@ -278,6 +280,12 @@ option{
     }
 .cardImg{
     border-radius: 10px 10px 0 0;
+}
+.vue3H2{
+    font-weight: 700;
+}
+.vue3H4{
+    font-weight: 700;
 }
 
 </style>

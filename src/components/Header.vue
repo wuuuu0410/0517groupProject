@@ -29,7 +29,7 @@ export default{
 .headerArea{
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, rgb(255, 255, 255),#F8C3CD);
+    background: linear-gradient(to right,#F8C3CD,rgb(255, 255, 255));
     text-align: center;
     display: flex;
     justify-content:space-between;
