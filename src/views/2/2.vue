@@ -74,7 +74,7 @@ export default {
         async: false,
         success: (data) => {
           this.apiResponse = data;
-          this.filterData = data;
+          // this.filterData = data;
           if (this.eventType.length !== 0) {
             this.filterData = this.apiResponse.filter((item) => {
               for (let n of this.eventType) {
@@ -102,6 +102,7 @@ export default {
             // 檢查結果數量
             if (this.filterData.length === 0) {
               alert('沒有符合條件的活動');
+              this.filterData = null;
             }
           }
         },
@@ -198,86 +199,90 @@ export default {
 }
 </script>
 <template>
-  <div class="background">
-    <div class="cart-search">
-      <div class="cart-search-periodTime">
-        <label for="periodtime">選擇時間範圍：</label>
-        <br>
-        <select name="periodtime" id="periodtime" v-model="periodTime">
-          <option value="-1">即將到來的活動</option>
-          <option value=90>最近三個月內</option>
-          <option value=180>最進六個月內</option>
-          <option value=365>最近一年內</option>
-          <option valuw=730>最近兩年內</option>
-        </select>
-      </div>
-      <div class="cart-search-eventtype">
-        <label for="eventtype">你選擇的活動類型：</label>
-        <div>
-          <input type="checkbox" name="eventype" id="eventype" value="年度活動" v-model="eventType"> 年度活動
-          <input type="checkbox" name="eventype" id="eventype" value="節慶活動" v-model="eventType"> 節慶活動
-          <input type="checkbox" name="eventype" id="eventype" value="藝文活動" v-model="eventType"> 藝文活動
+  <transition-group name="list" tag="div" class="app">
+    <div class="background">
+      <div class="cart-search">
+        <div class="cart-search-periodTime">
+          <label for="periodtime">選擇時間範圍：</label>
+          <br>
+          <select name="periodtime" id="periodtime" v-model="periodTime">
+            <option value="-1">即將到來的活動</option>
+            <option value=90>最近三個月內</option>
+            <option value=180>最進六個月內</option>
+            <option value=365>最近一年內</option>
+            <option valuw=730>最近兩年內</option>
+          </select>
         </div>
+        <div class="cart-search-eventtype">
+          <label for="eventtype">你選擇的活動類型：</label>
+          <div>
+            <input type="checkbox" name="eventype" id="eventype" value="年度活動" v-model="eventType"> 年度活動
+            <input type="checkbox" name="eventype" id="eventype" value="節慶活動" v-model="eventType"> 節慶活動
+            <input type="checkbox" name="eventype" id="eventype" value="藝文活動" v-model="eventType"> 藝文活動
+          </div>
+        </div>
+        <button @click="getApiResponse">搜尋</button>
       </div>
-      <button @click="getApiResponse">搜尋</button>
-    </div>
-    <!--this is for data test-->
-    <!-- <diV>
+      <!--this is for data test-->
+      <!-- <diV>
       <h3>api 資料:</h3>
       <pre>{{ filterData }}</pre>
     </diV> -->
-    <!--this is for data test-->
-    <div class="main">
-      <!-- 左右按鈕 -->
-      <button @mousedown="cartsLeftButtonMouseDownHandler">往左</button>
-      <!-- 活動卡片 -->
-      <div class="carts" @mouseup="cartsUpHandler" @mousedown="cartsMouseDownHandler"
-        @mouseleave="cartsMouseLeaveHandler" @mousemove="cartsDragHandler">
-        <!-- 使用 v-for 指令，遍歷 filterData 陣列，產生活動卡片 -->
-        <div v-for="item in filterData" :key="item" class="cart">
-          <!-- 活動卡片標題 -->
-          <div class="cart-title">活動名稱：<br>{{ item.ActivityName }}</div>
-          <!-- 活動卡片內容 -->
-          <div class="cart-body">
-            <p v-if="item.Description.length >= 100">活動描述：{{ item.Description.substr(0, 101) }} ...</p>
-            <p v-else>活動描述：{{ item.Description }} </p>
-            <p>主辦單位：{{ item.Organizer }}</p>
-            <p>活動時間：{{ item.StartTime.split('T')[0] }} - {{ item.EndTime.split('T')[0] }}</p>
-            <p v-if="item.Class1 || item.Class2">活動類型：{{ item.Class1 }} {{ item.Class2 }}</p>
-            <p v-else>活動類型：無</p>
-            <a href="#sidebar" @click="itemSelectedHandler(filterData.indexOf(item))">詳細資訊</a>
-          </div>
-        </div>
+      <!--this is for data test-->
+      <div class="main">
+        <!-- 左右按鈕 -->
+        <button v-if="filterData" @mousedown="cartsLeftButtonMouseDownHandler">往左</button>
+        <!-- 活動卡片 -->
+        <transition name="fade" mode="out-in">
+          <transition-group name="list" tag="div" class="carts" @mouseup="cartsUpHandler"
+            @mousedown="cartsMouseDownHandler" @mouseleave="cartsMouseLeaveHandler" @mousemove="cartsDragHandler">
+            <!-- 使用 v-for 指令，遍歷 filterData 陣列，產生活動卡片 -->
+            <div v-for="item in filterData" :key="item" class="cart">
+              <!-- 活動卡片標題 -->
+              <div class="cart-title">活動名稱：<br>{{ item.ActivityName }}</div>
+              <!-- 活動卡片內容 -->
+              <div class="cart-body">
+                <p v-if="item.Description.length >= 100">活動描述：{{ item.Description.substr(0, 101) }} ...</p>
+                <p v-else>活動描述：{{ item.Description }} </p>
+                <p>主辦單位：{{ item.Organizer }}</p>
+                <p>活動時間：{{ item.StartTime.split('T')[0] }} - {{ item.EndTime.split('T')[0] }}</p>
+                <p v-if="item.Class1 || item.Class2">活動類型：{{ item.Class1 }} {{ item.Class2 }}</p>
+                <p v-else>活動類型：無</p>
+                <a href="#sidebar" @click="itemSelectedHandler(filterData.indexOf(item))">詳細資訊</a>
+              </div>
+            </div>
 
+          </transition-group>
+        </transition>
+        <button v-if="filterData" @mousedown="cartsRightButtonMouseDownHandler">往右</button>
       </div>
-      <button @mousedown="cartsRightButtonMouseDownHandler">往右</button>
     </div>
-  </div>
-  <div class="container">
-    <div class="sidebar" id="sidebar">
-      <div v-if="filterData" class="sidebar-main">
-        <h1>活動名稱：</h1>
-        <h1>{{ filterData[selected_item_index].ActivityName }}</h1>
-        <h1>活動描述：</h1>
-        <p class="sidebar-body">{{ filterData[selected_item_index].Description }}</p>
-        <h1>主辦單位：</h1>
-        <p>{{ filterData[selected_item_index].Organizer }}</p>
-        <h1>活動照片：</h1>
-        <img v-if="filterData[selected_item_index].Picture.PictureUrl1"
-          :src="filterData[selected_item_index].Picture.PictureUrl1">
-        <p v-else>無</p>
-        <h1>官網：</h1>
-        <a v-if="filterData[selected_item_index].WebsiteUrl" :href="filterData[selected_item_index].WebsiteUrl">{{
-          filterData[selected_item_index].WebsiteUrl }}</a>
-        <p v-else>無</p>
+    <div class="container">
+      <div class="sidebar" id="sidebar">
+        <div v-if="filterData" class="sidebar-main">
+          <h1>活動名稱：</h1>
+          <h1>{{ filterData[selected_item_index].ActivityName }}</h1>
+          <h1>活動描述：</h1>
+          <p class="sidebar-body">{{ filterData[selected_item_index].Description }}</p>
+          <h1>主辦單位：</h1>
+          <p>{{ filterData[selected_item_index].Organizer }}</p>
+          <h1>活動照片：</h1>
+          <img v-if="filterData[selected_item_index].Picture.PictureUrl1"
+            :src="filterData[selected_item_index].Picture.PictureUrl1">
+          <p v-else>無</p>
+          <h1>官網：</h1>
+          <a v-if="filterData[selected_item_index].WebsiteUrl" :href="filterData[selected_item_index].WebsiteUrl">{{
+            filterData[selected_item_index].WebsiteUrl }}</a>
+          <p v-else>無</p>
+        </div>
+        <div v-else>近期無活動可顯示</div>
       </div>
-      <div v-else>近期無活動可顯示</div>
+      <!-- 地圖 -->
+      <div class="map-wrapper">
+        <div id="map" class="map-container"></div>
+      </div>
     </div>
-    <!-- 地圖 -->
-    <div class="map-wrapper">
-      <div id="map" class="map-container"></div>
-    </div>
-  </div>
+  </transition-group>
 </template>
 
 <style scoped lang="scss">
@@ -417,62 +422,90 @@ export default {
     }
   }
 }
+
 .container {
   display: flex;
   height: 80vh;
   flex-wrap: wrap;
-  justify-content: space-between;;
+  justify-content: space-between;
+  ;
+
   //設定左側欄位的樣式
-    .sidebar {
+  .sidebar {
     flex: 2 1 500px;
     padding: 20px;
     background: url(https://www.finalfantasyxiv.com/freetrial/static/eb21a694cb608a7dd2a52fede01db68f/c69a4/texture.png) rgba(60, 60, 60, 0.146);
 
-      .sidebar-main {
-        * {
-          margin: 1.2rem;
-        }
-
-        p {
-          font-size: 1.2rem;
-        }
-
-        h1 {
-          font-weight: bold;
-          font-size: 1.5rem;
-        }
-
-        .sidebar-body {
-          height: 30vh;
-          overflow-y: scroll;
-          background-color: white;
-          padding: 1rem;
-          border: 1px solid black;
-        }
-
-        img {
-          width: 60%;
-        }
-
-        a {
-          text-align: center;
-          font-size: 1.2rem;
-          color: blue;
-          text-decoration: underline;
-
-        }
+    .sidebar-main {
+      * {
+        margin: 1.2rem;
       }
+
+      p {
+        font-size: 1.2rem;
+      }
+
+      h1 {
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+
+      .sidebar-body {
+        height: 30vh;
+        overflow-y: scroll;
+        background-color: white;
+        padding: 1rem;
+        border: 1px solid black;
+      }
+
+      img {
+        width: 60%;
+      }
+
+      a {
+        text-align: center;
+        font-size: 1.2rem;
+        color: blue;
+        text-decoration: underline;
+
+      }
+    }
   }
 
   //將地圖容器包裝在一個 .map-wrapper 容器中,並使用 flex: 1 佔滿剩餘空間。
   .map-wrapper {
-    flex:2 1 500px; 
+    flex: 2 1 500px;
+
     .map-container {
       height: 100%;
     }
   }
 
   //設定地圖的高度和寬度
- 
+
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.8s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.7s ease;
+}
+
+.list-enter,
+.list-leave-to
+
+/* .list-move */
+  {
+  opacity: 0;
+  transform: translateY(30px);
 }
 </style>
