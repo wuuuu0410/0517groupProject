@@ -13,7 +13,8 @@ export default {
       perPage: 30,
       eventType: [],
       isCartsMouseDown: false,
-      selected_item_index:0,
+      selected_item_index: 0,
+      marker: null,
     }
   },
   // 建立生命週期函式
@@ -84,11 +85,16 @@ export default {
               return false;
             })
           }
+          // 如果有城市名稱，篩選出該城市的活動
           if (this.periodTime !== 0) {
+            // 篩選出活動時間在指定時間內的活動
             this.filterData = this.filterData.filter((item) => {
+              // 轉換時間字串為時間戳
               let StartTime = Date.parse(item.StartTime.split('T')[0]);
-              let EndTime = Date.now()-this.periodTime*24*60*60;
-              if(EndTime>StartTime){
+              // 計算活動結束時間
+              let EndTime = Date.now() - this.periodTime * 24 * 60 * 60;
+              // 判斷活動時間是否在指定時間內
+              if (EndTime > StartTime) {
                 return true;
               }
               return false;
@@ -101,11 +107,13 @@ export default {
         }
       })
     },
+    // 滑鼠按下
     cartsMouseDownHandler(event) {
       this.isCartsMouseDown = true;
       const carts = document.querySelector('.carts');
       carts.style.cursor = 'grab';
     },
+    // 移動滑鼠
     cartsDragHandler(event) {
       const carts = document.querySelector('.carts');
       if (this.isCartsMouseDown) {
@@ -113,26 +121,48 @@ export default {
         event.preventDefault();
       }
     },
+    // 放開滑鼠
     cartsUpHandler(event) {
       this.isCartsMouseDown = false;
     },
+    // 移動滑鼠離開
     cartsMouseLeaveHandler(event) {
       this.isCartsMouseDown = false;
       carts.style.cursor = 'default';
     },
+    // 左鍵按鈕
     cartsLeftButtonMouseDownHandler(event) {
       const carts = document.querySelector('.carts');
       carts.scrollLeft -= 500;
       event.preventDefault();
     },
+    // 右鍵按鈕
     cartsRightButtonMouseDownHandler(event) {
       const carts = document.querySelector('.carts');
       carts.scrollLeft += 500;
       event.preventDefault();
     },
-    itemSeletedHandler(item_index){
-      this.selected_item_index = item_index;
+    // 點擊活動卡片後，顯示活動資訊並初始化地圖
+    itemSelectedHandler(itemIndex) {
+      this.selected_item_index = itemIndex;
       this.selected_item_initMap();
+
+      // 如果已存在marker,先將其從地圖上移除
+      if (this.marker) {
+        this.marker.setMap(null);
+      }
+
+      // 創建新的marker
+      this.marker = new google.maps.Marker({
+        position: {
+          lat: this.filterData[itemIndex].Position.PositionLat,
+          lng: this.filterData[itemIndex].Position.PositionLon
+        },
+        // 將marker添加到已創建的地圖上
+        map: this.map,
+        // 設定marker的標題
+        title: this.filterData[itemIndex].ActivityName
+      });
     },
     //============
     initMap() {
@@ -151,14 +181,15 @@ export default {
       // const marker = new google.maps.Marker({ map: map })
       // // autocomplete.bindTo('bounds', map)
     },
-    selected_item_initMap(){
+    // 點擊活動卡片後，顯示活動資訊並初始化地圖
+    selected_item_initMap() {
       const mapElement = document.querySelector('.map-container')
       // 建立地圖
-      const map = new google.maps.Map(mapElement, {
+      this.map = new google.maps.Map(mapElement, {
         center: { lat: this.filterData[this.selected_item_index].Position.PositionLat, lng: this.filterData[this.selected_item_index].Position.PositionLon },
-        zoom: 15
+        zoom: 17
       })
-    }
+    },
   }
 }
 </script>
@@ -192,11 +223,16 @@ export default {
       </diV> -->
     <!--this is for data test-->
     <div class="main">
+      <!-- 左右按鈕 -->
       <button @mousedown="cartsLeftButtonMouseDownHandler">往左</button>
+      <!-- 活動卡片 -->
       <div class="carts" @mouseup="cartsUpHandler" @mousedown="cartsMouseDownHandler"
         @mouseleave="cartsMouseLeaveHandler" @mousemove="cartsDragHandler">
+        <!-- 使用 v-for 指令，遍歷 filterData 陣列，產生活動卡片 -->
         <div v-for="item in filterData" :key="item" class="cart">
+          <!-- 活動卡片標題 -->
           <div class="cart-title">活動名稱：<br>{{ item.ActivityName }}</div>
+          <!-- 活動卡片內容 -->
           <div class="cart-body">
             <p v-if="item.Description.length >= 100">活動描述：{{ item.Description.substr(0, 101) }} ...</p>
             <p v-else>活動描述：{{ item.Description }} </p>
@@ -204,7 +240,7 @@ export default {
             <p>活動時間：{{ item.StartTime.split('T')[0] }} - {{ item.EndTime.split('T')[0] }}</p>
             <p v-if="item.Class1 || item.Class2">活動類型：{{ item.Class1 }} {{ item.Class2 }}</p>
             <p v-else>活動類型：無</p>
-            <a href="#sidebar" @click="itemSeletedHandler(filterData.indexOf(item))">詳細資訊</a>
+            <a href="#sidebar" @click="itemSelectedHandler(filterData.indexOf(item))">詳細資訊</a>
           </div>
         </div>
 
@@ -222,10 +258,12 @@ export default {
         <h1>主辦單位：</h1>
         <p>{{ filterData[selected_item_index].Organizer }}</p>
         <h1>活動照片：</h1>
-        <img v-if="filterData[selected_item_index].Picture.PictureUrl1" :src="filterData[selected_item_index].Picture.PictureUrl1">
+        <img v-if="filterData[selected_item_index].Picture.PictureUrl1"
+          :src="filterData[selected_item_index].Picture.PictureUrl1">
         <p v-else>無</p>
         <h1>官網：</h1>
-        <a v-if="filterData[selected_item_index].WebsiteUrl" :href="filterData[selected_item_index].WebsiteUrl">{{filterData[selected_item_index].WebsiteUrl}}</a>
+        <a v-if="filterData[selected_item_index].WebsiteUrl" :href="filterData[selected_item_index].WebsiteUrl">{{
+          filterData[selected_item_index].WebsiteUrl }}</a>
         <p v-else>無</p>
       </div>
       <div v-else>近期無活動可顯示</div>
@@ -238,15 +276,16 @@ export default {
 </template>
 
 <style scoped lang="scss">
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 //設定整個容器的樣式
 .background {
   background: url(https://www.finalfantasyxiv.com/freetrial/static/eb21a694cb608a7dd2a52fede01db68f/c69a4/texture.png);
-  }
+}
 
 .container {
   display: flex;
@@ -258,35 +297,41 @@ export default {
   width: 400px;
   padding: 20px;
   background: url(https://www.finalfantasyxiv.com/freetrial/static/eb21a694cb608a7dd2a52fede01db68f/c69a4/texture.png) rgba(60, 60, 60, 0.146);
-  .sidebar-main{
-      *{
-        margin: 1.2rem;
-      }
-      p{
-        font-size: 1.2rem;
-      }
-      h1{
-        font-weight: bold;
-        font-size: 1.5rem;
-      }
-      .sidebar-body{
-        height: 30vh;
-        overflow-y: scroll;
-        background-color: white;
-        padding: 1rem;
-        border: 1px solid black;
-      }
-      img{
-        width: 60%;
-      }
-      a{
-          text-align: center;
-          font-size: 1.2rem;
-          color: blue;
-          text-decoration: underline;
-              
-        }
+
+  .sidebar-main {
+    * {
+      margin: 1.2rem;
     }
+
+    p {
+      font-size: 1.2rem;
+    }
+
+    h1 {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .sidebar-body {
+      height: 30vh;
+      overflow-y: scroll;
+      background-color: white;
+      padding: 1rem;
+      border: 1px solid black;
+    }
+
+    img {
+      width: 60%;
+    }
+
+    a {
+      text-align: center;
+      font-size: 1.2rem;
+      color: blue;
+      text-decoration: underline;
+
+    }
+  }
 }
 
 //將地圖容器包裝在一個 .map-wrapper 容器中,並使用 flex: 1 佔滿剩餘空間。
@@ -306,6 +351,7 @@ export default {
   box-sizing: border-box;
 }
 
+// 設定活動搜尋欄位的樣式
 .cart-search {
   display: flex;
   margin: 2rem;
@@ -319,6 +365,7 @@ export default {
     margin: 2rem;
   }
 
+  // 設定城市名稱的選單
   .cart-search-cityname,
   .cart-search-periodTime {
     flex: 1 1 300px;
@@ -330,6 +377,7 @@ export default {
     }
   }
 
+  // 設定活動類型的選單
   .cart-search-eventtype {
     flex: 2 1 500px;
     display: flex;
@@ -355,6 +403,7 @@ export default {
   }
 }
 
+// 設定活動卡片的樣式
 .main {
   display: flex;
   flex-direction: row;
@@ -407,17 +456,19 @@ export default {
         overflow: visible;
         display: flex;
         flex-direction: column;
+
         p {
           margin: 1rem;
           padding: 0.5rem;
           font-size: 1.5rem;
         }
-        a{
+
+        a {
           text-align: center;
           font-size: 2rem;
           color: blue;
           text-decoration: underline;
-          
+
         }
       }
 
