@@ -151,7 +151,7 @@ export default {
     position: absolute;
     top: 0;
     left: 0;
-    width: 95%;
+    width: 93%;
     pointer-events: none;
     z-index: -1;
 }
