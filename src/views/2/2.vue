@@ -1,5 +1,6 @@
 <script>
 import $ from 'jquery'
+import Swal from 'sweetalert2'
 
 export default {
   name: 'App',
@@ -100,9 +101,14 @@ export default {
             });
 
             // 檢查結果數量
-            if (this.filterData.length === 0) {
-              alert('沒有符合條件的活動');
+            if (this.filterData.length == 0) {
+              // alert('沒有符合條件的活動');
               this.filterData = null;
+              Swal.fire({
+                title: "沒有符合條件的活動",
+                text: "請在時間範圍內重新搜尋",
+                icon: "warning"
+              });
             }
           }
         },
@@ -147,9 +153,21 @@ export default {
       carts.scrollLeft += 500;
       event.preventDefault();
     },
+    selected_item_initMap() {
+      const mapElement = document.querySelector('.map-container')
+      // 建立地圖
+      this.map = new google.maps.Map(mapElement, {
+        // 中心點
+        center: { lat: this.filterData[this.selected_item_index].Position.PositionLat, lng: this.filterData[this.selected_item_index].Position.PositionLon },
+        // 地圖縮放層級
+        zoom: 17
+      })
+    },
     // 點擊活動卡片後，顯示活動資訊並初始化地圖
     itemSelectedHandler(itemIndex) {
+      // 將目前選取的活動索引存入selected_item_index
       this.selected_item_index = itemIndex;
+      // 顯示活動資訊
       this.selected_item_initMap();
 
       // 如果已存在marker,先將其從地圖上移除
@@ -187,14 +205,6 @@ export default {
       // // autocomplete.bindTo('bounds', map)
     },
     // 點擊活動卡片後，顯示活動資訊並初始化地圖
-    selected_item_initMap() {
-      const mapElement = document.querySelector('.map-container')
-      // 建立地圖
-      this.map = new google.maps.Map(mapElement, {
-        center: { lat: this.filterData[this.selected_item_index].Position.PositionLat, lng: this.filterData[this.selected_item_index].Position.PositionLon },
-        zoom: 17
-      })
-    },
   }
 }
 </script>
@@ -205,10 +215,10 @@ export default {
         <div class="cart-search-periodTime">
           <label for="periodtime">選擇時間範圍：</label>
           <br>
-          <select name="periodtime" id="periodtime" v-model="periodTime">
+          <select name="periodtime" id="periodtime" v-model="periodTime" style="border-radius: 5px; padding: 0.5rem; border: 1px solid #ccc;">
             <option value="-1">即將到來的活動</option>
             <option value=90>最近三個月內</option>
-            <option value=180>最進六個月內</option>
+            <option value=180>最近六個月內</option>
             <option value=365>最近一年內</option>
             <option valuw=730>最近兩年內</option>
           </select>
@@ -216,9 +226,12 @@ export default {
         <div class="cart-search-eventtype">
           <label for="eventtype">你選擇的活動類型：</label>
           <div>
-            <input type="checkbox" name="eventype" id="eventype" value="年度活動" v-model="eventType"> 年度活動
-            <input type="checkbox" name="eventype" id="eventype" value="節慶活動" v-model="eventType"> 節慶活動
-            <input type="checkbox" name="eventype" id="eventype" value="藝文活動" v-model="eventType"> 藝文活動
+            <input type="checkbox" name="eventype" id="eventype" value="藝文活動" v-model="eventType" style="cursor: pointer;
+            "> 藝文活動
+            <input type="checkbox" name="eventype" id="eventype" value="節慶活動" v-model="eventType" style="cursor: pointer;
+            "> 節慶活動
+            <input type="checkbox" name="eventype" id="eventype" value="年度活動" v-model="eventType" style="cursor: pointer;
+            "> 年度活動
           </div>
         </div>
         <button @click="getApiResponse">搜尋</button>
@@ -260,10 +273,11 @@ export default {
     <div class="container">
       <div class="sidebar" id="sidebar">
         <div v-if="filterData" class="sidebar-main">
-          <h1>活動名稱：</h1>
-          <h1>{{ filterData[selected_item_index].ActivityName }}</h1>
+          <!-- <h1>活動名稱：</h1> -->
+          <h1 style="font-size: 36px;color: #333333;font-weight: bold;;">{{ filterData[selected_item_index].ActivityName
+            }}</h1>
           <h1>活動描述：</h1>
-          <p class="sidebar-body">{{ filterData[selected_item_index].Description }}</p>
+          <p class="sidebar-body" style="font-size: 20px;">{{ filterData[selected_item_index].Description }}</p>
           <h1>主辦單位：</h1>
           <p>{{ filterData[selected_item_index].Organizer }}</p>
           <h1>活動照片：</h1>
@@ -275,7 +289,9 @@ export default {
             filterData[selected_item_index].WebsiteUrl }}</a>
           <p v-else>無</p>
         </div>
-        <div v-else>近期無活動可顯示</div>
+        <div v-else
+          style="font-size: 30px; text-align: center; margin-top: 15rem;border: 1px solid black;padding: 1rem;border-radius: 2px;background-color: #f2f2f2;box-shadow: 0px 4px 6px 4px rgba(0, 0, 0, 0.2) ; color: #333333; ">
+          近期無活動可顯示</div>
       </div>
       <!-- 地圖 -->
       <div class="map-wrapper">
@@ -339,42 +355,43 @@ export default {
   }
 
   button {
-  flex: 0.5 0.5 80px;
-  height: 10vh;
-  font-size: 2rem;
-  border-radius: 8px;
-  background: linear-gradient(to bottom, #ffffff, #f2f2f2);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border: 1px solid #c9c9c9;
-  color: #333333;
-  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s, color 0.3s;
+    flex: 0.5 0.5 80px;
+    height: 8vh;
+    font-size: 2rem;
+    border-radius: 8px;
+    background: linear-gradient(to bottom, #ffffff, #f2f2f2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #c9c9c9;
+    color: #1c1c1c;
+    transition: background-color 0.3s, transform 0.05s, box-shadow 0.3s, color 0.3s;
 
-  &:hover {
-    background: linear-gradient(to bottom, #f2f2f2, #e5e5e5);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    color: #555555;
-    cursor: pointer;
+    &:hover {
+      background: linear-gradient(to bottom, #ffffff, #e5e5e5);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      color: rgb(45, 45, 45);
+      cursor: pointer;
+    }
+
+    &:active {
+      transform: scale(0.95);
+      box-shadow: none;
+      animation: coolAnimation 0.5s infinite alternate;
+    }
+
+    &::before {
+      margin-right: 5px;
+    }
   }
 
-  &:active {
-    transform: scale(0.95);
-    box-shadow: none;
-    animation: coolAnimation 0.5s infinite alternate;
-  }
+  @keyframes coolAnimation {
+    0% {
+      transform: scale(1);
+    }
 
-  &::before {
-    margin-right: 5px;
+    100% {
+      transform: scale(0.9);
+    }
   }
-}
-
-@keyframes coolAnimation {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0.9);
-  }
-}
 }
 
 // 設定活動卡片的樣式
@@ -386,74 +403,80 @@ export default {
   margin: 1rem;
 
   .left-right-button {
-  padding: 0.6em 1em; /* 設定內邊距 */
-  border: none; /* 移除邊框 */
-  outline: none; /* 移除輪廓 */
-  color: rgb(0, 0, 0); /* 文字顏色設為白色 */
-  background: #111; /* 背景顏色設為深灰色 */
-  cursor: pointer; /* 鼠標樣式設為指針 */
-  position: relative; /* 定位設為相對 */
-  z-index: 0; /* 層疊順序設為0 */
-  border-radius: 10px; /* 邊框圓角設為10px */
-  transition: all 0.3s ease-in-out; /* 設定動畫 */
-  font-size: 1.3rem;
+    padding: 0.6em 1em;
+    border: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    font-size: 1.3rem;
 
-  &:hover {
-    scale: 1.1; /* 放大1.1倍 */
+    &:hover {
+      scale: 1.1;
     }
-}
 
-.left-right-button:before {
-  content: "";
-  background: linear-gradient(
-    45deg,
-    #ff0000,
-    #ff7300,
-    #fffb00,
-    #48ff00,
-    #00ffd5,
-    #002bff,
-    #7a00ff,
-    #ff00c8,
-    #ff0000
-  ); /* 設定漸變背景 */
-  position: absolute; /* 定位設為絕對 */
-  top: -2px; /* 上偏移-2px */
-  left: -2px; /* 左偏移-2px */
-  background-size: 400%; /* 背景大小設為400% */
-  z-index: -1; /* 層疊順序設為-1 */
-  filter: blur(5px); /* 設定模糊效果 */
-  -webkit-filter: blur(5px); /* 設定模糊效果（適用於舊版瀏覽器） */
-  width: calc(100% + 4px); /* 寬度設為100% + 4px */
-  height: calc(100% + 4px); /* 高度設為100% + 4px */
-  animation: glowing-left-right-button 20s linear infinite; /* 設定動畫 */
-  transition: opacity 0.3s ease-in-out; /* 設定過渡效果 */
-  border-radius: 10px; /* 邊框圓角設為10px */
-}
+    &:active {
+      transform: scale(0.95);
+      box-shadow: none;
+    }
+  }
 
-@keyframes glowing-left-right-button {
-  0% {
-    background-position: 0 0;
+  .left-right-button:before {
+    content: "";
+    background: linear-gradient(45deg,
+        #ff0000,
+        #ff7300,
+        #fffb00,
+        #48ff00,
+        #00ffd5,
+        #002bff,
+        #7a00ff,
+        #ff00c8,
+        #ff0000);
+    /* 設定漸變背景 */
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-left-right-button 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
   }
-  50% {
-    background-position: 400% 0;
-  }
-  100% {
-    background-position: 0 0;
-  }
-}
 
-.left-right-button:after {
-  z-index: -1; 
-  content: "";
-  position: absolute; 
-  width: 100%; 
-  height: 100%;
-  background: #eaeaea; 
-  left: 0; 
-  top: 0; 
-  border-radius: 10px; 
-}
+  @keyframes glowing-left-right-button {
+    0% {
+      background-position: 0 0;
+    }
+
+    50% {
+      background-position: 400% 0;
+    }
+
+    100% {
+      background-position: 0 0;
+    }
+  }
+
+  .left-right-button:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #eaeaea;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
 
 
   .carts {
@@ -482,11 +505,19 @@ export default {
       box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.2);
       transition: all 0.3s ease-in-out;
       background: url(https://www.finalfantasyxiv.com/freetrial/static/eb21a694cb608a7dd2a52fede01db68f/c69a4/texture.png) rgba(107, 106, 115, 0.08);
+      margin-bottom: 2rem;
 
       &:hover {
         cursor: pointer;
         background-color: rgb(240, 240, 240);
         scale: 1.015;
+        box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.439);
+      }
+
+      &:active {
+        background-color: rgb(220, 220, 220);
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+        scale: 0.985;
       }
 
       .cart-title {
@@ -515,7 +546,6 @@ export default {
           color: rgb(106, 106, 233);
           text-decoration: underline;
           font-size: bold;
-
         }
       }
 
@@ -527,15 +557,19 @@ export default {
   display: flex;
   height: 100vh;
   flex-wrap: wrap;
+
   //設定左側欄位的樣式
-    .sidebar {
-    flex:1 1 500px;
+  .sidebar {
+    flex: 1 1 500px;
     padding: 20px;
     background: url(https://www.finalfantasyxiv.com/freetrial/static/eb21a694cb608a7dd2a52fede01db68f/c69a4/texture.png) rgba(60, 60, 60, 0.146);
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
 
     .sidebar-main {
       * {
         margin: 1.2rem;
+        border-radius: 5px;
       }
 
       p {
@@ -548,7 +582,7 @@ export default {
       }
 
       .sidebar-body {
-        height: 30vh;
+        height: 35vh;
         overflow-y: scroll;
         background-color: white;
         padding: 1rem;
@@ -571,9 +605,11 @@ export default {
 
   //將地圖容器包裝在一個 .map-wrapper 容器中,並使用 flex: 1 佔滿剩餘空間。
   .map-wrapper {
-    flex:2 1 500px;
+    flex: 2 1 500px;
+
     .map-container {
       height: 100%;
+      box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.2);
     }
   }
 
@@ -583,7 +619,7 @@ export default {
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.8s;
+  transition: opacity 1s;
 }
 
 .fade-enter,
@@ -593,7 +629,7 @@ export default {
 
 .list-enter-active,
 .list-leave-active {
-  transition: all 0.7s ease;
+  transition: all 1s ease;
 }
 
 .list-enter,
