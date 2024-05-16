@@ -16,7 +16,7 @@ export default {
                 { image: '/消息輪播5.jpg' },
             ],
             currentPage: 0,
-            itemsPerPage: 7,
+            itemsPerPage: 9,
             isActive: 0,
             ndImgs: [
                 { image: '/home圖3.png' },
@@ -151,7 +151,7 @@ export default {
     position: absolute;
     top: 0;
     left: 0;
-    width: 90%;
+    width: 96%;
     pointer-events: none;
     z-index: -1;
 }
@@ -168,7 +168,7 @@ export default {
         transform: translateY(-10%) rotate(0deg); /* 初始位置和旋转角度 */
     }
     100% {
-        transform: translateY(800%) rotate(360deg); /* 结束位置和旋转角度 */
+        transform: translateY(1000%) rotate(360deg); /* 结束位置和旋转角度 */
     }
 }
 
