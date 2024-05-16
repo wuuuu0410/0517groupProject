@@ -19,10 +19,10 @@ export default {
             itemsPerPage: 7,
             isActive: 0,
             ndImgs: [
-                { image: '/home圖1.jpg' },
-                { image: '/home圖2.jpg' },
                 { image: '/home圖3.png' },
+                { image: '/home圖2.jpg' },
                 { image: '/home圖4.jpg' },
+                { image: '/home圖1.jpg' },
             ],
             bears: [],
         };
