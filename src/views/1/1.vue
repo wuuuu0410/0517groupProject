@@ -1,12 +1,12 @@
 <script>
 import location from '@/stores/location';
-import { mapState,mapActions } from 'pinia';
+import { mapState, mapActions } from 'pinia';
 export default {
     data() {
         return {
             selectedArea: '',
             areas: [],
-            stations: []
+            stations: [],
         };
     },
     async created() {
@@ -16,7 +16,7 @@ export default {
         this.setPage(1)
     },
     methods: {
-        ...mapActions(location,["setPage"]),
+        ...mapActions(location, ["setPage"]),
         async fetchData() {
             try {
                 const response = await fetch('https://tcgbusfs.blob.core.windows.net/dotapp/youbike/v2/youbike_immediate.json');
@@ -35,10 +35,10 @@ export default {
         },
         formatStationName(name) {
             return name.replace('YouBike2.0_', '');
-        }
+        },
     },
     computed: {
-        ...mapState(location,["page","pageInfo"]),
+        ...mapState(location, ["page", "pageInfo"]),
         filteredStations() {
             return this.stations.filter(station => station.sarea === this.selectedArea);
         }
@@ -50,63 +50,11 @@ export default {
 <template>
 
     <div class="header">
-        <img src="https://www.youbike.com.tw/region/assets/images/logo.svg" alt="">
-        <!-- <div class="dropmenu"></div> -->
-        <ul class="drop-down-menu">
-            <li><a href="#">使用說明</a>
-                <ul style="padding: 0;">
-                    <li><a href="">註冊方式</a>
-                    </li>
-                    <li><a href="">借還方式</a>
-                    </li>
-                    <li><a href="">設備介紹</a>
-                    </li>
-                    <li><a href="">騎乘須知</a>
-                    </li>
-                    <li><a href="">公共自行車保險</a>
-                    </li>
-                </ul>
-            </li>
-            <li><a href="https://booking.ubus.com.tw/">收費方式</a>
-            </li>
-            <li><a href="#">站點資訊</a>
-                <ul style="padding: 0;">
-                    <li><a href="">站點地圖</a>
-                    </li>
-                    <li><a href="">站點列表</a>
-                    </li>
-                </ul>
-            </li>
-            <li><a href="#">最新消息</a>
-                <ul style="padding: 0;">
-                    <li><a href="">站點公告</a>
-                    </li>
-                    <li><a href="">服務公告</a>
-                    </li>
-                </ul>
-            </li>
-            <li><a href="https://booking.ubus.com.tw/">活動專區</a>
-            </li>
-            <li><a href="#">常見問題</a>
-                <ul style="padding: 0;">
-                    <li><a href="">FAQ</a>
-                    </li>
-                    <li><a href="">失物招領</a>
-                    </li>
-                    <li><a href="">YouBike協尋</a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
+        <div id="title"  class="title">
+            <img class="ubikeImg" src="/ubike.svg" alt="" width="200px" height="100px" >
+            <h1>站點列表</h1>
+        </div>
     </div>
-
-
-
-
-    <div class="stopList">
-        <h1>站點列表</h1>
-    </div>
-
 
     <div class="chooseArea">
 
@@ -136,7 +84,7 @@ export default {
 
     <div class="bigArea">
         <div class="content" style="display: flex; justify-content: space-around; padding: 0;">
-            <div class="1" style="width: 25%;">
+            <div class="distcontent" style="width: 25%;">
                 <ul v-for="(station, index) in filteredStations" :key="station.sno" style="list-style: none; margin: 0"
                     :class="{ 'content-bg': index % 2 !== 0 }">
                     <li style=" text-align: center; height: 30px; padding: 1% 0;">
@@ -144,7 +92,7 @@ export default {
                     </li>
                 </ul>
             </div>
-            <div class="2" style="width: 33%;">
+            <div class="arconcent" style="width: 33%;">
                 <ul v-for="(station, index) in filteredStations" :key="station.sno" style="list-style: none; margin: 0"
                     :class="{ 'content-bg': index % 2 !== 0 }">
                     <li style="height: 30px; padding: 1% 0; ">
@@ -152,7 +100,7 @@ export default {
                     </li>
                 </ul>
             </div>
-            <div class="3" style="width: 25%;">
+            <div class="rentcontent" style="width: 25%;">
                 <ul v-for="(station, index) in filteredStations" :key="station.sno" style="list-style: none; margin: 0"
                     :class="{ 'content-bg': index % 2 !== 0 }">
                     <li style="height: 30px; padding: 2% 0; ">
@@ -160,7 +108,7 @@ export default {
                     </li>
                 </ul>
             </div>
-            <div class="4" style="width: 25%;">
+            <div class="dockcontent" style="width: 25%;">
                 <ul v-for="(station, index) in filteredStations" :key="station.sno" style="list-style: none; margin: 0"
                     :class="{ 'content-bg': index % 2 !== 0 }">
                     <li style="height: 30px; padding: 2% 0; ">
@@ -188,94 +136,37 @@ export default {
     align-items: center;
     width: 100%;
     height: 100px;
-    border: 1px solid black;
-    position: relative;
-
-    img {
-        position: absolute;
-        width: 100px;
-        height: 100px;
-        left: 2%;
+    h1{
+        color: black;
     }
-
-    ul.drop-down-menu {
-    display: inline-block;
-    width: 70%;
-    list-style: none;
-    border: 1px solid red;
-    position: absolute;
-    top: 25%;
-    left: 15%;
+    .title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 500px;
+        height: 80px;
+        // border: 2px solid black;
+        font-size: 20px;
+        font-weight: bolder;
+        // border-radius: 5px;
+    }
 }
-
-
-//改次選單字大小
-ul.drop-down-menu li {   
-            position: relative;
-            left: 0;
-            top: 100%;
-            white-space: nowrap;
-        }
-
-        //改上層選單字大小
-        ul.drop-down-menu > li {
-            font-size: 22px;    
-            float: left;
-            width: 15%;
-        }
-        ul.drop-down-menu a {
-            display: block;
-            text-align: center;
-            text-decoration: none;
-                &:hover{
-                background:black;
-                color: aliceblue;
-                }
-        }
-
-        //隱藏次選單
-        ul.drop-down-menu ul { 
-            display: none;
-            list-style: none;
-            background:aliceblue;
-        }
-
-        //滑鼠滑入展開次選單
-        ul.drop-down-menu li:hover > ul { 
-            display: block;
-            font-size: 18px;
-            transform: 1s;
-
-        }
-    }
-
-
-
-.stopList {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 50px;
-    border: 1px solid black;
-    font-size: 20px;
-    font-weight: bolder;
-    background: #ffef00;
+.ubikeImg{
+    margin-right: 45px;
 }
 
 .chooseArea {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100px;
-    border: 1px solid black;
+    width: 60%;
+    height: 150px;
+    border-top: 1px solid black;
     font-weight: bolder;
+    margin: 0 auto;
+    
 
     button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         width: 150px;
         height: 50px;
         border: 1px solid rgb(229, 218, 218);
@@ -283,29 +174,35 @@ ul.drop-down-menu li {
         position: relative;
         transition: 1s;
 
-        // .ubike {
-        //     font-size: 25px;
-        //     font-weight: bolder;}
     }
 
 
     .tabs {
-        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;  //讓文字前面的圓點消失
         padding: 0;
         margin: 0;
-        display: flex;
         font-size: 15px;
-    }
+        word-wrap: normal
 
+        
+    }
     .tabs li {
         border-radius: 10px;
-        padding: 8px 16px;
+        padding: 3px 16px;
+        margin: 5px 5px;
+        font-size: 22px;
         cursor: pointer;
-        transition: background-color 0.3s;
+        border: 3px dashed orange;
+        transition: background-color 1s;
 
         &:hover {
             background-color: black;
             color: aliceblue;
+            border:none;
             animation: slideIn 0.3s alternate; // 添加動畫
         }
     }
@@ -320,7 +217,7 @@ ul.drop-down-menu li {
 
 hr {
     margin: 5px 5rem;
-    background: yellow;
+    background: rgb(168, 168, 168);
     height: 5px;
     border: none;
 }
@@ -330,17 +227,18 @@ hr {
     display: flex;
     justify-content: space-around;
     position: relative;
+    margin-bottom: 15px;
 
     .dist {
         display: flex;
         justify-content: center;
         align-items: center;
         position: absolute;
-        width: 40px;
-        height: 25px;
-        font-size: 20px;
+        // width: 40px;
+        // height: 25px;
+        font-size: 30px;
         font-weight: bolder;
-        left: 18%;
+        left: 18.5%;
     }
 
     .stop {
@@ -348,11 +246,11 @@ hr {
         justify-content: center;
         align-items: center;
         position: absolute;
-        width: 80px;
-        height: 25px;
-        font-size: 20px;
+        // width: 80px;
+        // height: 25px;
+        font-size: 30px;
         font-weight: bolder;
-        left: 32%;
+        left: 30%;
     }
 
     .rent {
@@ -360,12 +258,12 @@ hr {
         justify-content: center;
         align-items: center;
         position: absolute;
-        width: 80px;
-        height: 25px;
-        font-size: 20px;
+        // width: 80px;
+        // height: 25px;
+        font-size: 30px;
         font-weight: bolder;
         margin-left: 10%;
-        right: 44%;
+        right: 42%;
     }
 
     .dock {
@@ -373,11 +271,11 @@ hr {
         justify-content: center;
         align-items: center;
         position: absolute;
-        width: 100px;
-        height: 25px;
-        font-size: 20px;
+        // width: 100px;
+        // height: 25px;
+        font-size: 30px;
         font-weight: bolder;
-        right: 24%;
+        right: 23%;
     }
 
 }
@@ -394,9 +292,9 @@ hr {
         border: 1px solid black;
         overflow-y: auto;
     }
-
+    
     .content-bg {
-        background-color: rgb(211, 211, 251);
+        background-color: #f7e2e6;
     }
 }
 
@@ -414,27 +312,31 @@ hr {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 70px;
-    border: 1px solid black;
-    font-size: 10px;
+    height: 50px;
+    border-top: 1px solid black;
+    font-size: 20px;
+    margin-top: 10px;
     position: relative;
 
     button {
-        width: 80px;
+        width: 160px;
         height: 30px;
         border: 1px solid black;
         border-radius: 10px;
     }
-    h5{
+
+    h5 {
         position: absolute;
         font-size: 13px;
         right: 30%;
     }
-    .member{
+
+    .member {
         position: absolute;
         left: 30%;
     }
-    .privacy{
+
+    .privacy {
         position: absolute;
         left: 40%;
     }

@@ -35,7 +35,7 @@ export default{
 <div class="headerArea">
     <img src="/LOGO2.png" alt="" width="235px" height="235px">
     <RouterLink  class="routerItem" to="/"  :class="{ 'selectPage': this.page === 0 }">Home</RouterLink>
-    <RouterLink  class="routerItem" to="/1/1"  :class="{ 'selectPage': this.page === 1  }">交通</RouterLink>
+    <RouterLink  class="routerItem" to="/1/1"  :class="{ 'selectPage': this.page === 1  }">YouBike</RouterLink>
     <RouterLink  class="routerItem" to="/2/2"  :class="{ 'selectPage': this.page === 2  }">活動</RouterLink>
     <RouterLink  class="routerItem" to="/3/3"  :class="{ 'selectPage': this.page === 3 }">餐廳</RouterLink>
     <RouterLink  class="routerItem" to="/4/AboutViewcopy"  :class="{ 'selectPage': this.page === 4  }">觀光景點</RouterLink>
