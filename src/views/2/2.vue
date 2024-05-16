@@ -1,7 +1,7 @@
 <script>
-import $ from 'jquery'
 import location from '@/stores/location';
 import { mapState,mapActions } from 'pinia';
+import $ from 'jquery'
 import Swal from 'sweetalert2'
 
 export default {
@@ -338,7 +338,7 @@ export default {
     select {
       width: 100%;
       height: 5vh;
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
   }
 
